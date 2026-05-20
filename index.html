@@ -10383,21 +10383,102 @@ function EcoSection() {
    04.1 ROADMAP
    ======================================================== */
 function RoadmapSection() {
+  /* Mapeo de estados a estilos visuales */
+  const statusStyles = {
+    now:       { color: '#F2C12B', label: '★ ESTAMOS ACÁ',         bg: 'rgba(242,193,43,0.10)', border: '2px solid #F2C12B' },
+    next:      { color: '#C9F25C', label: 'PRÓXIMO',                bg: 'rgba(201,242,92,0.06)', border: '1px solid rgba(201,242,92,0.30)' },
+    milestone: { color: '#FF3D7F', label: '★ HITO · INFORME OFICIAL',bg: 'rgba(255,61,127,0.08)', border: '2px solid rgba(255,61,127,0.55)' },
+    future:    { color: 'var(--ink-soft, rgba(255,255,255,0.55))', label: 'FUTURO', bg: 'rgba(255,255,255,0.03)', border: '1px solid var(--line, rgba(255,255,255,0.10))' }
+  };
+
   return (
     <section>
-      <SectionHead num="04.1" title="Roadmap · <em>12 meses</em>"
-        desc="Plan secuencial · cada fase desbloquea la siguiente. Trabajamos por sprints mensuales con entregables visibles y métricas chequeadas al cierre de cada bloque."/>
-      <div className="road-list">
-        {T.roadmap.map((r, i) => (
-          <div key={i} className="road-step tilt">
-            <div className="mo">{r.mo}</div>
-            <div className="right">
-              <h4>{r.name}</h4>
-              <div className="focus">→ {r.focus}</div>
-              <ul>{r.milestones.map((m, j) => <li key={j}>{m}</li>)}</ul>
-            </div>
+      <SectionHead num="04.0" title="Roadmap · <em>sprint a sprint</em>"
+        desc="Plan operativo realista · arrancamos en Semana 2 (estás leyendo este documento). Cada bloque tiene quick wins en producción · grilla RRSS · campañas digitales · agente Hapee activándose en paralelo. Informes ejecutivos al día 60 y día 90 con QBR · ahí se decide escalar inversión."/>
+
+      {/* RESUMEN VISUAL · línea de tiempo + reportes destacados */}
+      <div className="info-card tilt" style={{ marginBottom: '1.6rem', borderColor: 'rgba(242,193,43,0.45)', background: 'linear-gradient(135deg, rgba(242,193,43,0.06), transparent 70%)' }}>
+        <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.22em', color: '#F2C12B', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.5rem' }}>★ LECTURA RÁPIDA DEL ROADMAP</div>
+        <h4 style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 700, fontSize: '1.3rem', color: 'var(--ink)', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '.6rem' }}>3 capas trabajando en <em style={{ fontFamily: 'Instrument Serif', fontStyle: 'italic', color: 'var(--accent)', fontWeight: 400, textTransform: 'none' }}>paralelo</em>.</h4>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '.8rem' }}>
+          <div style={{ padding: '.8rem 1rem', background: 'rgba(0,0,0,0.30)', borderRadius: 10, borderLeft: '3px solid #FF5A1F' }}>
+            <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.58rem', letterSpacing: '.18em', color: '#FF5A1F', fontWeight: 700, textTransform: 'uppercase', marginBottom: '.3rem' }}>Capa 01 · Producción</div>
+            <div style={{ fontSize: '.78rem', color: 'var(--ink)', lineHeight: 1.5 }}>Toma audiovisual S3 · grillas RRSS · piezas mensuales</div>
           </div>
-        ))}
+          <div style={{ padding: '.8rem 1rem', background: 'rgba(0,0,0,0.30)', borderRadius: 10, borderLeft: '3px solid #C9F25C' }}>
+            <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.58rem', letterSpacing: '.18em', color: '#C9F25C', fontWeight: 700, textTransform: 'uppercase', marginBottom: '.3rem' }}>Capa 02 · Marketing digital</div>
+            <div style={{ fontSize: '.78rem', color: 'var(--ink)', lineHeight: 1.5 }}>Google + Meta MVP S4 · testeo S6 · scaling S9</div>
+          </div>
+          <div style={{ padding: '.8rem 1rem', background: 'rgba(0,0,0,0.30)', borderRadius: 10, borderLeft: '3px solid #F2C12B' }}>
+            <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.58rem', letterSpacing: '.18em', color: '#F2C12B', fontWeight: 700, textTransform: 'uppercase', marginBottom: '.3rem' }}>Capa 03 · Hapee + IA</div>
+            <div style={{ fontSize: '.78rem', color: 'var(--ink)', lineHeight: 1.5 }}>Agente fase 1 → 4 progresivo · loop datos al algoritmo</div>
+          </div>
+        </div>
+        <div style={{ marginTop: '1rem', padding: '.7rem .9rem', background: 'rgba(255,61,127,0.08)', border: '1px solid rgba(255,61,127,0.40)', borderRadius: 8, fontSize: '.82rem', color: 'var(--ink)', lineHeight: 1.55 }}>
+          <b style={{ color: '#FF3D7F' }}>Informes oficiales:</b> primer informe ejecutivo + QBR al <b>Día 60</b> · segundo informe + plan Q2 al <b>Día 90</b>. Entre medias hay reporte semanal de KPIs operativos automatizado en dashboard.
+        </div>
+      </div>
+
+      <div className="road-list">
+        {T.roadmap.map((r, i) => {
+          const st = statusStyles[r.status] || statusStyles.future;
+          const isMilestone = r.status === 'milestone';
+          return (
+            <div key={i} className="road-step tilt" style={{
+              borderColor: r.status === 'now' ? '#F2C12B' : r.status === 'milestone' ? 'rgba(255,61,127,0.55)' : undefined,
+              background: r.status === 'now' ? 'rgba(242,193,43,0.06)' : r.status === 'milestone' ? 'rgba(255,61,127,0.04)' : undefined,
+              boxShadow: r.status === 'now' ? '0 18px 50px -20px rgba(242,193,43,0.50)' : isMilestone ? '0 18px 50px -20px rgba(255,61,127,0.40)' : undefined
+            }}>
+              <div className="mo">
+                <div>{r.mo}</div>
+                {r.phase && <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.55rem', letterSpacing: '.16em', color: 'var(--ink-soft)', textTransform: 'uppercase', fontWeight: 700, marginTop: '.3rem' }}>{r.phase}</div>}
+              </div>
+              <div className="right">
+                <div style={{ display: 'flex', alignItems: 'center', gap: '.6rem', flexWrap: 'wrap', marginBottom: '.4rem' }}>
+                  <h4 style={{ margin: 0 }}>{r.name}</h4>
+                  <span style={{
+                    padding: '.25rem .65rem', borderRadius: 999,
+                    background: st.bg, border: st.border,
+                    fontFamily: 'Geist Mono, monospace', fontSize: '.55rem', letterSpacing: '.16em',
+                    textTransform: 'uppercase', fontWeight: 800,
+                    color: st.color, whiteSpace: 'nowrap'
+                  }}>{st.label}</span>
+                </div>
+                <div className="focus">→ {r.focus}</div>
+                <ul>{r.milestones.map((m, j) => <li key={j}>{m}</li>)}</ul>
+                {r.hapee && (
+                  <div style={{ marginTop: '.8rem', padding: '.6rem .8rem', background: 'rgba(242,193,43,0.06)', border: '1px dashed rgba(242,193,43,0.32)', borderRadius: 8, display: 'flex', alignItems: 'flex-start', gap: '.6rem' }}>
+                    <span style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.55rem', letterSpacing: '.16em', color: '#F2C12B', textTransform: 'uppercase', fontWeight: 800, paddingTop: '.1rem', whiteSpace: 'nowrap' }}>↺ HAPEE PARALELO</span>
+                    <span style={{ fontSize: '.78rem', color: 'var(--ink)', lineHeight: 1.5, flex: 1 }}>{r.hapee}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* CADENCIA DE REPORTERÍA */}
+      <div className="info-card" style={{ marginTop: '1.8rem' }}>
+        <div className="kicker">— FRECUENCIA DE REPORTERÍA · QUÉ Y CUÁNDO RECIBES</div>
+        <h4 style={{ marginTop: '.3rem' }}>3 capas de información para decidir bien</h4>
+        <div className="info-grid cols-3" style={{ marginTop: '.7rem' }}>
+          <div className="step-card" style={{ borderColor: 'rgba(201,242,92,0.30)' }}>
+            <div className="step-num" style={{ color: '#C9F25C' }}>Diario</div>
+            <h5>Dashboard live</h5>
+            <p>Looker Studio compartido · KPIs core (CPL · ROAS · leads · conversiones · engagement) actualizados a las 06:00 todos los días. Acceso 24/7 para Priscila + equipo.</p>
+          </div>
+          <div className="step-card" style={{ borderColor: 'rgba(242,193,43,0.30)' }}>
+            <div className="step-num" style={{ color: '#F2C12B' }}>Semanal</div>
+            <h5>Sync operativo</h5>
+            <p>Call 30 min con tu account manager · qué pasó, qué se cortó, qué se escaló esta semana, qué viene la próxima. Notas escritas en Slack/email post-sync.</p>
+          </div>
+          <div className="step-card" style={{ borderColor: 'rgba(255,61,127,0.55)' }}>
+            <div className="step-num" style={{ color: '#FF3D7F' }}>Mensual / QBR</div>
+            <h5>Informe ejecutivo</h5>
+            <p>Reporte completo con narrativa · primer informe oficial al Día 60 · QBR trimestral al Día 90. Documento PDF + sesión 90 min de lectura estratégica.</p>
+          </div>
+        </div>
       </div>
     </section>
   );

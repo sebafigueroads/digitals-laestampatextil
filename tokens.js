@@ -1017,24 +1017,140 @@ window.LET_TOKENS = {
     }
   ],
 
-  /* ============= ROADMAP · primeras 12 semanas por fase ============= */
+  /* ============= ROADMAP · operativo · sprint a sprint =============
+     Narrativa: estamos en S2 de propuesta · próximo paso es feedback +
+     setup MVP. Hapee se va activando en paralelo. Informe oficial al día 60. */
   roadmap: [
-    { mo: 'Semana 1-2',  name: 'Fundación', focus: 'Sistema visual + tracking + Hapee + caso TINI',
-      milestones: ['Identidad visual + manual de marca v1', 'Hapee CRM operativo con flujo IA básico', 'Pixel Meta + GA4 + CAPI funcionando', 'Caso TINI con permission + asset PDF'] },
-    { mo: 'Semana 3-5',  name: 'Web madre', focus: 'Diseño + dev de laestampatextil.cl v2.0',
-      milestones: ['Wireframe + design system', 'Dev Next.js/Astro con CMS mínimo', 'Migración SEO sin pérdida de rankings actuales', 'QA + lanzamiento staging'] },
-    { mo: 'Semana 6-8',  name: 'Landings 1+2', focus: 'Landing Estampado + Landing Merch B2B en aire',
-      milestones: ['Landing Estampado + Serigrafía live', 'Landing Merch B2B live + PDF capacidades', 'Campañas Google redireccionadas a landings', 'Conversiones por landing tracked'] },
-    { mo: 'Semana 9-12', name: 'Always-on Google', focus: 'Estructura 4 líneas + quality score 8+',
-      milestones: ['4 líneas always-on con LP dedicadas', 'Quality score promedio 8+', 'CPL reducido 30-40%', 'Reporte semanal automatizado'] },
-    { mo: 'Semana 13-16',name: 'Meta · testeo', focus: 'Sistema F1+F2 · descubrir ganadores',
-      milestones: ['24 creativos en testeo F1', '2-3 ganadores por servicio escalados a F2', 'Lookalikes 1-3% performando', 'ROAS >3× promedio'] },
-    { mo: 'Semana 17-20',name: 'Línea Eco editorial', focus: 'Sistema de reporte público + co-branding',
-      milestones: ['Métricas trimestrales publicadas', 'Editorial mensual con fundación', 'Anexo ESG en cotización B2B activo', 'Primer co-branding cerrado'] },
-    { mo: 'Semana 21-28',name: 'Retención + LTV', focus: 'Loop · email + Meta retención + LTV',
-      milestones: ['Email mensual segmentado', 'Meta dinámico con catálogo', 'LTV promedio +20% vs arranque', 'Tasa recurrencia >30%'] },
-    { mo: 'Semana 29-44',name: 'Escala + voz', focus: 'Voz Priscila + prensa + cierres premium',
-      milestones: ['LinkedIn de Priscila como activo editorial', 'Primera salida en prensa industria', '5+ casos B2B cerrados ticket >$1M', 'KPI cierre mensual >120/mes'] }
+    {
+      mo: 'Semana 1-2', phase: 'F0 · Estratégica',
+      status: 'now', /* ESTAMOS ACÁ */
+      name: 'Propuesta + feedback',
+      focus: 'Presentación + alineación · este documento',
+      milestones: [
+        'Presentación propuesta integral (este documento) entregada',
+        'Cliente revisa direcciones · feedback de estilo web, pilares, pisos de inversión Meta',
+        'SOW + kick-off firmado',
+        'Accesos: pixel/GA4/ads/redes/dominios entregados a Digitals'
+      ],
+      hapee: 'Setup cuenta Hapee · estructura de pipeline base'
+    },
+    {
+      mo: 'Semana 3', phase: 'F1 · Producción',
+      status: 'next',
+      name: 'Toma de contenidos presencial',
+      focus: 'Sesión audiovisual en taller · activo editorial mes 1',
+      milestones: [
+        'Sesión audiovisual full-day en taller: plotters, prendas TINI, Priscila en cámara',
+        'Captura para 30-40 piezas (reels BTS · carruseles técnicos · quote cards · stories)',
+        'Tracking instalado: Pixel Meta + GA4 + CAPI server-side validados',
+        'Primera grilla RRSS construida (4 semanas adelantadas) · LinkedIn + IG + TikTok'
+      ],
+      hapee: 'Agente IA fase 1 · responde queries básicos de servicios + horarios'
+    },
+    {
+      mo: 'Semana 4-5', phase: 'F2 · MVP en aire',
+      status: 'next',
+      name: 'Campañas MVP + grillas publicando',
+      focus: 'Marketing digital arranca · always-on básico',
+      milestones: [
+        'Google Ads MVP: 2 líneas Search core (Estampado + Merch B2B) en aire',
+        'Meta MVP: 2 campañas (cold prospecting + retargeting)',
+        '8 creativos en F1 testeo · variantes de hipótesis ganadora',
+        'Primera grilla RRSS publicándose · ritmo de 3 piezas por semana arranca'
+      ],
+      hapee: 'Agente fase 2 · lead scoring básico + routing por servicio (estampado/merch/eco)'
+    },
+    {
+      mo: 'Semana 6-7', phase: 'F3 · Iteración',
+      status: 'next',
+      name: 'Testeo creativos + ganadores',
+      focus: 'Identificar ganadores · cortar perdedores · re-asignar presupuesto',
+      milestones: [
+        'Análisis de los 8 creativos F1 · 2-3 ganadores identificados con data significativa',
+        'Perdedores cortados · presupuesto re-asignado a winners',
+        'Segunda grilla RRSS publicada · ajustada según engagement de la primera',
+        '4 nuevos creativos F2 entrando para escalar la hipótesis ganadora'
+      ],
+      hapee: 'Agente fase 3 · triaje cliente nuevo vs recurrente + cotización express integrada'
+    },
+    {
+      mo: 'Día 60 · Fin Mes 2', phase: '★ INFORME OFICIAL',
+      status: 'milestone',
+      name: 'Primer informe ejecutivo + QBR',
+      focus: 'Reporte completo + decisión de escalamiento',
+      milestones: [
+        'Reporte ejecutivo: CPL · ROAS · leads calificados · engagement por pilar · piezas publicadas',
+        'Sesión QBR con Priscila + equipo · narrativa + lectura estratégica de cifras',
+        'Decisión de escalamiento de pisos Meta (austero → medio · o medio → ambicioso)',
+        'Plan Mes 3-4 firmado con ajustes derivados del aprendizaje real'
+      ],
+      hapee: 'Reporte Hapee completo · pipeline · lead-to-close ratio · costo por industria'
+    },
+    {
+      mo: 'Semana 9-10', phase: 'F4 · Scaling',
+      status: 'future',
+      name: 'Ganadores en F2 + Advantage+',
+      focus: 'Aumento de presupuestos validados · estructura always-on completa',
+      milestones: [
+        'Ganadores creativos escalados a F2 con Advantage+ scaling',
+        'Aumento de presupuestos Meta + Google según ROAS validado',
+        'Google Ads pasa de 2 a 4 líneas always-on con landings dedicadas',
+        'Tercera grilla RRSS publicada · ya con tono refinado a la audiencia real'
+      ],
+      hapee: 'Agente fase 4 · lookups CRM + sugerencia upsell circular automática'
+    },
+    {
+      mo: 'Semana 11-12', phase: 'F5 · Segunda toma',
+      status: 'future',
+      name: 'Producción mes 3 + Eco editorial',
+      focus: 'Refresh de banco audiovisual + arranca línea Eco',
+      milestones: [
+        'Segunda toma de contenidos presencial · enfoque diferenciado por aprendizaje M1-M2',
+        '4 reels editoriales producidos · Priscila explicando proceso a cámara',
+        'Línea Eco arranca: primera entrega editorial mensual con fundación de perros',
+        'Anexo ESG activado en cotización B2B'
+      ],
+      hapee: 'Hapee + Pixel · conversiones offline (contratos firmados) re-inyectadas al algoritmo'
+    },
+    {
+      mo: 'Día 90 · Fin Mes 3', phase: '★ INFORME OFICIAL',
+      status: 'milestone',
+      name: 'Segundo informe + plan Q2',
+      focus: 'QBR trimestral · narrativa + roadmap Q2',
+      milestones: [
+        'Reporte ejecutivo Q1 completo · 90 días de data real',
+        'Casos cerrados B2B documentados con métricas reservadas',
+        'LTV promedio M1-M3 · tasa de recurrencia · churn risk',
+        'Plan Q2 firmado: prensa + voz Priscila + co-branding fundación'
+      ],
+      hapee: 'Hapee operando en modo predictivo · score de cierre por industria + intent'
+    },
+    {
+      mo: 'Mes 4-6', phase: 'F6 · Retención + LTV',
+      status: 'future',
+      name: 'Loop cliente · email + Meta dinámico',
+      focus: 'Maximizar valor cliente existente · loop de fidelización',
+      milestones: [
+        'Email mensual segmentado por tipo de cliente B2B (productora · agencia · empresa)',
+        'Meta dinámico con catálogo de prendas + servicios',
+        'LTV promedio +20% vs arranque · medido en cohortes mensuales',
+        'Tasa recurrencia >30% · reorders automáticos email + WhatsApp'
+      ],
+      hapee: 'Hapee · programa cliente recurrente con tier (Pro / Premium / Strategic)'
+    },
+    {
+      mo: 'Mes 7-12', phase: 'F7 · Escala + voz',
+      status: 'future',
+      name: 'Priscila como activo editorial + prensa',
+      focus: 'Brand-lift sectorial · La Estampa como referente CL',
+      milestones: [
+        'LinkedIn de Priscila operando con 4 posts/mes editoriales',
+        'Primera salida en prensa industria textil + activación cultural',
+        '5+ casos B2B cerrados con ticket >$1M documentados',
+        'KPI: cierre mensual >120 leads calificados · CPL <$8K'
+      ],
+      hapee: 'Hapee + Claude/Gemini · agente que pre-redacta propuestas con base templates'
+    }
   ],
 
   /* ============= INVERSIÓN + ENTREGABLES ============= */
