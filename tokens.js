@@ -45,8 +45,8 @@ window.LET_TOKENS = {
     ],
 
     products: [
-      { id: 'p-uniformes',    name: 'Uniformes corporativos',  cat: 'B2B', tag: 'Polos, chaquetas, hoodies con logo bordado/estampado',  qty: '20 → 1.000+ und' },
-      { id: 'p-event',        name: 'Activaciones de marca',   cat: 'B2B', tag: 'Polos staff, mantas, banderas, tótems textiles',          qty: '50 → 500 und' },
+      { id: 'p-uniformes',    name: 'Uniformes corporativos',  cat: 'B2B', tag: 'Poleras, chaquetas, hoodies con logo bordado/estampado',  qty: '20 → 1.000+ und' },
+      { id: 'p-event',        name: 'Activaciones de marca',   cat: 'B2B', tag: 'Poleras staff, mantas, banderas, tótems textiles',          qty: '50 → 500 und' },
       { id: 'p-manta',        name: 'Mantas de picnic',        cat: 'Pro', tag: 'Personalizadas con logo full-color, bordes terminados',    qty: '10 → 300 und' },
       { id: 'p-pano',         name: 'Pañoletas / bandanas',    cat: 'Pro', tag: 'Algodón natural · sublimación o estampado al agua',         qty: '50 → 2.000 und' },
       { id: 'p-cubre',        name: 'Cubrealarmas',            cat: 'Pro', tag: 'Para inmobiliarias · marcas de seguridad · publicidad OOH', qty: '5 → 100 und' },
@@ -57,7 +57,7 @@ window.LET_TOKENS = {
 
     cases: [
       { tag: 'ENTRETENIMIENTO · TVN',    title: '31 Minutos · vestuario para el último Tini Desk',  desc: 'Estampados y piezas de vestuario para la aparición de 31 Minutos en el desk de TINI · timing apretado, materialidad de cámara, libreta de color del show respetada. El crédito vive en la storytelling de la marca.' },
-      { tag: 'ACTIVACIÓN · AGENCIA',     title: 'Polos staff · 200 unidades · activación nacional', desc: 'Operación tipo "activación a la chilena": brief el lunes, polos en bodega del cliente el viernes. DTF para soportar lavados y sol. Repetición a partir del segundo evento.' },
+      { tag: 'ACTIVACIÓN · AGENCIA',     title: 'Poleras staff · 200 unidades · activación nacional', desc: 'Operación tipo "activación a la chilena": brief el lunes, poleras en bodega del cliente el viernes. DTF para soportar lavados y sol. Repetición a partir del segundo evento.' },
       { tag: 'INMOBILIARIA · OOH',       title: 'Cubrealarmas full-color para fachada nueva',       desc: 'Una inmobiliaria pidió cubrir 18 alarmas con su gráfica de lanzamiento. Sublimación sobre poliéster reforzado · resistencia UV · instalación en obra.' },
       { tag: 'RETAIL · KIT ONBOARDING',  title: 'Kit nuevo empleado · pañoleta + manta + tote',     desc: 'Marca de retail con 200 ingresos mensuales · kit con 3 piezas estampadas a su brand book · entrega a domicilio del nuevo colaborador.' }
     ]
@@ -77,7 +77,7 @@ window.LET_TOKENS = {
     breaks: [
       'Marca sin sistema visual definido: la web actual no comunica el oficio premium que tiene detrás.',
       'Cero storytelling: 4 años, vestir a 31 Minutos, plotters Epson, mermas a perros · todo desperdiciado.',
-      'No hay segmentación B2B vs B2C: misma puerta para una madre con un cumpleaños que para un gerente de marketing comprando 500 polos.',
+      'No hay segmentación B2B vs B2C: misma puerta para una madre con un cumpleaños que para un gerente de marketing comprando 500 poleras.',
       'No hay landing por servicio: las campañas de Google llegan a páginas genéricas, score de calidad mediocre.',
       'Pixel y tracking de Meta inexistentes o mal calibrados · imposible escalar pauta.',
       'Sin embudo automático: leads entran a WhatsApp y los filtra una persona (cuello de botella).',
@@ -127,15 +127,15 @@ window.LET_TOKENS = {
     rationale: [
       { num: '01', title: 'El mark ya dice "la estampa"', body: 'El wordmark principal en script bold dice "la estampa" — la palabra "textil" vive en el badge curvo secundario. La marca está pre-rebautizada en su propio diseño visual. Quitar "textil" del badge superior consolida lo que la identidad ya hace de hecho.' },
       { num: '02', title: 'El negocio creció más allá del textil', body: 'Estampado por metro + confección completa + merch B2B (kits onboarding, regalo corporativo, uniformes) + cubrealarmas + activaciones + economía circular. "Textil" cubre solo el 30-40% de lo que se vende hoy.' },
-      { num: '03', title: 'Cadencia + memorabilidad', body: '"La Estampa" tiene mejor cadencia oral, cabe mejor en un hashtag, en un IG handle, en una conversación de Whatsapp. Tres sílabas vs cinco. Es la diferencia entre "Nike" y "Nike Athletic".' },
+      { num: '03', title: 'Frecuencia + memorabilidad', body: '"La Estampa" tiene mejor frecuencia oral, cabe mejor en un hashtag, en un IG handle, en una conversación de Whatsapp. Tres sílabas vs cinco. Es la diferencia entre "Nike" y "Nike Athletic".' },
       { num: '04', title: 'Permite sub-marcas claras', body: 'La Estampa · Pro (servicios) / La Estampa · Merch (B2B corporativo) / La Estampa · Eco (línea circular). Imposible escalar igual de elegante con "La Estampa Textil · Pro" (suena redundante).' },
       { num: '05', title: 'Equity de SEO se mantiene', body: 'Las búsquedas "la estampa textil chile" siguen funcionando porque "la estampa" está incluido y Google match parcial. Migramos URL principal pero mantenemos 301 redirect desde laestampatextil.cl. Cero pérdida de tráfico orgánico.' }
     ],
     transition: [
-      { phase: 'M1', name: 'Co-existencia',  detail: 'Logo nuevo aprobado · firmas de email duales ("La Estampa · ex-La Estampa Textil") · stories explicando el cambio.' },
-      { phase: 'M2', name: 'Rebrand RRSS',   detail: 'IG/LinkedIn cambia handle a @laestampa · bio actualizada · pinned post anunciando el cambio + por qué.' },
-      { phase: 'M3', name: 'Web nueva',      detail: 'Dominio principal pasa a laestampa.cl (o subdominio) · laestampatextil.cl mantiene 301 redirect permanente.' },
-      { phase: 'M4', name: 'Sub-marcas',     detail: 'Aparecen formalmente La Estampa · Pro / Merch / Eco con su sistema visual derivado.' },
+      { phase: 'Semana 1-2', name: 'Co-existencia',  detail: 'Logo nuevo aprobado · firmas de email duales ("La Estampa · ex-La Estampa Textil") · stories explicando el cambio.' },
+      { phase: 'Semana 3-5', name: 'Rebrand RRSS',   detail: 'IG/LinkedIn cambia handle a @laestampa · bio actualizada · pinned post anunciando el cambio + por qué.' },
+      { phase: 'Semana 6-8', name: 'Web nueva',      detail: 'Dominio principal pasa a laestampa.cl (o subdominio) · laestampatextil.cl mantiene 301 redirect permanente.' },
+      { phase: 'Semana 9-12',name: 'Sub-marcas',     detail: 'Aparecen formalmente La Estampa · Pro / Merch / Eco con su sistema visual derivado.' },
       { phase: 'M6', name: 'Full transition',detail: 'Materiales físicos (etiquetas, uniformes, packaging) ya migrados al nuevo wordmark. Cierre del rebrand.' }
     ]
   },
@@ -218,7 +218,7 @@ window.LET_TOKENS = {
       hito: {
         tag: 'HITO 2026',
         title: 'Esta semana <span class="hi">dejamos de usar Adobe + Figma</span>',
-        body: 'El equipo migró 100% de los flujos de diseño y producción audiovisual al nuevo stack IA-nativo: <b>Higgsfield</b> (video), <b>CapCut</b> (edición), <b>Gamma</b> (decks/landings) y <b>Claude/Gemini</b> (copy + design assistance). Resultado: tiempos de producción <em>4-8× más rápidos</em>, costo de licencias <em>−85%</em>, calidad output <em>igual o superior</em> medida en aprobación cliente. <b>Esta es la ventaja operativa que habilita el servicio a La Estampa con cadencia mensual sin disparar costo.</b>'
+        body: 'El equipo migró 100% de los flujos de diseño y producción audiovisual al nuevo stack IA-nativo: <b>Higgsfield</b> (video), <b>CapCut</b> (edición), <b>Gamma</b> (decks/landings) y <b>Claude/Gemini</b> (copy + design assistance). Resultado: tiempos de producción <em>4-8× más rápidos</em>, costo de licencias <em>−85%</em>, calidad output <em>igual o superior</em> medida en aprobación cliente. <b>Esta es la ventaja operativa que habilita el servicio a La Estampa con frecuencia mensual sin disparar costo.</b>'
       },
       categories: [
         {
@@ -277,7 +277,8 @@ window.LET_TOKENS = {
     { name: 'Coté Conde Estampados',    type: 'directo',   bucket: 'Estampado CL',  focus: 'Boutique creativo · IG-first',                          web: 7, gap: 'Identidad fuerte en IG · sin web de conversión · escala limitada.' },
 
     /* DIRECTO CHILE · MERCH B2B PREMIUM */
-    { name: 'Nova Promo (Nova Group)',  type: 'b2bcl',     bucket: 'Merch B2B CL',  focus: 'Importación + representación premium · corporate gigante', web: 7, gap: 'Trading internacional fuerte (Hugo Boss, Brookstone) · catálogo de importación · sin producción textil local · sin oficio circular.' },
+    { name: 'ALO Print (ALO Group)',    type: 'b2bcl',     bucket: 'Merch B2B CL',  focus: 'Imprenta + merchandising corporativo · hermana de ALO Rental', web: 6, gap: 'Apalancada en la base industrial ALO Group (rental + retail) · oficio impresión sí · oficio textil + ESG circular no.' },
+    { name: 'Nova Promo (Nova Group)',  type: 'b2bcl',     bucket: 'Merch B2B CL',  focus: 'Importación + representación premium · brokerage corporate',  web: 7, gap: 'Trading internacional fuerte (Hugo Boss, Brookstone) · catálogo de importación · sin producción textil local · sin oficio circular ni narrativa editorial.' },
     { name: 'Genteamericana Chile',     type: 'b2bcl',     bucket: 'Merch B2B CL',  focus: 'Corporate merchandising clásico · uniformes + regalo',    web: 5, gap: 'Portafolio amplio pero comunicación 2018 · web tipo PDF · sin sustentabilidad ni curaduría editorial.' },
     { name: 'Promobrands Chile',        type: 'b2bcl',     bucket: 'Merch B2B CL',  focus: 'Agencia merch + producción · cuentas corporate',          web: 6, gap: 'Brokerage de Yiwu + producción local mixta · sin diferencial de oficio textil propio.' },
     { name: 'Branding Chile',           type: 'b2bcl',     bucket: 'Merch B2B CL',  focus: 'POS + visual merchandising + uniforme corporativo',       web: 6, gap: 'Fuerte en POS / retail · oficio textil limitado · sin propuesta sustentable.' },
@@ -298,9 +299,9 @@ window.LET_TOKENS = {
   insights: [
     {
       kicker: 'INSIGHT 01 · OFICIO',
-      title: 'El comprador B2B no busca "estampado más barato" — busca alguien a quien le crea el oficio.',
-      body: 'Gerentes de marca, productoras y agencias compran por confianza. El precio se compara después, no antes. El que ofrece "rápido y barato" entra al spreadsheet de proveedores reemplazables. El que muestra oficio entra al rol de partner.',
-      use: 'Toda la web debe gritar oficio: plotters Epson, sublimación vs DTF explicado, gestión de color, time-to-bodega. La voz de Priscila como directora creativa, no como vendedora.'
+      title: 'El comprador B2B compra confianza · no precio. El que muestra oficio se gana el partner. El que vende "rápido y barato" se gana la cotización.',
+      body: 'Una gerenta de marca, un productor o una agencia eligen proveedor por una razón sola: confían que el resultado va a salir como prometiste. Cuando entras compitiendo por precio bajo, te miden contra todos los demás y te reemplazan cuando hay uno más barato. Cuando entras mostrando oficio real — qué máquinas usas, cómo gestionas color, qué pasa si la talla sale mal — pasas a ser el partner que no se cambia.',
+      use: 'La web tiene que demostrar oficio en cada scroll: plotters Epson visibles, diferencia técnica entre sublimación y DTF, gestión de color paso a paso, tiempos reales de entrega. Priscila aparece como directora creativa explicando cómo se hace · no como vendedora cerrando.'
     },
     {
       kicker: 'INSIGHT 02 · DEADLINE',
@@ -361,7 +362,7 @@ window.LET_TOKENS = {
       },
       {
         num: '03', name: 'Línea Eco · circular', weight: 18, kicker: 'PROPÓSITO',
-        desc: 'Mermas a camas y sacos · textiles ecológicos · fundaciones aliadas · kilos recuperados al mes. Pillar permanente con cadencia propia. Es el activo ESG que cierra cotizaciones de marcas grandes.',
+        desc: 'Mermas a camas y sacos · textiles ecológicos · fundaciones aliadas · kilos recuperados al mes. Pillar permanente con frecuencia propia. Es el activo ESG que cierra cotizaciones de marcas grandes.',
         formats: ['Mini doc 2-3 min', 'Carrusel impacto', 'Stories proceso taller', 'Newsletter eco'],
         cadence: '2 al mes'
       },
@@ -498,9 +499,9 @@ window.LET_TOKENS = {
     structure: [
       {
         num: 'L1', name: 'Estampado · serigrafía', focus: 'B2B + B2C operativo',
-        desc: 'Bottom-of-funnel · intención de compra alta. Foco en serigrafía, sublimación, DTF, "estampado de polos", "estampado uniforme". Aterriza en landing dedicada · serigrafía-estampado.',
+        desc: 'Bottom-of-funnel · intención de compra alta. Foco en serigrafía, sublimación, DTF, "estampado de poleras", "estampado uniforme". Aterriza en landing dedicada · serigrafía-estampado.',
         budgetShare: '38%',
-        keywords: ['estampado de polos', 'serigrafía Chile', 'DTF Chile', 'sublimación textil', 'estampar uniforme empresa'],
+        keywords: ['estampado de poleras', 'serigrafía Chile', 'DTF Chile', 'sublimación textil', 'estampar uniforme empresa'],
         landing: 'Landing Estampado + Serigrafía'
       },
       {
@@ -512,9 +513,9 @@ window.LET_TOKENS = {
       },
       {
         num: 'L3', name: 'Activación · eventos', focus: 'Agencias + productoras + marcas',
-        desc: 'Estacional con peaks · noviembre-marzo (festivales/eventos) y agosto-septiembre (fiestas patrias). Foco en "polos para activación", "estampado urgente", "producción evento".',
+        desc: 'Estacional con peaks · noviembre-marzo (festivales/eventos) y agosto-septiembre (fiestas patrias). Foco en "poleras para activación", "estampado urgente", "producción evento".',
         budgetShare: '18%',
-        keywords: ['polos activación marca', 'estampado urgente', 'producción evento textil', 'merchandising festival'],
+        keywords: ['poleras activación marca', 'estampado urgente', 'producción evento textil', 'merchandising festival'],
         landing: 'Landing Estampado · módulo Eventos'
       },
       {
@@ -561,7 +562,7 @@ window.LET_TOKENS = {
       }
     ],
     creativeMatrix: [
-      { ang: 'OFICIO',       hook: '"Así se imprime un polo que aguanta 50 lavados"',          format: 'Reel taller · plotter Epson en acción',          cta: 'Cotizar mi pedido' },
+      { ang: 'OFICIO',       hook: '"Así se imprime un polera que aguanta 50 lavados"',          format: 'Reel taller · plotter Epson en acción',          cta: 'Cotizar mi pedido' },
       { ang: 'DEADLINE',     hook: '"Lunes el brief, viernes en tu bodega"',                    format: 'Carrusel proceso 5 slides',                       cta: 'Pedir cotización express' },
       { ang: 'TINI',         hook: '"Le hicimos la ropa a 31 Minutos para el desk de TINI"',    format: 'Reel BTS · 30s · con permiso',                    cta: 'Ver casos' },
       { ang: 'ECO',          hook: '"Tus mermas se convierten en una cama para un perro"',      format: 'Mini doc 90s · taller + fundación',               cta: 'Conocer Línea Eco' },
@@ -603,7 +604,7 @@ window.LET_TOKENS = {
     target: 'B2B operativo · agencias · productoras · jefes de marketing comprando 50-1.000 unidades',
     accent: '#FF5A1F',
     sections: [
-      { num: '01', label: 'Hero · "Tinta firme en tu prenda"', detail: 'Video taller 8s · headline display · CTA "Cotizar polos" · prueba "70+ cierres/mes"' },
+      { num: '01', label: 'Hero · "Tinta firme en tu prenda"', detail: 'Video taller 8s · headline display · CTA "Cotizar poleras" · prueba "70+ cierres/mes"' },
       { num: '02', label: 'Servicios técnicos', detail: 'Sublimación · DTF · Serigrafía · Bordado · cada uno con foto real, durabilidad lavados, mejor uso' },
       { num: '03', label: 'Por qué La Estampa', detail: '4 pilares: plotters Epson certificados, deadline real, gestión de color, Línea Eco' },
       { num: '04', label: 'Cómo funciona', detail: '5 pasos · brief → mockup → aprobación → producción → entrega · timeline visible' },
@@ -720,7 +721,7 @@ window.LET_TOKENS = {
       },
       sections: [
         { id: 'oficio',     name: 'Oficio · capacidades',  detail: 'DTF · sublimación · serigrafía · confección. Cada técnica con su mejor uso, durabilidad de lavado y materialidad.', image: 'assets/img/taller-mesa.png' },
-        { id: 'producto',   name: 'Pieza editorial',       detail: 'Foto editorial de prendas terminadas con luz natural · tipo lookbook. La prenda es protagonista, no la oferta.', image: 'assets/img/taller-polo.png' },
+        { id: 'producto',   name: 'Pieza editorial',       detail: 'Foto editorial de prendas terminadas con luz natural · tipo lookbook. La prenda es protagonista, no la oferta.', image: 'assets/img/taller-polera.png' },
         { id: 'casos',      name: 'Casos · 4 años',        detail: '31 Minutos + agencia activación + inmobiliaria + retail · prueba social con permission management.' },
         { id: 'proceso',    name: 'Cómo trabajamos',       detail: 'Brief → cotización <24h → mockup → producción → entrega · timeline visible con SLA por etapa.' },
         { id: 'priscila',   name: 'Voz · Priscila Sarmiento', detail: 'Editorial de la fundadora · entrevista corta · 4 años de oficio narrados en primera persona.' },
@@ -766,10 +767,10 @@ window.LET_TOKENS = {
         cta: 'Cotizar mi evento →',
         cta2: 'Ver casos pop',
         image: 'assets/img/pop-hero.png',
-        imageAlt: 'Polos vibrantes en festival production · backstage activación',
+        imageAlt: 'Poleras vibrantes en festival production · backstage activación',
         stats: [
           { v: '31 Min.', k: 'TINI DESK · 2026' },
-          { v: '+200', k: 'POLOS/ACTIVACIÓN' },
+          { v: '+200', k: 'POLERAS/ACTIVACIÓN' },
           { v: '5 días', k: 'BRIEF → BODEGA' },
           { v: 'CL', k: 'EVENTOS NACIONALES' }
         ]
@@ -777,7 +778,7 @@ window.LET_TOKENS = {
       sections: [
         { id: 'manifiesto',  name: 'Manifiesto pop',         detail: 'Editorial de marca: por qué La Estampa es la elección cuando una campaña tiene que romper la cultura. Headline gigante + foto pop.' },
         { id: 'casos-pop',   name: 'Casos · cultura pop',    detail: 'TINI / 31 Minutos · festival X · activación Y. Caso con foto vibrante + ticket cumplido + métrica de momento social.', image: 'assets/img/pop-confetti.png' },
-        { id: 'productos',   name: 'Catálogo pop',           detail: 'Polos staff · bandanas · mantas · banderas · tótems. Cada producto con foto saturada + min/máx unidades + lead time.', image: 'assets/img/pop-polo.png' },
+        { id: 'productos',   name: 'Catálogo pop',           detail: 'Poleras staff · bandanas · mantas · banderas · tótems. Cada producto con foto saturada + min/máx unidades + lead time.', image: 'assets/img/pop-polera.png' },
         { id: 'marquee',     name: 'Marquee marcas',         detail: 'Banda infinita con logos de marcas vestidas (con permiso). Movimiento continuo, hover acelera la velocidad.' },
         { id: 'crew',        name: 'El crew La Estampa',     detail: 'Foto del equipo en faena, retrato grupal pop, energía colectiva. Humaniza la operación.' },
         { id: 'agenda',      name: 'Próximos eventos',       detail: 'Lista de festivales / activaciones donde la marca estará vistiendo o presente. Calendario rotativo.' },
@@ -883,13 +884,13 @@ window.LET_TOKENS = {
         { img: 'assets/img/rrss-taller-feed.png',    caption: 'Macro de tela cruda con etiqueta',     kicker: 'MATERIAL · 01' },
         { img: 'assets/img/rrss-taller-feed-2.png',  caption: 'Manos planchando · proceso',           kicker: 'OFICIO · 02' },
         { img: 'assets/img/rrss-taller-feed-3.png',  caption: 'Flatlay herramientas de taller',       kicker: 'HERRAMIENTAS · 03' },
-        { img: 'assets/img/taller-polo.png',         caption: 'Producto final · polo blanco DTF',     kicker: 'PRODUCTO · 04' },
+        { img: 'assets/img/taller-polera.png',         caption: 'Producto final · polera blanco DTF',     kicker: 'PRODUCTO · 04' },
         { img: 'assets/img/taller-mesa.png',         caption: 'Mesa de corte · luz natural',           kicker: 'TALLER · 05' },
         { img: 'assets/img/taller-hero.png',         caption: 'Plotter Epson en plena impresión',     kicker: 'TECH · 06' }
       ],
       stories: [
         { img: 'assets/img/rrss-taller-story.png', kicker: 'BTS · COSTURA',     title: 'Detrás del taller', cta: 'Cotizar ahora →' },
-        { img: 'assets/img/taller-polo.png',       kicker: 'PRODUCTO · POLO',   title: 'Nueva tirada de polos básicos LE.PRO 01', cta: 'Ver materialidad →' }
+        { img: 'assets/img/taller-polera.png',       kicker: 'PRODUCTO · POLERA',   title: 'Nueva tirada de poleras básicos LE.PRO 01', cta: 'Ver materialidad →' }
       ],
       carousel: {
         title: 'Carrusel educativo · 6 slides',
@@ -898,14 +899,14 @@ window.LET_TOKENS = {
           { n: '02/06', kind: 'DATO',  title: 'Sublimación = poliéster',         body: 'Tinta integrada a la fibra. Cero relieve. Aguanta 60+ lavados.' },
           { n: '03/06', kind: 'DATO',  title: 'DTF = casi cualquier tela',       body: 'Film + termoadhesivo. Color sin límite. Algodón, lycra, polar.' },
           { n: '04/06', kind: 'COMP',  title: 'Cuándo elegir cada uno',          body: 'Uniforme deportivo → sublimación. Activación corta → DTF.' },
-          { n: '05/06', kind: 'CASO',  title: 'Caso real',                       body: '200 polos staff · DTF para tirada rápida con marca a 4 tintas.' },
+          { n: '05/06', kind: 'CASO',  title: 'Caso real',                       body: '200 poleras staff · DTF para tirada rápida con marca a 4 tintas.' },
           { n: '06/06', kind: 'CTA',   title: 'Cotiza tu pedido',                body: 'Te respondemos en menos de 24h con mockup incluido.' }
         ]
       },
       samplePost: {
         kicker: '— OFICIO · 4 AÑOS DE TINTA',
-        title: 'No vendemos polos. Vendemos firmeza.',
-        body: 'Cuando un cliente nos pide 200 polos para una activación que sale en TV, no pensamos en el polo. Pensamos en el lavado número 50, en el sol de las 3 de la tarde, en la cámara HD que va a registrar cada hilo. La tinta firme no es un slogan: es el cálculo de gramaje + base textil + DTF correcto para que en el lavado 50, tu marca todavía exista. Y eso, que parece obvio, es la diferencia entre un proveedor y un partner.\n\n— Priscila',
+        title: 'No vendemos poleras. Vendemos firmeza.',
+        body: 'Cuando un cliente nos pide 200 poleras para una activación que sale en TV, no pensamos en el polera. Pensamos en el lavado número 50, en el sol de las 3 de la tarde, en la cámara HD que va a registrar cada hilo. La tinta firme no es un slogan: es el cálculo de gramaje + base textil + DTF correcto para que en el lavado 50, tu marca todavía exista. Y eso, que parece obvio, es la diferencia entre un proveedor y un partner.\n\n— Priscila',
         metrics: [{ k: 'Lavados resistidos', v: '50+' }, { k: 'Cierres/mes', v: '70-80' }, { k: 'Tiempo cotización', v: '<24h' }],
         tags: ['#estampadochile', '#oficiotextil', '#dtfprofesional']
       },
@@ -922,10 +923,10 @@ window.LET_TOKENS = {
         { id: 'fb',  name: 'Facebook',  pct: 30, focus: 'Audiencia masiva · grupos de productoras + agencias + dueños de marca · video crosspost · eventos en agenda · marketplace para ofertas express activación.' }
       ],
       formats: [
-        { name: 'Reel IG trend 15-30s',     use: 'Sumarse a trend del momento con polo + chiste',     cadence: '10/mes' },
+        { name: 'Reel IG trend 15-30s',     use: 'Sumarse a trend del momento con polera + chiste',     cadence: '10/mes' },
         { name: 'Carrusel meme IG',          use: 'Memes locales con producto · alta viralidad',       cadence: '4/mes' },
         { name: 'Stories reactivas IG',      use: 'En vivo desde activación + festival',                cadence: 'evento' },
-        { name: 'Co-creación con talents',   use: 'Influencer / micro-celeb pop chileno usa polo',     cadence: '2/mes' },
+        { name: 'Co-creación con talents',   use: 'Influencer / micro-celeb pop chileno usa polera',     cadence: '2/mes' },
         { name: 'Video FB crosspost',        use: 'Mismo reel reformateado · alcance masivo orgánico', cadence: '4/mes' },
         { name: 'Evento FB · próxima act.',  use: 'Página de evento + agenda + check-in masivo',       cadence: '2/mes' }
       ],
@@ -933,11 +934,11 @@ window.LET_TOKENS = {
       storyImage: 'assets/img/rrss-pop-story.png',
       feedTiles: [
         { img: 'assets/img/rrss-pop-feed.png',    caption: 'Pop flatlay maximalista',          kicker: 'POP · 01' },
-        { img: 'assets/img/rrss-pop-feed-2.png',  caption: 'Polos vibrantes apilados',          kicker: 'PRODUCTO · 02' },
-        { img: 'assets/img/rrss-pop-feed-3.png',  caption: 'Polo amarillo · estudio pop',       kicker: 'CAMPAÑA · 03' },
-        { img: 'assets/img/pop-polo.png',         caption: 'Pop polo flatlay + party props',    kicker: 'EDITORIAL · 04' },
+        { img: 'assets/img/rrss-pop-feed-2.png',  caption: 'Poleras vibrantes apilados',          kicker: 'PRODUCTO · 02' },
+        { img: 'assets/img/rrss-pop-feed-3.png',  caption: 'Polera amarillo · estudio pop',       kicker: 'CAMPAÑA · 03' },
+        { img: 'assets/img/pop-polera.png',         caption: 'Pop polera flatlay + party props',    kicker: 'EDITORIAL · 04' },
         { img: 'assets/img/pop-confetti.png',     caption: 'Confetti explosion · activación',   kicker: 'BTS · 05' },
-        { img: 'assets/img/pop-hero.png',         caption: 'Polos colgando · backstage',         kicker: 'EVENTO · 06' }
+        { img: 'assets/img/pop-hero.png',         caption: 'Poleras colgando · backstage',         kicker: 'EVENTO · 06' }
       ],
       stories: [
         { img: 'assets/img/rrss-pop-story.png', kicker: 'EN VIVO · FESTIVAL',  title: 'Estamos en backstage', cta: 'Ver activación →' },
@@ -947,7 +948,7 @@ window.LET_TOKENS = {
         title: 'Carrusel meme · 6 slides',
         slides: [
           { n: '01/06', kind: 'HOOK',  title: 'Cuando tu marca tiene que pegar',       body: 'Y el comercial sale el domingo. Y el lunes es feriado.' },
-          { n: '02/06', kind: 'DATO',  title: 'Lunes: brief',                          body: 'Te llama tu jefe. "Necesito 200 polos para el viernes."' },
+          { n: '02/06', kind: 'DATO',  title: 'Lunes: brief',                          body: 'Te llama tu jefe. "Necesito 200 poleras para el viernes."' },
           { n: '03/06', kind: 'DATO',  title: 'Martes: mockup',                        body: 'Te respondemos con mockup, color y tela. Apruebas.' },
           { n: '04/06', kind: 'DATO',  title: 'Miércoles-jueves: producción',          body: 'DTF a tope. Empaquetado. Etiquetado por talla.' },
           { n: '05/06', kind: 'CASO',  title: 'Viernes: bodega',                        body: 'Llega antes del cierre de bodega de tu cliente.' },
@@ -956,9 +957,9 @@ window.LET_TOKENS = {
       },
       samplePost: {
         kicker: '— BTS · ACTIVACIÓN FESTIVAL X',
-        title: 'Cuando tu polo sale en TV nacional sin permiso.',
-        body: 'POV: lunes te mandamos 200 polos para tu staff de festival. Viernes están repartidos. Domingo salen en TV nacional. Lunes te están pidiendo más. Esa es La Estampa. Si tu marca tiene que estar EN la fiesta y no en el folleto, escribinos.\n\n#popchileno #tini #marca',
-        metrics: [{ k: 'Tiempo brief → bodega', v: '5 días' }, { k: 'Polos producidos', v: '200' }, { k: 'Repetición cliente', v: '92%' }],
+        title: 'Cuando tu polera sale en TV nacional sin permiso.',
+        body: 'POV: lunes te mandamos 200 poleras para tu staff de festival. Viernes están repartidos. Domingo salen en TV nacional. Lunes te están pidiendo más. Esa es La Estampa. Si tu marca tiene que estar EN la fiesta y no en el folleto, escribinos.\n\n#popchileno #tini #marca',
+        metrics: [{ k: 'Tiempo brief → bodega', v: '5 días' }, { k: 'Poleras producidos', v: '200' }, { k: 'Repetición cliente', v: '92%' }],
         tags: ['#popchileno', '#festivales', '#staffpolo']
       }
     },
@@ -1016,23 +1017,23 @@ window.LET_TOKENS = {
     }
   ],
 
-  /* ============= ROADMAP 12 MESES ============= */
+  /* ============= ROADMAP · primeras 12 semanas por fase ============= */
   roadmap: [
-    { mo: 'M1',     name: 'Fundación', focus: 'Sistema visual + tracking + Hapee + caso TINI',
+    { mo: 'Semana 1-2',  name: 'Fundación', focus: 'Sistema visual + tracking + Hapee + caso TINI',
       milestones: ['Identidad visual + manual de marca v1', 'Hapee CRM operativo con flujo IA básico', 'Pixel Meta + GA4 + CAPI funcionando', 'Caso TINI con permission + asset PDF'] },
-    { mo: 'M2',     name: 'Web madre', focus: 'Diseño + dev de laestampatextil.cl v2.0',
+    { mo: 'Semana 3-5',  name: 'Web madre', focus: 'Diseño + dev de laestampatextil.cl v2.0',
       milestones: ['Wireframe + design system', 'Dev Next.js/Astro con CMS mínimo', 'Migración SEO sin pérdida de rankings actuales', 'QA + lanzamiento staging'] },
-    { mo: 'M3',     name: 'Landings 1+2', focus: 'Landing Estampado + Landing Merch B2B en aire',
+    { mo: 'Semana 6-8',  name: 'Landings 1+2', focus: 'Landing Estampado + Landing Merch B2B en aire',
       milestones: ['Landing Estampado + Serigrafía live', 'Landing Merch B2B live + PDF capacidades', 'Campañas Google redireccionadas a landings', 'Conversiones por landing tracked'] },
-    { mo: 'M4-M5',  name: 'Always-on Google', focus: 'Estructura 4 líneas + quality score 8+',
+    { mo: 'Semana 9-12', name: 'Always-on Google', focus: 'Estructura 4 líneas + quality score 8+',
       milestones: ['4 líneas always-on con LP dedicadas', 'Quality score promedio 8+', 'CPL reducido 30-40%', 'Reporte semanal automatizado'] },
-    { mo: 'M5-M6',  name: 'Meta · testeo', focus: 'Sistema F1+F2 · descubrir ganadores',
+    { mo: 'Semana 13-16',name: 'Meta · testeo', focus: 'Sistema F1+F2 · descubrir ganadores',
       milestones: ['24 creativos en testeo F1', '2-3 ganadores por servicio escalados a F2', 'Lookalikes 1-3% performando', 'ROAS >3× promedio'] },
-    { mo: 'M6-M7',  name: 'Línea Eco editorial', focus: 'Sistema de reporte público + co-branding',
+    { mo: 'Semana 17-20',name: 'Línea Eco editorial', focus: 'Sistema de reporte público + co-branding',
       milestones: ['Métricas trimestrales publicadas', 'Editorial mensual con fundación', 'Anexo ESG en cotización B2B activo', 'Primer co-branding cerrado'] },
-    { mo: 'M7-M9',  name: 'Retención + LTV', focus: 'Loop · email + Meta retención + LTV',
-      milestones: ['Email mensual segmentado', 'Meta dinámico con catálogo', 'LTV promedio +20% vs M1', 'Tasa recurrencia >30%'] },
-    { mo: 'M9-M12', name: 'Escala + voz', focus: 'Voz Priscila + prensa + cierres premium',
+    { mo: 'Semana 21-28',name: 'Retención + LTV', focus: 'Loop · email + Meta retención + LTV',
+      milestones: ['Email mensual segmentado', 'Meta dinámico con catálogo', 'LTV promedio +20% vs arranque', 'Tasa recurrencia >30%'] },
+    { mo: 'Semana 29-44',name: 'Escala + voz', focus: 'Voz Priscila + prensa + cierres premium',
       milestones: ['LinkedIn de Priscila como activo editorial', 'Primera salida en prensa industria', '5+ casos B2B cerrados ticket >$1M', 'KPI cierre mensual >120/mes'] }
   ],
 

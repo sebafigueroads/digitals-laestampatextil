@@ -6926,10 +6926,8 @@ function Sidebar({ section, setSection, onClickItem }) {
       { id: 'land-merch',  num: 'L.2',  label: 'Landing · Merch B2B',         accent: '#C9F25C' },
       { id: 'land-widget', num: 'L.3',  label: 'Landing · Merch B2B + Widget ★', accent: '#F2C12B' }
     ] },
-    { name: 'Propósito + Roadmap', items: [
-      { id: 'eco',        num: '04.0', label: 'Línea Eco · circular' },
-      { id: 'roadmap',    num: '04.1', label: 'Roadmap 12 meses' },
-      { id: 'invest',     num: '04.2', label: 'Inversión · entregables' }
+    { name: 'Roadmap', items: [
+      { id: 'roadmap',    num: '04.0', label: 'Roadmap por semana' }
     ] },
     { name: 'Showcase visual', items: [
       { id: 'showcase', num: 'S.0', label: 'Showcase · gráficas + videos' }
@@ -7013,7 +7011,7 @@ function SummarySection() {
           <p>Benchmark con 10 players (CL + globales), insights B2B, estrategia comunicacional con 6 pilares de contenido y estrategia gráfica con paleta + tipografía propias. Es la base que define todo lo que viene después.</p>
           <ul>
             <li>Matriz competitiva con score y gaps reales</li>
-            <li><b>6 pilares</b> de contenido con cadencia mensual</li>
+            <li><b>6 pilares</b> de contenido con frecuencia mensual</li>
             <li>Manual de marca + sub-marcas Pro / Merch / Eco</li>
           </ul>
         </div>
@@ -7375,7 +7373,7 @@ function CommSection() {
   const matrix = [
     {
       audience: 'Camila · productora', stageBuilder: 'AUTORIDAD',
-      tofu: 'Cumplimos deadlines imposibles · 200 polos en 5 días.',
+      tofu: 'Cumplimos deadlines imposibles · 200 poleras en 5 días.',
       mofu: 'Caso TINI / 31 Min · cómo se cumplió un brief de 48h.',
       bofu: 'Cupo express para activaciones de tu fecha + NDA disponible.'
     },
@@ -7466,72 +7464,6 @@ function CommSection() {
         ))}
       </div>
 
-      {/* MESSAGE MATRIX */}
-      <div style={{ marginTop: '2.5rem', marginBottom: '.6rem' }}>
-        <span className="tag-pill">— MESSAGE MATRIX · AUDIENCIA × ETAPA</span>
-      </div>
-      <h3 style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 700, fontSize: '1.5rem', color: 'var(--ink)', textTransform: 'uppercase', letterSpacing: '-0.015em', marginBottom: '.5rem' }}>
-        Qué le decimos a quién · <span style={{ fontFamily: 'Instrument Serif', fontStyle: 'italic', color: 'var(--accent)', fontWeight: 400, textTransform: 'none' }}>cuándo.</span>
-      </h3>
-      <p style={{ fontSize: '0.92rem', lineHeight: 1.65, color: 'var(--ink-soft)', maxWidth: 720, marginBottom: '1rem' }}>Cuatro audiencias × tres etapas (TOFU · MOFU · BOFU) = doce mensajes. Cada uno con un building block emocional (autoridad · confianza · cultura pop · ESG verificable).</p>
-      <div className="message-matrix">
-        <table>
-          <thead>
-            <tr><th>Audiencia</th><th>TOFU · descubrir</th><th>MOFU · evaluar</th><th>BOFU · cerrar</th></tr>
-          </thead>
-          <tbody>
-            {matrix.map((r, i) => (
-              <tr key={i}>
-                <td>{r.audience}<small>builder · {r.stageBuilder}</small></td>
-                <td>{r.tofu}</td>
-                <td>{r.mofu}</td>
-                <td>{r.bofu}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      {/* EDITORIAL CALENDAR sampler */}
-      <div style={{ marginTop: '2.5rem', marginBottom: '.6rem' }}>
-        <span className="tag-pill">— CALENDARIO EDITORIAL · MES TIPO (4 SEMANAS)</span>
-      </div>
-      <h3 style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 700, fontSize: '1.5rem', color: 'var(--ink)', textTransform: 'uppercase', letterSpacing: '-0.015em', marginBottom: '.5rem' }}>
-        Cómo se vería <span style={{ fontFamily: 'Instrument Serif', fontStyle: 'italic', color: 'var(--accent)', fontWeight: 400, textTransform: 'none' }}>un mes real</span> de parrilla.
-      </h3>
-      <p style={{ fontSize: '0.92rem', lineHeight: 1.65, color: 'var(--ink-soft)', maxWidth: 720, marginBottom: '1rem' }}>Cadencia mensual: ~12 piezas distribuidas entre 6 pilares. Reel BTS · carrusel técnico · post Priscila · caso · eco · pop. Esta es la planilla que el equipo opera.</p>
-      <div className="cal-sampler">
-        <div className="cal-head">Pilar</div>
-        <div className="cal-head">S1 · 1-7</div>
-        <div className="cal-head">S2 · 8-14</div>
-        <div className="cal-head">S3 · 15-21</div>
-        <div className="cal-head">S4 · 22-30</div>
-        {/* row 1 */}
-        <div className="cal-week">CASOS</div>
-        <div className="cal-cell"><span className="pillar-tag p1">CASOS · AUTORIDAD</span><b>Reel BTS plotter · LI long-form</b></div>
-        <div className="cal-cell"><span className="pillar-tag p1">CASOS</span><b>Carrusel caso TINI · IG</b></div>
-        <div className="cal-cell"><span className="pillar-tag p1">CASOS</span><b>Testimonio Camila · LI</b></div>
-        <div className="cal-cell"><span className="pillar-tag p1">CASOS</span><b>Reel agencia activación · IG</b></div>
-        {/* row 2 */}
-        <div className="cal-week">OFICIO</div>
-        <div className="cal-cell"><span className="pillar-tag p2">OFICIO · DIFERENCIACIÓN</span><b>Reel 60s DTF vs sub. · IG</b></div>
-        <div className="cal-cell"><span className="pillar-tag p2">OFICIO</span><b>Carrusel "ficha técnica polo" · LI</b></div>
-        <div className="cal-cell"><span className="pillar-tag p2">OFICIO</span><b>Quote card Priscila · IG</b></div>
-        <div className="cal-cell"><span className="pillar-tag p2">OFICIO</span><b>Blog SEO "gestión de color"</b></div>
-        {/* row 3 */}
-        <div className="cal-week">ECO</div>
-        <div className="cal-cell"><span className="pillar-tag p3">ECO · PROPÓSITO</span><b>Stories taller + fundación</b></div>
-        <div className="cal-cell"><span className="pillar-tag p3">ECO</span><b>—</b></div>
-        <div className="cal-cell"><span className="pillar-tag p3">ECO</span><b>Mini-doc 90s · proceso · YT/IG</b></div>
-        <div className="cal-cell"><span className="pillar-tag p3">ECO</span><b>Carrusel reporte mensual · LI</b></div>
-        {/* row 4 */}
-        <div className="cal-week">POP</div>
-        <div className="cal-cell"><span className="pillar-tag p4">POP · BRAND LIFT</span><b>—</b></div>
-        <div className="cal-cell"><span className="pillar-tag p4">POP</span><b>Reactivo TikTok trend</b></div>
-        <div className="cal-cell"><span className="pillar-tag p4">POP</span><b>Reel BTS festival · IG</b></div>
-        <div className="cal-cell"><span className="pillar-tag p4">POP</span><b>Sticker pack pop launch</b></div>
-      </div>
-
       <div className="lead-callout" style={{ marginTop: '1.6rem' }}>
         <b>Cómo se mide:</b> Cada pilar tiene su KPI primario. <span className="hl">Casos = leads B2B calificados/mes. Oficio = engagement rate técnico (saves + shares). Eco = descargas de PDF + co-cotizaciones. Pop = alcance orgánico + repeticiones. Priscila = inbound mensajes. Cultura = SOV en menciones.</span> Reporte mensual con esos 6 números más CPL global de paid.
       </div>
@@ -7546,7 +7478,7 @@ function PillarsSection() {
   return (
     <section>
       <SectionHead num="02.1" title="Pilares de <em>contenido</em>"
-        desc="6 pilares con peso editorial · cadencia mensual definida. La marca no improvisa: cada mes hay un mix balanceado entre autoridad técnica, conversión, propósito y cultura."/>
+        desc="6 pilares con peso editorial · frecuencia mensual definida. La marca no improvisa: cada mes hay un mix balanceado entre autoridad técnica, conversión, propósito y cultura."/>
       <div className="pillars-detail">
         {T.comm.pillars.map(p => (
           <div key={p.num} className="pillar-detail-card tilt">
@@ -7557,7 +7489,7 @@ function PillarsSection() {
             <h3>{p.name}</h3>
             <p>{p.desc}</p>
             <div className="formats">{p.formats.map((f, i) => <span key={i}>{f}</span>)}</div>
-            <div className="cadence">CADENCIA · {p.cadence}</div>
+            <div className="cadence">FRECUENCIA · {p.cadence}</div>
           </div>
         ))}
       </div>
@@ -7686,6 +7618,15 @@ function TiniSection() {
    ======================================================== */
 function FunnelSection() {
   const f = T.funnel;
+  /* Activación progresiva · qué se enciende cuándo · criterio agencia */
+  const activations = [
+    { stage: '01', name: 'TOFU · descubrir',          quickWin: 'Always-on Google Search core + Pixel + CAPI · día 5', mes1: ['Google Search · keywords core', 'Pixel + CAPI server-side', 'Hero web madre live'], mes2: ['Meta · ABO testeo creativos', 'LinkedIn editorial Priscila'], mes3plus: ['Google PMax + Demand Gen', 'Meta Advantage+ scaling', 'YouTube Shorts cross-post'] },
+    { stage: '02', name: 'MOFU IA · calificar',       quickWin: 'Agente Hapee responde en menos de 3 min · día 12',    mes1: ['Agente Hapee primer prompt', 'Lead scoring básico (industria + ticket)', 'Cotización express form'], mes2: ['Routing por servicio (estampado / merch / eco)', 'Triaje cliente nuevo vs recurrente', 'Anexo ESG en cotización'], mes3plus: ['Lookup automático a CRM histórico', 'Scoring fino (intent + budget + plazo)', 'Sugerencia de upsell circular'] },
+    { stage: '03', name: 'BOFU · cerrar',             quickWin: 'Cotización formal en menos de 24h · semana 2',         mes1: ['Cotizador inteligente con base templates', 'Pipeline visual en Hapee', 'SLA 24h público visible'], mes2: ['Aprobaciones online con click', 'Recordatorios automáticos cliente', 'Calendar embed para reuniones técnicas'], mes3plus: ['Renovación predictiva (alerta 60d antes)', 'Score riesgo de churn', 'Onboarding express B2B'] },
+    { stage: '04', name: 'POST · entrega + fidelizar', quickWin: 'Encuesta NPS automática al despachar · M2',           mes1: ['Tracking despacho + checklist firmado', 'NPS post-entrega'], mes2: ['Email reorder con misma config', 'Anexo ESG mensual al cliente'], mes3plus: ['Programa cliente recurrente con tier', 'Comunidad B2B (slack/whatsapp privado)', 'QBR trimestral con datos'] },
+    { stage: '05', name: 'LOOP · datos al algoritmo', quickWin: 'CAPI server-side con event_id dedupe · día 5',         mes1: ['CAPI + Google Enhanced Conversions', 'Eventos firmados desde Hapee'], mes2: ['Conversiones offline (contrato cerrado → algoritmo)', 'Audiencias lookalike B2B'], mes3plus: ['Modelo predictivo de lead → cliente', 'Bid adjustment por industria', 'Atribución multi-touch UTM-CRM'] }
+  ];
+
   return (
     <section>
       <SectionHead num="03.0" title="Embudo · <em>Hapee + IA</em>"
@@ -7705,6 +7646,60 @@ function FunnelSection() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* ACTIVACIÓN PROGRESIVA · criterio agencia · no todo de una */}
+      <div style={{ marginTop: '3rem', marginBottom: '1.2rem' }}>
+        <span className="tag-pill" style={{ background: 'rgba(242,193,43,0.10)', borderColor: 'rgba(242,193,43,0.30)', color: 'var(--accent3, #F2C12B)' }}>★ ACTIVACIÓN PROGRESIVA · CRITERIO AGENCIA</span>
+      </div>
+      <h3 style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 700, fontSize: '1.5rem', color: 'var(--ink)', textTransform: 'uppercase', letterSpacing: '-0.015em', marginBottom: '.6rem' }}>
+        Qué se activa <span style={{ fontFamily: 'Instrument Serif', fontStyle: 'italic', color: 'var(--accent)', fontWeight: 400, textTransform: 'none' }}>cuándo</span> · sin sobrecargar arranque
+      </h3>
+      <p style={{ fontSize: '.92rem', lineHeight: 1.65, color: 'var(--ink-soft)', maxWidth: 720, marginBottom: '1.4rem' }}>
+        No se puede prender todo el sistema el día 1 · ni conviene. Cada etapa se activa por capas · primero los <b>quick wins</b> que entregan resultado visible en días, después las palancas avanzadas. Esta es la secuencia con la que opera Digitals para cuentas premium.
+      </p>
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '1.4rem' }}>
+        {activations.map((a, i) => (
+          <div key={i} className="tilt" style={{ background: 'var(--card-elev, #1a1a1a)', border: '1px solid var(--line, rgba(255,255,255,0.08))', borderRadius: 14, padding: '1.4rem 1.6rem', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '64px 1fr', gap: '1.2rem', alignItems: 'start' }}>
+              <div style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 800, fontSize: '2.4rem', color: 'var(--accent)', lineHeight: 1, letterSpacing: '-0.04em' }}>{a.stage}</div>
+              <div>
+                <h4 style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 700, fontSize: '1.2rem', color: 'var(--ink)', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '.6rem' }}>{a.name}</h4>
+
+                <div style={{ padding: '.7rem .9rem', background: 'rgba(242,193,43,0.08)', border: '1px solid rgba(242,193,43,0.35)', borderRadius: 10, marginBottom: '1rem' }}>
+                  <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.62rem', letterSpacing: '.18em', color: '#F2C12B', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.25rem' }}>★ QUICK WIN</div>
+                  <div style={{ fontSize: '.86rem', color: 'var(--ink)', lineHeight: 1.5 }}>{a.quickWin}</div>
+                </div>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '.8rem' }}>
+                  <div style={{ padding: '.7rem .8rem', background: 'rgba(255,255,255,0.03)', borderRadius: 10, borderLeft: '3px solid var(--accent)' }}>
+                    <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.58rem', letterSpacing: '.18em', color: 'var(--accent)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '.4rem' }}>Mes 1 · arranque</div>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '.25rem' }}>
+                      {a.mes1.map((it, j) => <li key={j} style={{ fontSize: '.78rem', color: 'var(--ink-soft)', lineHeight: 1.4, paddingLeft: '.7rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>·</span>{it}</li>)}
+                    </ul>
+                  </div>
+                  <div style={{ padding: '.7rem .8rem', background: 'rgba(255,255,255,0.03)', borderRadius: 10, borderLeft: '3px solid rgba(255,255,255,0.32)' }}>
+                    <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.58rem', letterSpacing: '.18em', color: 'var(--ink-soft)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '.4rem' }}>Mes 2 · scaling</div>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '.25rem' }}>
+                      {a.mes2.map((it, j) => <li key={j} style={{ fontSize: '.78rem', color: 'var(--ink-soft)', lineHeight: 1.4, paddingLeft: '.7rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: 'var(--ink-soft)' }}>·</span>{it}</li>)}
+                    </ul>
+                  </div>
+                  <div style={{ padding: '.7rem .8rem', background: 'rgba(255,255,255,0.03)', borderRadius: 10, borderLeft: '3px solid rgba(255,255,255,0.20)' }}>
+                    <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.58rem', letterSpacing: '.18em', color: 'var(--ink-soft)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '.4rem' }}>Mes 3+ · optimización fina</div>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '.25rem' }}>
+                      {a.mes3plus.map((it, j) => <li key={j} style={{ fontSize: '.78rem', color: 'var(--ink-soft)', lineHeight: 1.4, paddingLeft: '.7rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: 'var(--ink-soft)' }}>·</span>{it}</li>)}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="lead-callout" style={{ marginTop: '1.4rem' }}>
+        <b>Por qué activación progresiva:</b> arrancar el sistema completo en el día 1 dispara dos problemas reales — (1) <b>los algoritmos no tienen datos para optimizar</b> · necesitan baseline de eventos limpios primero, y (2) <b>el equipo del cliente se satura</b> con leads sin clasificar. La capa mes 1 da uptime + quick wins visibles · mes 2 escala cuando los algoritmos ya entrenaron · mes 3+ entra a optimización fina cuando hay 60-90 días de data real.
       </div>
     </section>
   );
@@ -7787,6 +7782,84 @@ function MetaSection() {
             <div className="cta-line"><b>CTA ·</b> {c.cta}</div>
           </div>
         ))}
+      </div>
+
+      {/* 3 PISOS DE INVERSIÓN META · austero / medio / ambicioso */}
+      <div style={{ marginTop: '3rem', marginBottom: '1rem' }}>
+        <span className="tag-pill" style={{ background: 'rgba(242,193,43,0.10)', borderColor: 'rgba(242,193,43,0.30)', color: '#F2C12B' }}>★ 3 PISOS DE INVERSIÓN META · ELEGÍ TU NIVEL</span>
+      </div>
+      <h3 style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 700, fontSize: '1.5rem', color: 'var(--ink)', textTransform: 'uppercase', letterSpacing: '-0.015em', marginBottom: '.5rem' }}>
+        Cuánto invertir en Meta · <span style={{ fontFamily: 'Instrument Serif', fontStyle: 'italic', color: 'var(--accent)', fontWeight: 400, textTransform: 'none' }}>según tu apetito</span>.
+      </h3>
+      <p style={{ fontSize: '.92rem', lineHeight: 1.65, color: 'var(--ink-soft)', maxWidth: 720, marginBottom: '1.4rem' }}>
+        3 escenarios reales de inversión mensual sostenida. El piso austero es el mínimo que justifica abrir Meta para B2B premium. El medio es el sweet spot donde los algoritmos aprenden rápido. El ambicioso es para escalar agresivo cuando el embudo Hapee ya valida cierres.
+      </p>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.4rem' }}>
+        {/* PISO 1 · AUSTERO */}
+        <div className="tilt" style={{ background: 'var(--card-elev, #1a1a1a)', border: '1px solid rgba(255,255,255,0.10)', borderRadius: 14, padding: '1.6rem', display: 'flex', flexDirection: 'column' }}>
+          <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.62rem', letterSpacing: '.18em', color: 'var(--ink-soft)', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.5rem' }}>Piso 01 · Austero</div>
+          <div style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 800, fontSize: '2.2rem', color: 'var(--ink)', lineHeight: 1, letterSpacing: '-0.03em', marginBottom: '.15rem' }}>$ 600 K <span style={{ fontFamily: 'Instrument Serif', fontStyle: 'italic', fontSize: '1rem', color: 'var(--ink-soft)' }}>/ mes</span></div>
+          <div style={{ fontSize: '.78rem', color: 'var(--ink-soft)', marginBottom: '1rem' }}>~$ 20 K diarios</div>
+          <div style={{ flexGrow: 1 }}>
+            <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.16em', color: 'var(--ink-soft)', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.5rem' }}>Qué se logra</div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '.45rem' }}>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>·</span> 2 campañas activas (testeo + remarketing)</li>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>·</span> 6-8 creativos en rotación / mes</li>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>·</span> 30-50 leads B2B calificados / mes</li>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>·</span> CPL objetivo: $ 12.000-18.000</li>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>·</span> Sin campaña LinkedIn paid</li>
+            </ul>
+          </div>
+          <div style={{ marginTop: '1rem', padding: '.6rem .8rem', background: 'rgba(255,255,255,0.04)', borderRadius: 8, fontSize: '.74rem', color: 'var(--ink-soft)', lineHeight: 1.5 }}>
+            <b style={{ color: 'var(--ink)' }}>Para quién:</b> validar el canal sin compromiso fuerte · ver si Meta tracciona para B2B premium antes de escalar.
+          </div>
+        </div>
+
+        {/* PISO 2 · MEDIO · RECOMENDADO */}
+        <div className="tilt" style={{ background: 'var(--card-elev, #1a1a1a)', border: '2px solid #F2C12B', borderRadius: 14, padding: '1.6rem', display: 'flex', flexDirection: 'column', position: 'relative', boxShadow: '0 16px 40px -16px rgba(242,193,43,0.35)' }}>
+          <span style={{ position: 'absolute', top: -10, right: 20, background: '#F2C12B', color: '#0d0d0d', padding: '.2rem .7rem', borderRadius: 999, fontFamily: 'Geist Mono, monospace', fontSize: '.58rem', letterSpacing: '.2em', textTransform: 'uppercase', fontWeight: 800 }}>★ RECOMENDADO</span>
+          <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.62rem', letterSpacing: '.18em', color: '#F2C12B', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.5rem' }}>Piso 02 · Medio</div>
+          <div style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 800, fontSize: '2.2rem', color: 'var(--ink)', lineHeight: 1, letterSpacing: '-0.03em', marginBottom: '.15rem' }}>$ 1,5 M <span style={{ fontFamily: 'Instrument Serif', fontStyle: 'italic', fontSize: '1rem', color: 'var(--ink-soft)' }}>/ mes</span></div>
+          <div style={{ fontSize: '.78rem', color: 'var(--ink-soft)', marginBottom: '1rem' }}>~$ 50 K diarios</div>
+          <div style={{ flexGrow: 1 }}>
+            <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.16em', color: '#F2C12B', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.5rem' }}>Qué se logra</div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '.45rem' }}>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: '#F2C12B' }}>·</span> 4 campañas activas (TOFU + MOFU + remarketing + look-alike)</li>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: '#F2C12B' }}>·</span> 16-20 creativos en rotación / mes</li>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: '#F2C12B' }}>·</span> 90-130 leads B2B calificados / mes</li>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: '#F2C12B' }}>·</span> CPL objetivo: $ 8.000-12.000</li>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: '#F2C12B' }}>·</span> LinkedIn paid editorial + retargeting cross-platform</li>
+            </ul>
+          </div>
+          <div style={{ marginTop: '1rem', padding: '.6rem .8rem', background: 'rgba(242,193,43,0.08)', borderRadius: 8, fontSize: '.74rem', color: 'var(--ink-soft)', lineHeight: 1.5 }}>
+            <b style={{ color: '#F2C12B' }}>Para quién:</b> sweet spot · los algoritmos Meta entran en zona óptima de aprendizaje (>50 conversiones / semana) · la economía del canal recién acá funciona en serio.
+          </div>
+        </div>
+
+        {/* PISO 3 · AMBICIOSO */}
+        <div className="tilt" style={{ background: 'var(--card-elev, #1a1a1a)', border: '1px solid rgba(255,255,255,0.10)', borderRadius: 14, padding: '1.6rem', display: 'flex', flexDirection: 'column' }}>
+          <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.62rem', letterSpacing: '.18em', color: 'var(--ink-soft)', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.5rem' }}>Piso 03 · Ambicioso</div>
+          <div style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 800, fontSize: '2.2rem', color: 'var(--ink)', lineHeight: 1, letterSpacing: '-0.03em', marginBottom: '.15rem' }}>$ 3 M+ <span style={{ fontFamily: 'Instrument Serif', fontStyle: 'italic', fontSize: '1rem', color: 'var(--ink-soft)' }}>/ mes</span></div>
+          <div style={{ fontSize: '.78rem', color: 'var(--ink-soft)', marginBottom: '1rem' }}>~$ 100 K+ diarios</div>
+          <div style={{ flexGrow: 1 }}>
+            <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.16em', color: 'var(--ink-soft)', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.5rem' }}>Qué se logra</div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '.45rem' }}>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>·</span> 7+ campañas (TOFU brand-lift + MOFU + BOFU + LinkedIn ABM + lookalikes + retargeting + reactivación)</li>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>·</span> 30+ creativos / mes con testeo continuo</li>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>·</span> 200-300 leads B2B calificados / mes</li>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>·</span> CPL objetivo: $ 6.000-9.000</li>
+              <li style={{ fontSize: '.82rem', color: 'var(--ink)', paddingLeft: '1rem', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>·</span> Advantage+ scaling + lookalike cross-vertical + producción audiovisual mensual</li>
+            </ul>
+          </div>
+          <div style={{ marginTop: '1rem', padding: '.6rem .8rem', background: 'rgba(255,255,255,0.04)', borderRadius: 8, fontSize: '.74rem', color: 'var(--ink-soft)', lineHeight: 1.5 }}>
+            <b style={{ color: 'var(--ink)' }}>Para quién:</b> dominar el sector en 12 meses · presencia constante en feed de TODO comprador B2B premium del país · SOV claro.
+          </div>
+        </div>
+      </div>
+
+      <div className="lead-callout" style={{ marginTop: '1.4rem' }}>
+        <b>Nota técnica:</b> Meta requiere mínimo <b>50 conversiones por semana por campaña</b> para que el algoritmo salga del modo de aprendizaje y optimice bien. Con presupuestos austeros se sostiene una sola campaña en óptimo · medio permite 3-4 · ambicioso permite portafolio completo con cada campaña en zona óptima. <b>El presupuesto no es vanidad · es lo que define si los algoritmos pueden trabajar para ti.</b>
       </div>
     </section>
   );
@@ -7875,7 +7948,7 @@ function MotherWebSection() {
               <h3>Vestimos a <em>31 Minutos</em>, a inmobiliarias, a agencias.</h3>
               <div className="mock-cases-row">
                 <div className="mock-case-card"><span className="tag">ENTRETENIMIENTO · TV</span><h5>31 Minutos · vestuario Tini Desk</h5><p>Estampados y piezas de vestuario para la aparición de 31 Minutos en el desk de TINI.</p></div>
-                <div className="mock-case-card"><span className="tag">AGENCIA · ACTIVACIÓN</span><h5>Polos staff · 200 und · nacional</h5><p>Lunes el brief, viernes en bodega del cliente. Activación con repetición desde el segundo evento.</p></div>
+                <div className="mock-case-card"><span className="tag">AGENCIA · ACTIVACIÓN</span><h5>Poleras staff · 200 und · nacional</h5><p>Lunes el brief, viernes en bodega del cliente. Activación con repetición desde el segundo evento.</p></div>
                 <div className="mock-case-card"><span className="tag">INMOBILIARIA · OOH</span><h5>Cubrealarmas full-color · UV</h5><p>18 alarmas con gráfica de lanzamiento · sublimación reforzada · instalación en obra.</p></div>
                 <div className="mock-case-card"><span className="tag">RETAIL · KIT</span><h5>Kit onboarding · 3 piezas/mes</h5><p>200 ingresos mensuales con pañoleta + manta + tote a brand book. Entrega a domicilio.</p></div>
               </div>
@@ -7951,9 +8024,9 @@ function TallerBody({ s }) {
       <div className="sb-section">
         <span className="sb-kicker">— 02 · PIEZA EDITORIAL</span>
         <div className="taller-editorial">
-          <div className="taller-editorial-img" style={{ backgroundImage: 'url(assets/img/taller-polo.png)' }}/>
+          <div className="taller-editorial-img" style={{ backgroundImage: 'url(assets/img/taller-polera.png)' }}/>
           <div className="taller-editorial-text">
-            <h6>— PIEZA · POLO BÁSICO LE.PRO 01</h6>
+            <h6>— PIEZA · POLERA BÁSICO LE.PRO 01</h6>
             <h3>La prenda <em>es protagonista,</em> no la oferta.</h3>
             <p>Cada prenda que sale del taller pasa por gestión de color profesional, prueba de lavado y revisión final por el equipo. Fotografiamos lo que producimos · cero render genérico · cero foto stock.</p>
             <div className="pull">"Si la prenda no aguanta el lavado 50, no sale del taller. Punto."</div>
@@ -8006,8 +8079,8 @@ function TallerBody({ s }) {
           <div className="g1" style={{ backgroundImage: 'url(assets/img/taller-hero.png)' }}>
             <div className="g-label">PLOTTER · TINTA DTF<b>Detalle de impresión</b></div>
           </div>
-          <div style={{ backgroundImage: 'url(assets/img/taller-polo.png)' }}>
-            <div className="g-label">PRODUCTO · LE.PRO 01<b>Polo blanco DTF</b></div>
+          <div style={{ backgroundImage: 'url(assets/img/taller-polera.png)' }}>
+            <div className="g-label">PRODUCTO · LE.PRO 01<b>Polera blanco DTF</b></div>
           </div>
           <div style={{ backgroundImage: 'url(assets/img/taller-mesa.png)' }}>
             <div className="g-label">TALLER · MESA<b>Corte y patronaje</b></div>
@@ -8027,7 +8100,7 @@ function TallerBody({ s }) {
         <h2 className="sb-title">Tres voces · <em>tres veces que el deadline se cumplió.</em></h2>
         <div className="web-quotes">
           {[
-            { qm: '"', text: 'Cumplieron un brief imposible. Lunes en la noche pedí 240 polos para staff del lanzamiento del viernes. El miércoles ya estaban en bodega. El estampado aguanta, los talles vinieron correctos, todo.',                                              n: 'C', name: 'Camila R.', role: 'Productora · agencia activación' },
+            { qm: '"', text: 'Cumplieron un brief imposible. Lunes en la noche pedí 240 poleras para staff del lanzamiento del viernes. El miércoles ya estaban en bodega. El estampado aguanta, los talles vinieron correctos, todo.',                                              n: 'C', name: 'Camila R.', role: 'Productora · agencia activación' },
             { qm: '"', text: 'Pedimos kits onboarding mensuales para nuestros 200 ingresos. Manta + pañoleta + tote, todo a brand book. Tres meses sin un solo error de talla o color. Y la línea eco le agregó valor narrativo al kit.',                                  n: 'M', name: 'Matías L.', role: 'Head of People · retail nacional' },
             { qm: '"', text: 'Queríamos cubrealarmas con la gráfica del lanzamiento y prevención nos rebotó el primer proveedor por flama. La Estampa volvió a fabricar con sublimación reforzada UV en 4 días. Mejor que el inicial.',                                       n: 'F', name: 'Francisca H.', role: 'Brand Manager · inmobiliaria premium' }
           ].map((q, i) => (
@@ -8081,7 +8154,7 @@ function TallerBody({ s }) {
           <div className="fields">
             <div className="field-row">
               <div className="field value">CANTIDAD · 200 UND</div>
-              <div className="field value">PRENDA · POLO BÁSICO</div>
+              <div className="field value">PRENDA · POLERA BÁSICO</div>
             </div>
             <div className="field-row">
               <div className="field value">FECHA · 25 DE MAYO</div>
@@ -8146,7 +8219,7 @@ function PopBody({ s }) {
           <div className="pop-card c2">
             <div>
               <span className="kk">— CASO 02 · FESTIVAL</span>
-              <h5>Activación + 200 polos</h5>
+              <h5>Activación + 200 poleras</h5>
               <p>Brief lunes. Viernes en bodega. Domingo en TV. Lunes nos están pidiendo otra tirada para el siguiente fin de semana.</p>
             </div>
             <span className="arrow">→</span>
@@ -8169,7 +8242,7 @@ function PopBody({ s }) {
         <div className="pop-cards-grid">
           <div className="pop-card c2" style={{ background: 'var(--style-bg2)', color: 'var(--style-ink)', border: '2px solid var(--style-accent)' }}>
             <div>
-              <span className="kk" style={{ color: 'var(--style-accent)' }}>— POLOS · ACTIVACIÓN</span>
+              <span className="kk" style={{ color: 'var(--style-accent)' }}>— POLERAS · ACTIVACIÓN</span>
               <h5>50 - 1.000 und</h5>
               <p>DTF o serigrafía. Plazo estándar 5 días. Lead time express 48h disponible bajo solicitud.</p>
             </div>
@@ -8197,10 +8270,10 @@ function PopBody({ s }) {
         <h2 className="sb-title">Próximos eventos · <em>donde van a estar nuestras prendas.</em></h2>
         <div className="pop-agenda">
           {[
-            { date: 'JUN', event: 'Festival Música Chilena · Santiago',         sub: 'Producimos staff polo de 3 marcas distintas · 600 und total', status: 'PRODUCIENDO' },
+            { date: 'JUN', event: 'Festival Música Chilena · Santiago',         sub: 'Producimos staff polera de 3 marcas distintas · 600 und total', status: 'PRODUCIENDO' },
             { date: 'JUL', event: 'Lanzamiento marca retail · cadena nacional', sub: 'Kits onboarding + uniformes empresa · 250 und',               status: 'BRIEF · CERRADO' },
             { date: 'AGO', event: 'Fiestas Patrias · activación marca masivas',  sub: '4 productoras coordinando merchandising 18-Sept',              status: 'COTIZACIÓN' },
-            { date: 'SEP', event: 'Activación festival outdoor regional',        sub: 'Banderas + tótems + 80 polos staff',                          status: 'BRIEF · ABIERTO' }
+            { date: 'SEP', event: 'Activación festival outdoor regional',        sub: 'Banderas + tótems + 80 poleras staff',                          status: 'BRIEF · ABIERTO' }
           ].map((e, i) => (
             <div key={i} className="pop-agenda-row">
               <div className="date">{e.date}</div>
@@ -8218,9 +8291,9 @@ function PopBody({ s }) {
         <div className="pop-talents-grid">
           {[
             { c: 't1', y: '2026', name: '31 Minutos', item: 'Vestuario Tini Desk · 60 piezas' },
-            { c: 't2', y: '2026', name: 'Festival X', item: '180 polos staff · activación' },
+            { c: 't2', y: '2026', name: 'Festival X', item: '180 poleras staff · activación' },
             { c: 't3', y: '2025', name: 'Inmobiliaria', item: '18 cubrealarmas · OOH' },
-            { c: 't4', y: '2025', name: 'Productora', item: '240 polos · tour nacional' },
+            { c: 't4', y: '2025', name: 'Productora', item: '240 poleras · tour nacional' },
             { c: 't1', y: '2025', name: 'Retail', item: '200 kits onboarding · mensual' },
             { c: 't2', y: '2024', name: 'Agencia BTL', item: '120 pañoletas · evento masivo' },
             { c: 't3', y: '2024', name: 'TV Show', item: '40 prendas · personaje' },
@@ -8265,11 +8338,11 @@ function PopBody({ s }) {
         <div className="web-faq">
           {[
             { q: '¿Producen express si el cliente pide para el viernes?',     a: 'Express 48-72h disponible bajo solicitud. Prima ~15-20% sobre costo estándar. Hablamos primero · no prometemos plazo sin haber visto el archivo.' },
-            { q: '¿Tienen mínimo para activaciones de 50-100 polos?',        a: 'Desde 50 piezas. Activaciones grandes (200-1.000+) tienen pricing escalonado. Por debajo de 50, hablamos por cotización personalizada.' },
-            { q: '¿Aguanta una prenda 8 horas bajo sol de festival?',         a: 'Sublimación reforzada UV + DTF aguantan jornada outdoor sin destiñir. Recomendamos polos algodón-poliéster 60/40 para máximo confort + durabilidad.' },
+            { q: '¿Tienen mínimo para activaciones de 50-100 poleras?',        a: 'Desde 50 piezas. Activaciones grandes (200-1.000+) tienen pricing escalonado. Por debajo de 50, hablamos por cotización personalizada.' },
+            { q: '¿Aguanta una prenda 8 horas bajo sol de festival?',         a: 'Sublimación reforzada UV + DTF aguantan jornada outdoor sin destiñir. Recomendamos poleras algodón-poliéster 60/40 para máximo confort + durabilidad.' },
             { q: '¿Hacen prendas para el talent del show / canal?',           a: 'Sí. Tenemos protocolo de discreción NDA para prendas de talents. Trabajamos con productoras, sellos y canales. Confección a medida o sobre prenda base.' },
             { q: '¿Pueden trabajar con la productora en faena el día del evento?', a: 'Tenemos equipo móvil para retoques, reimpresiones y entrega en faena para eventos críticos. Sobre cuota desde la fecha del brief.' },
-            { q: '¿Hacen pack staff + media + público?',                      a: 'Sí. Por tu marca: staff (polos), prensa (acreditaciones + tote), público (merch venta) con coordinación de despacho. Una cotización unificada.' }
+            { q: '¿Hacen pack staff + media + público?',                      a: 'Sí. Por tu marca: staff (poleras), prensa (acreditaciones + tote), público (merch venta) con coordinación de despacho. Una cotización unificada.' }
           ].map((f, i) => (
             <div key={i} className="web-faq-item">
               <div className="q">{f.q} <span className="plus">+</span></div>
@@ -8453,7 +8526,7 @@ function VerdeBody({ s }) {
           <div className="photo" style={{ backgroundImage: 'url(assets/img/verde-hero.png)' }}/>
           <div className="text-block">
             <span className="qm">"</span>
-            <blockquote>Recibimos mantas hechas con merma de polos de campaña. Son cómodas, lavables, sirven en invierno para la gente que viene a comer. Lo importante no es solo recibir: es que la marca después nos cuenta de dónde vino la tela. Eso humaniza la donación de los dos lados.</blockquote>
+            <blockquote>Recibimos mantas hechas con merma de poleras de campaña. Son cómodas, lavables, sirven en invierno para la gente que viene a comer. Lo importante no es solo recibir: es que la marca después nos cuenta de dónde vino la tela. Eso humaniza la donación de los dos lados.</blockquote>
             <cite><b>Cecilia Vargas</b>· Coordinadora, Olla Común Recoleta · Santiago RM</cite>
           </div>
         </div>
@@ -8550,13 +8623,13 @@ function WebGraphicSystem({ s }) {
   const photoMoods = {
     taller: [
       { tag: 'OFICIO',     img: 'assets/img/taller-hero.png',         h: 'Cinematografía editorial', p: 'Plotter Epson en acción · luz natural lateral · fondo desenfocado. Sin people · sí manos. 35mm shallow DOF.' },
-      { tag: 'PRODUCTO',   img: 'assets/img/taller-polo.png',          h: 'Lookbook minimal',          p: 'Prenda flat-lay sobre lino crudo. Sombra suave única dirección. Cero stylist visible. Centrado, mucho aire.' },
+      { tag: 'PRODUCTO',   img: 'assets/img/taller-polera.png',          h: 'Lookbook minimal',          p: 'Prenda flat-lay sobre lino crudo. Sombra suave única dirección. Cero stylist visible. Centrado, mucho aire.' },
       { tag: 'TALLER',     img: 'assets/img/taller-mesa.png',          h: 'Documental cálido',         p: 'Herramientas + manos en plena acción. Tonos cremas + naranja accent + sombras profundas. Vibe Apartamento Magazine.' }
     ],
     pop: [
       { tag: 'COLOR BLOCK', img: 'assets/img/pop-hero.png',            h: 'Saturación máxima',         p: 'Fondos color-block diagonales. Flash directo · sombras duras. Saturated primary palette según los 3 colores del logo (coral · peach · turquesa).' },
       { tag: 'BTS',        img: 'assets/img/pop-confetti.png',         h: 'Movimiento + energía',      p: 'Confetti en motion-blur · explosiones controladas. Vibe festival, no shoot estéril. La energía es protagonista.' },
-      { tag: 'PRODUCTO',   img: 'assets/img/pop-polo.png',             h: 'Pop maximalismo',           p: 'Producto rodeado de props culturales chilenos (cassettes, stickers, sunglasses). Composición chaotic-pero-curada.' }
+      { tag: 'PRODUCTO',   img: 'assets/img/pop-polera.png',             h: 'Pop maximalismo',           p: 'Producto rodeado de props culturales chilenos (cassettes, stickers, sunglasses). Composición chaotic-pero-curada.' }
     ],
     verde: [
       { tag: 'PROCESO',    img: 'assets/img/verde-hero.png',           h: 'Documental honesto',        p: 'Manos clasificando mermas · luz natural · cero pose. Tonos crema + verde + brown. Vibe Patagonia campaign sin spinning.' },
@@ -8784,14 +8857,31 @@ function WebGraphicSystem({ s }) {
 function WebStyleSection({ styleId }) {
   const s = T.webStyles.find(w => w.id === styleId);
   if (!s) return null;
+
+  /* TWEAKS interactivos · color de accent + toggle logo blanco hero */
+  const [accentOverride, setAccentOverride] = React.useState(null);
+  const [showLogoHero, setShowLogoHero] = React.useState(false);
+
+  const activeAccent = accentOverride || s.palette.accent;
+  /* Paleta de tweaks · 6 colores de destaque para experimentar */
+  const tweakColors = [
+    { name: 'Original',  c: s.palette.accent },
+    { name: 'Naranja',   c: '#FF5A1F' },
+    { name: 'Magenta',   c: '#FF3D7F' },
+    { name: 'Lime',      c: '#C9F25C' },
+    { name: 'Ámbar',     c: '#F2C12B' },
+    { name: 'Cyan',      c: '#00B4E6' },
+    { name: 'Violeta',   c: '#7B61FF' }
+  ];
+
   const cssVars = {
     '--style-bg': s.palette.bg,
     '--style-bg2': s.palette.bg2,
     '--style-ink': s.palette.ink,
     '--style-soft': s.palette.soft,
     '--style-line': s.palette.line,
-    '--style-accent': s.palette.accent,
-    '--style-accent-overlay': s.palette.accent + '15',
+    '--style-accent': activeAccent,
+    '--style-accent-overlay': activeAccent + '15',
     '--style-display': "'" + s.typo.display.family + "', sans-serif",
     '--style-display-weight': s.typo.display.weight,
     '--style-italic': "'" + s.typo.editorial.family + "', serif",
@@ -8858,6 +8948,52 @@ function WebStyleSection({ styleId }) {
       {/* GRAPHIC SYSTEM · estrategia gráfica completa */}
       <WebGraphicSystem s={s}/>
 
+      {/* ============= PANEL TWEAKS INTERACTIVOS · color accent + logo hero ============= */}
+      <div className="tilt" style={{ marginBottom: '1.2rem', padding: '1.2rem 1.4rem', background: 'linear-gradient(135deg, rgba(242,193,43,0.08), rgba(255,90,31,0.04))', border: '1px dashed rgba(242,193,43,0.45)', borderRadius: 14, position: 'relative' }}>
+        <div style={{ position: 'absolute', top: -10, left: 16, background: '#0d0d0d', padding: '.2rem .7rem', borderRadius: 999, fontFamily: 'Geist Mono, monospace', fontSize: '.58rem', letterSpacing: '.20em', color: '#F2C12B', textTransform: 'uppercase', fontWeight: 800, border: '1px solid rgba(242,193,43,0.45)' }}>★ TWEAKS · PROBÁ EN VIVO</div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '1.6rem', alignItems: 'center', marginTop: '.3rem' }}>
+          <div>
+            <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.62rem', letterSpacing: '.18em', color: 'var(--ink-soft)', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.6rem' }}>Color de destaque · tipografía + acentos</div>
+            <div style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap' }}>
+              {tweakColors.map((tw, i) => (
+                <button key={i} onClick={() => setAccentOverride(tw.c === s.palette.accent ? null : tw.c)}
+                  style={{
+                    padding: '.4rem .8rem .4rem .4rem',
+                    background: activeAccent === tw.c ? tw.c : 'rgba(255,255,255,0.04)',
+                    border: activeAccent === tw.c ? `2px solid ${tw.c}` : '1px solid var(--line, rgba(255,255,255,0.10))',
+                    borderRadius: 999,
+                    display: 'inline-flex', alignItems: 'center', gap: '.5rem',
+                    cursor: 'pointer', transition: 'all .2s',
+                    fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.10em', fontWeight: 700, textTransform: 'uppercase',
+                    color: activeAccent === tw.c ? '#0d0d0d' : 'var(--ink)'
+                  }}>
+                  <span style={{ width: 16, height: 16, borderRadius: '50%', background: tw.c, border: '1px solid rgba(0,0,0,0.20)', boxShadow: `0 0 8px ${tw.c}55` }}/>
+                  {tw.name}
+                </button>
+              ))}
+            </div>
+            <p style={{ marginTop: '.7rem', fontSize: '.74rem', color: 'var(--ink-soft)', lineHeight: 1.5 }}>
+              Click cualquier swatch · el accent cambia en vivo en todo el mockup (títulos italics, CTAs, bordes, glow). Vuelvé a "Original" para el color signature del estilo.
+            </p>
+          </div>
+          <div style={{ borderLeft: '1px solid var(--line, rgba(255,255,255,0.08))', paddingLeft: '1.6rem' }}>
+            <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.62rem', letterSpacing: '.18em', color: 'var(--ink-soft)', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.6rem' }}>Logo blanco<br/>en hero directo</div>
+            <button onClick={() => setShowLogoHero(!showLogoHero)}
+              style={{
+                padding: '.6rem 1rem',
+                background: showLogoHero ? '#F2C12B' : 'rgba(255,255,255,0.04)',
+                border: showLogoHero ? '2px solid #F2C12B' : '1px solid var(--line, rgba(255,255,255,0.10))',
+                borderRadius: 999, cursor: 'pointer', transition: 'all .2s',
+                fontFamily: 'Geist Mono, monospace', fontSize: '.62rem', letterSpacing: '.14em', fontWeight: 700, textTransform: 'uppercase',
+                color: showLogoHero ? '#0d0d0d' : 'var(--ink)',
+                whiteSpace: 'nowrap'
+              }}>
+              {showLogoHero ? '✓ Activo' : 'Aplicar logo'}
+            </button>
+          </div>
+        </div>
+      </div>
+
       {/* FULL WEB SHELL · sin tilt 3D para no interferir con scroll */}
       <div className="style-shell" style={{ ...cssVars }}>
         <div className="ss-browser">
@@ -8875,6 +9011,20 @@ function WebStyleSection({ styleId }) {
             </video>
           ) : (
             <div className="sh-bg" style={{ backgroundImage: 'url(' + s.hero.image + ')' }}/>
+          )}
+
+          {/* LOGO BLANCO OVERLAY · aplicado al hero cuando el toggle está activo */}
+          {showLogoHero && (
+            <img src="assets/logo/laestampa-logo-blanco.png" alt="la estampa" style={{
+              position: 'absolute', top: '50%', left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: 'clamp(180px, 30%, 360px)',
+              height: 'auto',
+              zIndex: 3,
+              opacity: 0.95,
+              filter: 'drop-shadow(0 8px 32px rgba(0,0,0,0.50))',
+              pointerEvents: 'none'
+            }}/>
           )}
           <div className="sh-nav">
             <div className="sh-logo-mark" style={{ display: 'flex', alignItems: 'center', gap: '.6rem' }}>
@@ -9050,7 +9200,7 @@ function RrssSection({ propId }) {
   return (
     <section style={cssVars}>
       <SectionHead num={p.idx} title={'RRSS · <em>' + p.name + '</em>'}
-        desc={'Sistema gráfico para redes sociales coherente con el estilo ' + (linkedStyle ? linkedStyle.name + ' (' + linkedStyle.idx + ')' : '') + '. Voz · canales · formatos · cadencia · piezas reales generadas con foto editorial.'}/>
+        desc={'Sistema gráfico para redes sociales coherente con el estilo ' + (linkedStyle ? linkedStyle.name + ' (' + linkedStyle.idx + ')' : '') + '. Voz · canales · formatos · frecuencia · piezas reales generadas con foto editorial.'}/>
 
       <div className="rrss-shell">
         <div className="rrss-meta">
@@ -9074,7 +9224,7 @@ function RrssSection({ propId }) {
           </div>
 
           <div style={{ marginBottom: '.6rem' }}>
-            <span className="tag-pill" style={{ background: accent + '20', borderColor: accent + '50', color: accent }}>FORMATOS · CADENCIA</span>
+            <span className="tag-pill" style={{ background: accent + '20', borderColor: accent + '50', color: accent }}>FORMATOS · FRECUENCIA</span>
           </div>
           <div className="rm-formats">
             {p.formats.map((f, i) => (
@@ -9233,7 +9383,7 @@ function LandEstampadoSection() {
             <h2>Tinta firme que aguanta <em>50 lavados</em> sin desteñir.</h2>
             <div className="sub">Estampado profesional para activaciones, uniformes y campañas. 70+ cierres mensuales lo confirman. Lunes el brief, viernes en bodega de tu cliente.</div>
             <div className="cta-row">
-              <span className="land-cta-primary">Cotizar mis polos →</span>
+              <span className="land-cta-primary">Cotizar mis poleras →</span>
               <span className="land-cta-secondary">Ver el oficio</span>
             </div>
           </div>
@@ -9257,7 +9407,7 @@ function LandEstampadoSection() {
             <h4>Cotización express · respuesta en 3 min</h4>
             <div className="land-form-row">
               <div className="land-input">CANTIDAD · 50 · 200 · 500 · 1000+</div>
-              <div className="land-input">PRENDA · POLO · POLERA · HOODIE · OTRO</div>
+              <div className="land-input">PRENDA · POLERA · POLERA · HOODIE · OTRO</div>
             </div>
             <div className="land-form-row">
               <div className="land-input">FECHA DE ENTREGA</div>
@@ -9280,10 +9430,10 @@ function LandEstampadoSection() {
 function RrssTryOnSection() {
   const pieces = [
     { idx: '01', kind: 'STORY', ratio: '9:16', img: 'assets/rrss/tryon-flat-916.png',     title: 'Sube tu logo · ven a probar',     caption: 'Story de captación · CTA al widget · audiencia agencia productora.', formats: 'IG Story + Reel cover', placeholder: 'CREA TU MERCH ONLINE' },
-    { idx: '02', kind: 'POST',  ratio: '1:1',  img: 'assets/rrss/tryon-tote-11.png',       title: 'Tap para subir tu logo',            caption: 'Post IG con tote bag + cursor de upload · explica el flujo en una pieza.', formats: 'IG Feed + Facebook + LinkedIn', placeholder: 'PROBÁ EL WIDGET · GRATIS' },
+    { idx: '02', kind: 'POST',  ratio: '1:1',  img: 'assets/rrss/tryon-tote-11.png',       title: 'Tap para subir tu logo',            caption: 'Post IG con tote bag + cursor de upload · explica el flujo en una pieza.', formats: 'IG Feed + Facebook + LinkedIn', placeholder: 'PRUEBA EL WIDGET · GRATIS' },
     { idx: '03', kind: 'POST',  ratio: '1:1',  img: 'assets/rrss/tryon-grid-11.png',       title: '8 productos · uno solo logo',       caption: 'Grilla 4×2 de productos sin marca · headline "sube tu logo y mira cómo queda".', formats: 'Feed + Carrusel slide 1/N', placeholder: 'TU LOGO EN 8 PRODUCTOS' },
     { idx: '04', kind: 'STORY', ratio: '9:16', img: 'assets/rrss/tryon-hands-916.png',     title: 'Detrás del Try-On en vivo',         caption: 'Story BTS con manos + phone + tshirt · cuenta cómo funciona el widget.', formats: 'IG Story BTS + Reel demo', placeholder: 'CÓMO FUNCIONA · 30S' },
-    { idx: '05', kind: 'POST',  ratio: '1:1',  img: 'assets/rrss/tryon-polo-11.png',       title: 'El polo que va a pegar en tu marca', caption: 'Polo solo · hero · acompaña sample post largo para LinkedIn de Priscila.', formats: 'IG + LinkedIn editorial', placeholder: 'TU MARCA · NUESTRO OFICIO' },
+    { idx: '05', kind: 'POST',  ratio: '1:1',  img: 'assets/rrss/tryon-polera-11.png',       title: 'El polera que va a pegar en tu marca', caption: 'Polera solo · hero · acompaña sample post largo para LinkedIn de Priscila.', formats: 'IG + LinkedIn editorial', placeholder: 'TU MARCA · NUESTRO OFICIO' },
     { idx: '06', kind: 'HERO',  ratio: '16:9', img: 'assets/rrss/tryon-workspace-169.png', title: 'Decide mejor con preview real',     caption: 'Cover horizontal · LinkedIn cover + Facebook cover + ad Meta carousel slide.', formats: 'LinkedIn cover + Meta Ad', placeholder: 'TRY-ON · DECISIÓN EN MINUTOS' }
   ];
   return (
@@ -9294,7 +9444,7 @@ function RrssTryOnSection() {
 
       <div className="preview-note" style={{ borderColor: '#F2C12B', background: 'rgba(242,193,43,0.06)', color: '#F2C12B' }}>
         <b>— SISTEMA REUSABLE. </b>
-        6 plantillas multi-formato · 9:16 story · 1:1 feed · 16:9 cover · cada una con placeholder de copy + área para CTA. <span className="arrow" style={{ color: '#F2C12B' }}>→</span> Diseñadas para ser editables en Figma/Canva · cambiás copy + logo + producto y obtenés 30 piezas distintas en 1 mes.
+        6 plantillas multi-formato · 9:16 story · 1:1 feed · 16:9 cover · cada una con placeholder de copy + área para CTA. <span className="arrow" style={{ color: '#F2C12B' }}>→</span> Diseñadas para ser editables en Figma/Canva · cambias copy + logo + producto y obtienes 30 piezas distintas en 1 mes.
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '1.5rem' }}>
@@ -9421,7 +9571,7 @@ function DigitalsCutSection() {
             <div className="photo" style={{ backgroundImage: 'url(assets/img/taller-hero.png)' }}/>
             <div className="text">
               <h3>Imprimimos lo que <em>tu marca defiende</em> en una sala de reuniones.</h3>
-              <p>Una agencia trae a un cliente un brief de polos para una activación · necesita 200 unidades para el viernes. Cualquier proveedor te dice "sí". Pocos te entregan el viernes con la calidad para que tu cliente apruebe.</p>
+              <p>Una agencia trae a un cliente un brief de poleras para una activación · necesita 200 unidades para el viernes. Cualquier proveedor te dice "sí". Pocos te entregan el viernes con la calidad para que tu cliente apruebe.</p>
               <div className="pull">"La diferencia entre proveedor y partner está en el lavado número 50."</div>
               <p>Eso lo construimos en 4 años de oficio. Plotters Epson certificados, gestión de color técnica, gente que sabe coser. Sin marketing-speak. <b>El resultado: 70 a 80 cierres mensuales por Google Ads, ticket promedio $50.000, repetición sobre 60%.</b></p>
               <p style={{ fontFamily: 'Geist Mono, monospace', fontSize: '0.78rem', letterSpacing: '0.1em', color: '#FF5A1F', textTransform: 'uppercase' }}>— PRISCILA SARMIENTO · FUNDADORA</p>
@@ -9480,7 +9630,7 @@ function DigitalsCutSection() {
             <div className="dc-caso" style={{ backgroundImage: 'url(assets/img/pop-hero.png)' }}>
               <div className="caso-meta">
                 <span className="caso-tag">FESTIVAL · ACTIVACIÓN</span>
-                <h4>200 polos staff · lunes brief, viernes en bodega.</h4>
+                <h4>200 poleras staff · lunes brief, viernes en bodega.</h4>
                 <a className="caso-link">VER PROCESO →</a>
               </div>
             </div>
@@ -9491,7 +9641,7 @@ function DigitalsCutSection() {
                 <a className="caso-link">LEER ENTREVISTA →</a>
               </div>
             </div>
-            <div className="dc-caso" style={{ backgroundImage: 'url(assets/img/taller-polo.png)' }}>
+            <div className="dc-caso" style={{ backgroundImage: 'url(assets/img/taller-polera.png)' }}>
               <div className="caso-meta">
                 <span className="caso-tag">B2B · ONBOARDING</span>
                 <h4>Kit nuevo empleado · 200 ingresos/mes con marca retail.</h4>
@@ -9505,7 +9655,7 @@ function DigitalsCutSection() {
         <div className="dc-section bg-paper">
           <span className="dc-kicker">— WIDGET EN VIVO · MERCH PREVIEW</span>
           <h2>Sube tu logo · <em>previsualiza en producto</em> · cotiza.</h2>
-          <p className="dc-sub">Antes de mandar el brief: ¿cómo se va a ver realmente tu logo en el polo? Acá lo previsualizas. El widget aplica tu logo sobre productos base con curvatura real (no overlay falso). Resultado: cero sorpresas al recibir el pedido.</p>
+          <p className="dc-sub">Antes de mandar el brief: ¿cómo se va a ver realmente tu logo en el polera? Acá lo previsualizas. El widget aplica tu logo sobre productos base con curvatura real (no overlay falso). Resultado: cero sorpresas al recibir el pedido.</p>
           <div className="dc-widget-embed">
             <MerchStudioCompact/>
           </div>
@@ -9517,7 +9667,7 @@ function DigitalsCutSection() {
           <h2>Tres voces · <em>tres veces</em> que el deadline se cumplió.</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '1.4rem' }}>
             {[
-              { qm: '"', text: 'Cumplieron un brief imposible. Lunes en la noche pedí 240 polos para staff del lanzamiento del viernes. El miércoles ya estaban en bodega. El estampado aguanta, los talles vinieron correctos, todo.', n: 'C', name: 'Camila R.', role: 'Productora · agencia activación' },
+              { qm: '"', text: 'Cumplieron un brief imposible. Lunes en la noche pedí 240 poleras para staff del lanzamiento del viernes. El miércoles ya estaban en bodega. El estampado aguanta, los talles vinieron correctos, todo.', n: 'C', name: 'Camila R.', role: 'Productora · agencia activación' },
               { qm: '"', text: 'Pedimos kits onboarding mensuales para nuestros 200 ingresos. Manta + pañoleta + tote, todo a brand book. Tres meses sin un solo error de talla o color. Y la línea eco le agregó valor narrativo al kit.', n: 'M', name: 'Matías L.', role: 'Head of People · retail nacional' },
               { qm: '"', text: 'Queríamos cubrealarmas con la gráfica del lanzamiento y prevención nos rebotó el primer proveedor por flama. La Estampa volvió a fabricar con sublimación reforzada UV en 4 días. Mejor que el inicial.', n: 'F', name: 'Francisca H.', role: 'Brand Manager · inmobiliaria premium' }
             ].map((q, i) => (
@@ -9736,7 +9886,7 @@ function MerchStudioCompact() {
    (Replica funcional del widget Nova Promo · upload logo + preview en producto)
    ======================================================== */
 const MERCH_PRODUCTS = [
-  { id: 'tshirt',   ic: '👕', label: 'Polo',     img: 'assets/merch/tshirt-1.jpg' },
+  { id: 'tshirt',   ic: '👕', label: 'Polera',     img: 'assets/merch/tshirt-1.jpg' },
   { id: 'mug',      ic: '☕', label: 'Taza',     img: 'assets/merch/mug-1.jpg' },
   { id: 'cap',      ic: '🧢', label: 'Gorro',    img: 'assets/merch/cap-1.jpg' },
   { id: 'backpack', ic: '🎒', label: 'Mochila',  img: 'assets/merch/backpack-1.jpg' },
@@ -9803,7 +9953,7 @@ function LandMerchWidgetSection() {
           <div className="lw-content">
             <span className="lw-kicker">— MERCH B2B · CON TU MARCA · 5 DÍAS</span>
             <h1>Tu marca <em>sobre 50 productos.</em> Sin minimo absurdo.</h1>
-            <p className="lw-sub">Polos, tazas, mochilas, libretas, llaveros, totes. Subes tu logo, eliges producto, generas el mockup y cotizas. Producción en taller propio · plotters Epson · DTF + serigrafía + bordado. Desde 50 unidades.</p>
+            <p className="lw-sub">Poleras, tazas, mochilas, libretas, llaveros, totes. Subes tu logo, eliges producto, generas el mockup y cotizas. Producción en taller propio · plotters Epson · DTF + serigrafía + bordado. Desde 50 unidades.</p>
             <div className="lw-cta-row">
               <button className="lw-cta-primary" onClick={() => { const el = document.getElementById('merch-studio'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Probar widget en vivo →</button>
               <button className="lw-cta-secondary" onClick={() => { const el = document.getElementById('merch-form'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Cotizar directamente</button>
@@ -9947,7 +10097,7 @@ function LandMerchWidgetSection() {
           <h2>Lo que <em>producimos</em> con tu marca.</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '.8rem', marginTop: '1.2rem' }}>
             {[
-              { ic: '👕', name: 'Polos + poleras', desc: 'Algodón · poliéster · mezcla. DTF · sublimación · serigrafía.', min: '50 und' },
+              { ic: '👕', name: 'Poleras + poleras', desc: 'Algodón · poliéster · mezcla. DTF · sublimación · serigrafía.', min: '50 und' },
               { ic: '☕', name: 'Tazas', desc: 'Cerámica blanca o color · sublimación full-color permanente.', min: '50 und' },
               { ic: '🧢', name: 'Gorros + jockeys', desc: 'Bordado industrial · 6 paneles · adultos y niños.', min: '50 und' },
               { ic: '🎒', name: 'Mochilas + totes', desc: 'Algodón crudo · poliéster · serigrafía o bordado.', min: '50 und' },
@@ -9975,7 +10125,7 @@ function LandMerchWidgetSection() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '1.2rem' }}>
             {[
               { tag: 'TV · 31 MINUTOS', title: 'Vestuario Tini Desk', desc: 'Producción exprés de prendas custom para la aparición de 31 Minutos en el desk de TINI. Permission management cuidado.', metric: '5 días brief→bodega' },
-              { tag: 'AGENCIA · ACTIVACIÓN', title: '200 polos staff festival', desc: 'Brief lunes, viernes en bodega del cliente. DTF para soportar lavados + sol. Repetición desde el 2do evento.', metric: '200 und · 5 días' },
+              { tag: 'AGENCIA · ACTIVACIÓN', title: '200 poleras staff festival', desc: 'Brief lunes, viernes en bodega del cliente. DTF para soportar lavados + sol. Repetición desde el 2do evento.', metric: '200 und · 5 días' },
               { tag: 'RETAIL · ONBOARDING', title: 'Kit nuevo empleado mensual', desc: 'Marca con 200 ingresos al mes · pañoleta + manta + tote a brand book · entrega a domicilio.', metric: '+600 kits / trimestre' }
             ].map((c, i) => (
               <div key={i} style={{ padding: '1.6rem 1.5rem', background: '#FFFFFF', border: '1px solid rgba(26,24,20,0.08)', borderRadius: '14px', boxShadow: '0 14px 28px -12px rgba(0,0,0,0.12)' }}>
@@ -10032,7 +10182,7 @@ function LandMerchWidgetSection() {
                 <div className="lw-field">
                   <label>PRODUCTO PRINCIPAL</label>
                   <select>
-                    <option>Polos / poleras</option>
+                    <option>Poleras / poleras</option>
                     <option>Tazas</option>
                     <option>Gorros / jockeys</option>
                     <option>Mochilas / totes</option>
@@ -10153,7 +10303,7 @@ function LandMerchSection() {
             <div className="row-grid">
               <div className="row-cell"><h5>Kits onboarding</h5><p>Pañoleta + manta + tote a brand book. Entrega a domicilio del colaborador.</p></div>
               <div className="row-cell"><h5>Regalo cliente</h5><p>Curaduría editorial. Materialidad premium. Cero feeling de regalo genérico.</p></div>
-              <div className="row-cell"><h5>Activaciones</h5><p>Polos staff, mantas, banderas. Time-to-bodega <b>en 5 días hábiles.</b></p></div>
+              <div className="row-cell"><h5>Activaciones</h5><p>Poleras staff, mantas, banderas. Time-to-bodega <b>en 5 días hábiles.</b></p></div>
             </div>
           </div>
           <div className="land-mock-row">
@@ -10548,10 +10698,48 @@ function DigitalsStackSection() {
   return (
     <section>
       <SectionHead num="D.3"
-        title="Stack tecnológico · <em>cómo operamos hoy</em>"
-        desc="No es decoración. Es la infraestructura real que usamos día a día para entregar campañas y servicios complejos a un costo y velocidad que ninguna agencia tradicional puede igualar. Migración 100% al stack IA-nativo completada esta semana."/>
+        title="Ventaja competitiva · <em>la cresta de la ola por tus clientes</em>"
+        desc="Tus competidores aún están aprendiendo a usar Pixel Meta. Nosotros ya operamos Advantage+ Andromeda, Enhanced Conversions, Demand Gen, server-side CAPI y GTM Server-side · features que Meta y Google liberan en beta a partners oficiales antes que al resto del mercado. Esa diferencia se traduce directo en CPL menor y leads mejor calificados para tu cuenta."/>
 
-      {/* HITO */}
+      {/* CALLOUT VENTAJA · qué obtiene el cliente */}
+      <div className="stack-hito tilt" style={{ background: 'linear-gradient(135deg, rgba(242,193,43,0.08), rgba(255,90,31,0.05))', borderColor: 'rgba(242,193,43,0.40)' }}>
+        <div className="head">
+          <span className="badge" style={{ background: 'rgba(242,193,43,0.20)', color: '#F2C12B', borderColor: 'rgba(242,193,43,0.45)' }}>★ POR QUÉ ELEGIR DIGITALS</span>
+          <h4>Estamos a la <em style={{ fontFamily: 'Instrument Serif, serif', fontStyle: 'italic', fontWeight: 400, color: '#F2C12B' }}>cresta de la ola algorítmica</em> · y eso lo recibe tu cuenta directo.</h4>
+        </div>
+        <p>
+          Los algoritmos de Meta y Google se reescriben cada 4-6 meses. La diferencia entre una agencia "tradicional" y Digitals no es el copy de los anuncios · es <b>cuán rápido absorbemos las features beta que llegan a Premier Partners y Meta Business Partners antes que al mercado masivo</b>. Cuando llegan al mercado abierto, nosotros ya tenemos 60-90 días de aprendizaje sobre cómo explotarlas. Eso es lo que te entregamos en la cuenta de La Estampa desde el día 1.
+        </p>
+      </div>
+
+      {/* 4 EDGES competitivos */}
+      <div style={{ marginTop: '2rem', marginBottom: '1rem' }}>
+        <span className="tag-pill">★ 4 EDGES QUE TUS COMPETIDORES NO TIENEN</span>
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', marginBottom: '1.6rem' }}>
+        <div className="tilt" style={{ padding: '1.4rem 1.6rem', background: 'var(--card-elev, #1a1a1a)', border: '1px solid rgba(255,90,31,0.30)', borderRadius: 14 }}>
+          <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.20em', color: '#FF5A1F', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.5rem' }}>Edge 01 · Meta Advantage+ Andromeda</div>
+          <h4 style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 700, fontSize: '1.1rem', color: 'var(--ink)', letterSpacing: '-0.01em', marginBottom: '.5rem' }}>El modelo de IA generativa de Meta · operativo hoy en tu cuenta</h4>
+          <p style={{ fontSize: '.86rem', color: 'var(--ink-soft)', lineHeight: 1.55 }}>Acceso priority a la beta del nuevo motor de Meta Andromeda · escala creativos automáticamente · mejora CTR 15-30% vs ABO tradicional. Tus competidores siguen con campañas manuales.</p>
+        </div>
+        <div className="tilt" style={{ padding: '1.4rem 1.6rem', background: 'var(--card-elev, #1a1a1a)', border: '1px solid rgba(66,133,244,0.30)', borderRadius: 14 }}>
+          <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.20em', color: '#4285F4', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.5rem' }}>Edge 02 · Google Enhanced Conversions + PMax</div>
+          <h4 style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 700, fontSize: '1.1rem', color: 'var(--ink)', letterSpacing: '-0.01em', marginBottom: '.5rem' }}>Atribución real en mundo post-cookie · activable hoy</h4>
+          <p style={{ fontSize: '.86rem', color: 'var(--ink-soft)', lineHeight: 1.55 }}>Enhanced Conversions con hash SHA-256 + PMax con feed de productos textiles. EMQ promedio +60% vs cuenta sin implementar. Más data útil al algoritmo = mejor decisión de bidding por tipo de prospecto B2B.</p>
+        </div>
+        <div className="tilt" style={{ padding: '1.4rem 1.6rem', background: 'var(--card-elev, #1a1a1a)', border: '1px solid rgba(201,242,92,0.30)', borderRadius: 14 }}>
+          <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.20em', color: '#C9F25C', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.5rem' }}>Edge 03 · GTM Server-side</div>
+          <h4 style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 700, fontSize: '1.1rem', color: 'var(--ink)', letterSpacing: '-0.01em', marginBottom: '.5rem' }}>Tu tracking inmune al iOS, ITP, GDPR y ad blockers</h4>
+          <p style={{ fontSize: '.86rem', color: 'var(--ink-soft)', lineHeight: 1.55 }}>Eventos servidor-a-servidor con event_id deduplicado, consent mode v2, cookies first-party 1 año. Mientras tus competidores pierden 40-60% de eventos por cookie blocking, vos retienes el 95%+.</p>
+        </div>
+        <div className="tilt" style={{ padding: '1.4rem 1.6rem', background: 'var(--card-elev, #1a1a1a)', border: '1px solid rgba(255,193,7,0.30)', borderRadius: 14 }}>
+          <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.20em', color: '#FFC107', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.5rem' }}>Edge 04 · Hapee CRM nativo</div>
+          <h4 style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 700, fontSize: '1.1rem', color: 'var(--ink)', letterSpacing: '-0.01em', marginBottom: '.5rem' }}>Loop completo de pauta → lead → cierre → algoritmo</h4>
+          <p style={{ fontSize: '.86rem', color: 'var(--ink-soft)', lineHeight: 1.55 }}>Hapee es CRM propio de Digitals · puede mandar conversiones offline (contratos firmados) de vuelta al algoritmo de Meta/Google. Esto entrena el modelo con clientes reales · no con formularios. Diferencia abismal en calidad de lead a partir del mes 3.</p>
+        </div>
+      </div>
+
+      {/* HITO IA-NATIVO · resumen del stack creativo */}
       <div className="stack-hito tilt">
         <div className="head">
           <span className="badge">{s.hito.tag}</span>
@@ -10560,7 +10748,7 @@ function DigitalsStackSection() {
         <p dangerouslySetInnerHTML={{ __html: s.hito.body }}/>
       </div>
 
-      {/* CATEGORIES */}
+      {/* CATEGORIES · stack creativo completo */}
       <div className="stack-list">
         {s.categories.map((row, i) => (
           <div key={i} className="stack-row tilt"
@@ -10693,9 +10881,7 @@ function App() {
       case 'digitals-about': return <DigitalsAboutSection/>;
       case 'digitals-team':  return <DigitalsTeamSection/>;
       case 'digitals-stack': return <DigitalsStackSection/>;
-      case 'eco':        return <EcoSection/>;
       case 'roadmap':    return <RoadmapSection/>;
-      case 'invest':     return <InvestSection/>;
       default:           return <SummarySection/>;
     }
   }
