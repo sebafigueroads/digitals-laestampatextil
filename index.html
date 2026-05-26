@@ -6987,17 +6987,20 @@ function SummarySection() {
   return (
     <section>
       <SectionHead num="00.0" title="Resumen <em>ejecutivo</em>"
-        desc="Qué entrega esta propuesta y por qué este momento es el correcto para construir la marca digital que el oficio ya merece."/>
+        desc="Qué entrega Digitals · cómo se entrega · qué queda en manos de LET al final del proyecto."/>
       <div className="summary-hero">
         <div className="summary-kicker">— DIGITALS · PROPUESTA INTEGRAL · 2026</div>
         <h2 className="summary-title">Construimos el <em>sistema digital</em> que el oficio textil ya está haciendo en taller.</h2>
         <p className="summary-lead">
           La Estampa Textil opera hace 4 años, tiene plotters Epson certificados, casos sólidos con productoras, agencias, inmobiliarias y retail,
           y convierte 70-80 leads de Google al mes (mayoritariamente B2C transaccional que sostiene el flujo de caja). El oficio existe.
-          Lo que falta es el sistema digital que lo proyecte:
-          <b> una web madre nueva con 3 puertas claras (B2B / B2C / por metro), 2 landings dedicadas por servicio, un embudo con Hapee + agente IA
-          filtrando prospectos, always-on en Google ya operando y un sistema de testeo en Meta para encontrar anuncios ganadores.</b>
-          Las iniciativas eco (mermas reutilizadas, bases más limpias) entran como complemento opcional, no como pilar central.
+          Lo que falta es el sistema digital que lo proyecte. Construimos
+          <b> una web madre nueva con 3 puertas (B2B / B2C / por metro) y 2 landings de campaña dedicadas (Estampado Textil + Merch B2B), conectadas a un funnel automático Hapee + agente IA
+          que filtra leads en primera línea, always-on Google estructurado y un sistema de testeo Meta para escalar creativos ganadores.</b>
+          Todo el código se construye con stack moderno (HTML5 + Tailwind v4 + JS ES2024 + GSAP · lo mismo que Linear, Vercel, Stripe) — <b>sin WordPress, sin plugins, sin lock-in</b> — y se entrega como repositorio Git completo a LET al lanzamiento. El sitio es editable a futuro con prompts de IA (ChatGPT, Claude, Cursor): el equipo LET no necesita aprender ningún CMS para agregar casos, cambiar copy o subir productos.
+          Operativamente, capacitamos al equipo LET para enviar material audiovisual aprovechable al instante desde el celular — cuando sale un pedido bonito del plotter o se entrega un proyecto especial, lo graban bien y Digitals lo publica en 24-48h sin re-grabaciones.
+          Compitiendo en doble cancha: textiles directos (Bulo, Cotton Print, Textil Digital) y merch B2B premium (Nova Promo, Zona Promo, Promobrands, Branding Chile).
+          Las iniciativas eco entran como complemento opcional, no como pilar central.
         </p>
         <div className="fact-row">
           {b.facts.map(f => (
@@ -7012,28 +7015,28 @@ function SummarySection() {
       <div className="pillars-row">
         <div className="pillar-block tilt">
           <span className="num">01</span>
-          <h3>Estudio + <em>estrategia</em></h3>
-          <p>Benchmark con competidores textiles reales (Bulo · Cotton Print · Textil Digital · referentes globales), insights B2B+B2C, estrategia comunicacional con 7 pilares y estrategia gráfica con paleta + tipografía propias. La base que define todo lo que viene después.</p>
+          <h3>Estudio + <em>estrategia doble cancha</em></h3>
+          <p>Benchmark de 15 jugadores en doble cancha competitiva: <b>6 textiles directos</b> (Bulo · Cotton Print · Textil Digital · Maule · Sublimasur · Coté Conde) que compiten por el cliente buscando "estampado de polera/uniforme" y <b>6 merch B2B indirectos</b> (Nova Promo · Zona Promo · Promobrands · Branding Chile · Prom Promo · Bestseller) que compiten por el budget de activación corporativa. Más 2 referentes globales (Custom Ink, Printful). Insights B2B+B2C, 7 pilares de contenido y estrategia gráfica propia.</p>
           <ul>
-            <li>Matriz competitiva textil con score y gaps reales</li>
-            <li><b>7 pilares</b> de contenido con frecuencia mensual</li>
+            <li>Matriz competitiva con score, gaps y dónde LET puede ganar</li>
+            <li><b>7 pilares</b> de contenido · equipo cara/nombre prioritario · logística en último lugar</li>
             <li>Manual de marca v1 · sin rebranding · evolución sobre logo actual</li>
           </ul>
         </div>
         <div className="pillar-block tilt">
           <span className="num">02</span>
-          <h3>Web madre + <em>2 landings</em></h3>
-          <p>Nueva laestampatextil.cl con 3 puertas claras (B2B / B2C / Por metro) · 9 secciones · arquitectura editorial. Más 2 landings dedicadas: una para Estampado Textil y otra para Merchandising B2B. Cada campaña pagada va a su LP con copy y proof específicos.</p>
+          <h3>Web madre + <em>2 landings · stack moderno</em></h3>
+          <p>Nueva laestampatextil.cl con 3 puertas (B2B / B2C / Por metro) + 2 landings dedicadas (Estampado Textil + Merch B2B). Todo construido con stack moderno: <b>HTML5 + Tailwind v4 + JS ES2024 + GSAP</b> — el mismo stack que Linear, Vercel y Stripe. Sin WordPress, sin plugins. El sitio se entrega como repositorio Git completo a LET y es editable a futuro con prompts de IA (ChatGPT, Claude, Cursor) — sin admin UI, sin curva CMS.</p>
           <ul>
-            <li><b>Web madre v2.0</b> · stack autoadministrable + tracking server-side</li>
-            <li>Landing Estampado Textil · acento naranja DTF</li>
-            <li>Landing Merch B2B · acento lime · PDF capacidades</li>
+            <li><b>Stack moderno · LCP &lt; 1.5s mobile</b> · SEO técnico impecable · WCAG AA</li>
+            <li>Repositorio Git entregado a LET · cero lock-in · sin admin</li>
+            <li>Editable con prompts IA · LET no aprende ningún CMS</li>
           </ul>
         </div>
         <div className="pillar-block tilt">
           <span className="num">03</span>
-          <h3>Embudo + <em>Hapee + IA</em></h3>
-          <p>Hapee como CRM operativo + agente IA que filtra prospectos en primera línea: distingue cliente antiguo vs nuevo, califica intención, enruta por servicio. La cotización express con SLA visible es el corazón del sistema.</p>
+          <h3>Funnel automático + <em>Hapee + IA</em></h3>
+          <p>El funnel automático conecta las <b>2 landings de campaña</b> con Hapee como CRM operativo + agente IA que filtra prospectos en primera línea: distingue cliente antiguo vs nuevo, califica intención, enruta por servicio. <em>Alcance: landings + funnel automatizado. La web madre institucional es entregable separado y no forma parte del scope automatizado.</em></p>
           <ul>
             <li><b>5 etapas</b> · TOFU · MOFU IA · BOFU · POST · LOOP</li>
             <li>Respuesta automática &lt;3 min · cotización &lt;24h</li>
@@ -7042,12 +7045,12 @@ function SummarySection() {
         </div>
         <div className="pillar-block tilt">
           <span className="num">04</span>
-          <h3>Always-on Google + <em>testeo Meta</em></h3>
-          <p>4 líneas Google always-on con landings dedicadas (Estampado / Merch / Activación / Por Metro). Sistema Meta de 3 fases para descubrir ganadores creativos a bajo costo y escalarlos con Advantage+ y lookalikes.</p>
+          <h3>Always-on Google + <em>testeo Meta + capacitación AV</em></h3>
+          <p>4 líneas Google always-on (Estampado / Merch / Activación / Por Metro) + sistema Meta de 3 fases para descubrir ganadores creativos. Además <b>capacitamos al equipo LET para enviar material audiovisual aprovechable al instante</b> desde el celular: cuando sale un pedido bonito o se entrega un proyecto especial, lo graban bien y Digitals lo publica en 24-48h sin re-grabaciones.</p>
           <ul>
             <li><b>Quality Score 8+</b> objetivo en todos los core keywords</li>
             <li>24 creativos en testeo F1 · ganadores escalados</li>
-            <li>ROAS objetivo &gt;3× promedio · CPL -30 a -40%</li>
+            <li>Equipo LET capacitado para captura AV diaria desde celular</li>
           </ul>
         </div>
       </div>
