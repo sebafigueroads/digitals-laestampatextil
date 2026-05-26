@@ -436,6 +436,7 @@ a { color: inherit; text-decoration: none; }
   display: inline-block;
 }
 .bench-type.directo  { background: rgba(255,140,90,0.14); color: #ff8a6a; }
+.bench-type.indirecto{ background: rgba(242,193,43,0.16); color: var(--accent3); }
 .bench-type.b2bcl    { background: rgba(242,193,43,0.16); color: var(--accent3); }
 .bench-type.global   { background: rgba(180,140,255,0.14); color: #c5a2ff; }
 .bench-type.referente{ background: rgba(201,242,92,0.16); color: var(--accent2); }
@@ -1639,7 +1640,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ====================================
-   TINI CASE
+   PORTAFOLIO · CASOS · (clase legacy "tini-block" mantenida por routing)
    ==================================== */
 .tini-block {
   padding: 2.5rem 2rem;
@@ -1650,7 +1651,7 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
 }
 .tini-block::before {
-  content: 'TINI · 31 MIN';
+  content: 'PORTAFOLIO';
   position: absolute; top: -20px; right: -20px;
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 800;
@@ -6888,7 +6889,9 @@ function Sidebar({ section, setSection, onClickItem }) {
       { id: 'summary',    num: '00.0', label: 'Resumen ejecutivo' },
       { id: 'brief',      num: '00.1', label: 'Brief + capacidades' },
       { id: 'audit',      num: '00.2', label: 'Sitio actual · audit' },
-      { id: 'logo',       num: '00.3', label: 'Análisis de logo' }
+      { id: 'logo',       num: '00.3', label: 'Análisis de logo · evolución (sin rebranding)' },
+      { id: 'ownership',  num: '00.4', label: 'Propiedad + plataforma + dominio' },
+      { id: 'operating',  num: '00.5', label: 'Operación · quién hace qué' }
     ] },
     { name: 'Estudio de mercado', items: [
       { id: 'market',     num: '01.0', label: 'Benchmark + matriz' },
@@ -6898,7 +6901,7 @@ function Sidebar({ section, setSection, onClickItem }) {
       { id: 'comm',       num: '02.0', label: 'Comunicacional' },
       { id: 'pillars',    num: '02.1', label: 'Pilares de contenido' },
       { id: 'graphic',    num: '02.2', label: 'Gráfica · paleta + type' },
-      { id: 'tini',       num: '02.3', label: 'Caso TINI · 31 Minutos' }
+      { id: 'tini',       num: '02.3', label: 'Casos · portafolio LET' }
     ] },
     { name: 'Embudo + Marketing', items: [
       { id: 'funnel',     num: '03.0', label: 'Embudo · Hapee + IA' },
@@ -6910,24 +6913,25 @@ function Sidebar({ section, setSection, onClickItem }) {
     ] },
     { name: '4 estilos de web (full)', featured: true, badge: 'W.4 RECOMENDADA ★', items: [
       { id: 'styles-ovr',  num: 'W.X',  label: 'Overview · los 4 estilos' },
-      { id: 'web-taller',  num: 'W.1',  label: 'Estilo · Taller Editorial', accent: '#FF5A1F' },
-      { id: 'web-pop',     num: 'W.2',  label: 'Estilo · Pop Industrial',   accent: '#E94F4F' },
-      { id: 'web-verde',   num: 'W.3',  label: 'Estilo · Verde Circular',   accent: '#C9F25C' },
+      { id: 'web-taller',  num: 'W.1',  label: 'Estilo · Taller Editorial',   accent: '#FF5A1F' },
+      { id: 'web-pop',     num: 'W.2',  label: 'Estilo · Pop Saturado',       accent: '#E94F4F' },
+      { id: 'web-verde',   num: 'W.3',  label: 'Estilo · Documental Técnico', accent: '#C9F25C' },
       { id: 'web-digitalscut', num: 'W.4', label: 'Digitals Cut · recomendada ★', accent: '#F2C12B' }
     ] },
     { name: 'Gráficas RRSS', featured: true, items: [
-      { id: 'rrss-taller', num: 'R.1',  label: 'RRSS · Editorial Taller',   accent: '#FF5A1F' },
-      { id: 'rrss-pop',    num: 'R.2',  label: 'RRSS · Pop Cultural',        accent: '#E94F4F' },
-      { id: 'rrss-verde',  num: 'R.3',  label: 'RRSS · Documental Eco',     accent: '#C9F25C' },
-      { id: 'rrss-tryon',  num: 'R.4',  label: 'RRSS · Merch Try-On ★',     accent: '#F2C12B' }
+      { id: 'rrss-taller', num: 'R.1',  label: 'RRSS · Editorial Taller',     accent: '#FF5A1F' },
+      { id: 'rrss-pop',    num: 'R.2',  label: 'RRSS · Pop Cultural',         accent: '#E94F4F' },
+      { id: 'rrss-verde',  num: 'R.3',  label: 'RRSS · Documental Técnico',   accent: '#C9F25C' },
+      { id: 'rrss-tryon',  num: 'R.4',  label: 'RRSS · Merch Try-On ★',       accent: '#F2C12B' }
     ] },
     { name: 'Landings dedicadas', items: [
-      { id: 'land-estamp', num: 'L.1',  label: 'Landing · Estampado',        accent: '#FF5A1F' },
-      { id: 'land-merch',  num: 'L.2',  label: 'Landing · Merch B2B',         accent: '#C9F25C' },
+      { id: 'land-estamp', num: 'L.1',  label: 'Landing · Estampado Textil',    accent: '#FF5A1F' },
+      { id: 'land-merch',  num: 'L.2',  label: 'Landing · Merch B2B',           accent: '#C9F25C' },
       { id: 'land-widget', num: 'L.3',  label: 'Landing · Merch B2B + Widget ★', accent: '#F2C12B' }
     ] },
-    { name: 'Roadmap', items: [
-      { id: 'roadmap',    num: '04.0', label: 'Roadmap por semana' }
+    { name: 'Roadmap + Gantt', items: [
+      { id: 'roadmap',    num: '04.0', label: 'Roadmap por semana' },
+      { id: 'gantt',      num: '04.1', label: 'Gantt visible · prioridades' }
     ] },
     { name: 'Showcase visual', items: [
       { id: 'showcase', num: 'S.0', label: 'Showcase · gráficas + videos' }
@@ -6986,13 +6990,14 @@ function SummarySection() {
         desc="Qué entrega esta propuesta y por qué este momento es el correcto para construir la marca digital que el oficio ya merece."/>
       <div className="summary-hero">
         <div className="summary-kicker">— DIGITALS · PROPUESTA INTEGRAL · 2026</div>
-        <h2 className="summary-title">Construimos la <em>marca digital</em> que la tinta ya está haciendo en taller.</h2>
+        <h2 className="summary-title">Construimos el <em>sistema digital</em> que el oficio textil ya está haciendo en taller.</h2>
         <p className="summary-lead">
-          La Estampa Textil opera hace 4 años, tiene plotters Epson certificados, vistió a 31 Minutos para el último Tini Desk
-          y convierte 70-80 leads de Google al mes. El oficio existe. Lo que falta es el sistema digital que lo proyecte:
-          <b> una web madre nueva con identidad editorial, 2 landings dedicadas por servicio, un embudo con Hapee + agente IA
+          La Estampa Textil opera hace 4 años, tiene plotters Epson certificados, casos sólidos con productoras, agencias, inmobiliarias y retail,
+          y convierte 70-80 leads de Google al mes (mayoritariamente B2C transaccional que sostiene el flujo de caja). El oficio existe.
+          Lo que falta es el sistema digital que lo proyecte:
+          <b> una web madre nueva con 3 puertas claras (B2B / B2C / por metro), 2 landings dedicadas por servicio, un embudo con Hapee + agente IA
           filtrando prospectos, always-on en Google ya operando y un sistema de testeo en Meta para encontrar anuncios ganadores.</b>
-          Más una narrativa de economía circular que convierte cada merma en activo de marca real.
+          Las iniciativas eco (mermas reutilizadas, bases más limpias) entran como complemento opcional, no como pilar central.
         </p>
         <div className="fact-row">
           {b.facts.map(f => (
@@ -7008,21 +7013,21 @@ function SummarySection() {
         <div className="pillar-block tilt">
           <span className="num">01</span>
           <h3>Estudio + <em>estrategia</em></h3>
-          <p>Benchmark con 10 players (CL + globales), insights B2B, estrategia comunicacional con 6 pilares de contenido y estrategia gráfica con paleta + tipografía propias. Es la base que define todo lo que viene después.</p>
+          <p>Benchmark con competidores textiles reales (Bulo · Cotton Print · Textil Digital · referentes globales), insights B2B+B2C, estrategia comunicacional con 7 pilares y estrategia gráfica con paleta + tipografía propias. La base que define todo lo que viene después.</p>
           <ul>
-            <li>Matriz competitiva con score y gaps reales</li>
-            <li><b>6 pilares</b> de contenido con frecuencia mensual</li>
-            <li>Manual de marca + sub-marcas Pro / Merch / Eco</li>
+            <li>Matriz competitiva textil con score y gaps reales</li>
+            <li><b>7 pilares</b> de contenido con frecuencia mensual</li>
+            <li>Manual de marca v1 · sin rebranding · evolución sobre logo actual</li>
           </ul>
         </div>
         <div className="pillar-block tilt">
           <span className="num">02</span>
           <h3>Web madre + <em>2 landings</em></h3>
-          <p>Nueva laestampatextil.cl editorial · 9 secciones · arquitectura B2B-first. Más 2 landings dedicadas: una para Estampado + Serigrafía y otra para Merchandising B2B. Cada campaña pagada va a su LP con copy y proof específicos.</p>
+          <p>Nueva laestampatextil.cl con 3 puertas claras (B2B / B2C / Por metro) · 9 secciones · arquitectura editorial. Más 2 landings dedicadas: una para Estampado Textil y otra para Merchandising B2B. Cada campaña pagada va a su LP con copy y proof específicos.</p>
           <ul>
-            <li><b>Web madre v2.0</b> · stack moderno + tracking server-side</li>
-            <li>Landing Estampado · acento naranja DTF</li>
-            <li>Landing Merch B2B · acento eco lime · PDF capacidades</li>
+            <li><b>Web madre v2.0</b> · stack autoadministrable + tracking server-side</li>
+            <li>Landing Estampado Textil · acento naranja DTF</li>
+            <li>Landing Merch B2B · acento lime · PDF capacidades</li>
           </ul>
         </div>
         <div className="pillar-block tilt">
@@ -7147,29 +7152,36 @@ function AuditSection() {
 }
 
 /* ========================================================
-   00.3 LOGO · análisis del logo real + propuesta de rename
+   00.3 LOGO · análisis del logo real + evolución (no rebranding)
    ======================================================== */
 function LogoSection() {
   const L = T.logo;
-  const R = T.rename;
+  const E = T.evolution;
   return (
     <section>
-      <SectionHead num="00.3" title="Logo · <em>análisis + rename</em>"
-        desc="Lectura del logo real que ya tienen + propuesta concreta de rebautizar la marca de 'La Estampa Textil' a simplemente 'La Estampa'. La empresa creció más allá del textil · el nombre tiene que crecer con ella."/>
+      <SectionHead num="00.3" title="Logo · <em>análisis + evolución</em>"
+        desc="Lectura del logo real que ya tienen + propuesta de evolución del ecosistema visual SIN rebranding. La marca está registrada · mantenemos logo, nombre y dominio. Profesionalizamos lo que rodea a la marca: manual visual, aplicaciones, arquitectura web."/>
+
+      {/* AVISO CLAVE NO REBRANDING */}
+      <div className="info-card tilt" style={{ marginBottom: '1.4rem', borderColor: 'rgba(201,242,92,0.55)', background: 'linear-gradient(135deg, rgba(201,242,92,0.08), transparent 70%)' }}>
+        <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.22em', color: '#C9F25C', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.5rem' }}>★ LO CLAVE</div>
+        <h4 style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 700, fontSize: '1.3rem', color: 'var(--ink)', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '.5rem' }}>{E.headline}</h4>
+        <p>{E.why}</p>
+      </div>
 
       {/* LOGO REAL */}
       <div className="logo-block">
         <div className="logo-vis-row">
           <div className="logo-vis-card dark tilt" style={{ background: 'var(--bg)', padding: '1.5rem' }}>
-            <img src={L.asset} alt="Logo La Estampa" style={{ maxWidth: '85%', maxHeight: '85%', filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.4))' }}/>
+            <img src={L.asset} alt="Logo La Estampa Textil" style={{ maxWidth: '85%', maxHeight: '85%', filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.4))' }}/>
             <span className="lbl">SOBRE OSCURO</span>
           </div>
           <div className="logo-vis-card light tilt" style={{ background: '#F4ECDC', padding: '1.5rem' }}>
-            <img src={L.asset} alt="Logo La Estampa" style={{ maxWidth: '85%', maxHeight: '85%' }}/>
+            <img src={L.asset} alt="Logo La Estampa Textil" style={{ maxWidth: '85%', maxHeight: '85%' }}/>
             <span className="lbl">ORIGINAL · LOGO ACTUAL</span>
           </div>
           <div className="logo-vis-card brand tilt" style={{ background: 'linear-gradient(135deg, #FF5A1F, #F2C12B)', padding: '1.5rem' }}>
-            <img src={L.asset} alt="Logo La Estampa" style={{ maxWidth: '85%', maxHeight: '85%', mixBlendMode: 'multiply' }}/>
+            <img src={L.asset} alt="Logo La Estampa Textil" style={{ maxWidth: '85%', maxHeight: '85%', mixBlendMode: 'multiply' }}/>
             <span className="lbl">SOBRE MARCA</span>
           </div>
         </div>
@@ -7204,52 +7216,38 @@ function LogoSection() {
         </div>
       </div>
 
-      {/* PROPUESTA DE RENAME */}
+      {/* EVOLUCIÓN · NO REBRANDING */}
       <div style={{ marginTop: '3rem', marginBottom: '1.2rem', display: 'flex', alignItems: 'baseline', gap: '1rem', flexWrap: 'wrap' }}>
-        <span className="tag-pill" style={{ background: 'rgba(242,193,43,0.10)', borderColor: 'rgba(242,193,43,0.30)', color: 'var(--accent3)' }}>PROPUESTA · RENAME ESTRATÉGICO</span>
-        <span style={{ fontFamily: 'Geist Mono', fontSize: '0.6rem', letterSpacing: '0.18em', color: 'var(--ink-soft)', textTransform: 'uppercase' }}>VALIDAR CON PRISCILA</span>
+        <span className="tag-pill" style={{ background: 'rgba(201,242,92,0.10)', borderColor: 'rgba(201,242,92,0.30)', color: '#C9F25C' }}>EVOLUCIÓN VISUAL · NO REBRANDING</span>
+        <span style={{ fontFamily: 'Geist Mono', fontSize: '0.6rem', letterSpacing: '0.18em', color: 'var(--ink-soft)', textTransform: 'uppercase' }}>MARCA REGISTRADA · LOGO INTACTO</span>
       </div>
 
-      <div className="rename-block tilt">
-        <div className="rb-compare">
-          <div className="rb-current">
-            <span className="rb-label">— ANTES</span>
-            <div className="rb-name strike">{R.current}</div>
-            <div className="rb-sub">"estampado textil digital"</div>
-          </div>
-          <div className="rb-arrow">→</div>
-          <div className="rb-proposed">
-            <span className="rb-label hi">— DESPUÉS</span>
-            <div className="rb-name new">{R.proposed}</div>
-            <div className="rb-sub new">{R.subline}</div>
-          </div>
+      <div className="info-grid cols-2" style={{ marginBottom: '1.4rem' }}>
+        <div className="step-card" style={{ borderColor: 'rgba(201,242,92,0.40)' }}>
+          <div className="step-num" style={{ color: '#C9F25C' }}>SE MANTIENE</div>
+          <h5>Lo que NO se toca</h5>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '.5rem' }}>{E.keepsList.map((it, i) => <li key={i} style={{ marginBottom: '.3rem' }}>{it}</li>)}</ul>
         </div>
-        <p className="rb-why">{R.why}</p>
+        <div className="step-card" style={{ borderColor: 'rgba(255,90,31,0.40)' }}>
+          <div className="step-num" style={{ color: '#FF5A1F' }}>EVOLUCIONA</div>
+          <h5>Lo que sí trabajamos</h5>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '.5rem' }}>{E.evolvesList.map((it, i) => <li key={i} style={{ marginBottom: '.3rem' }}>{it}</li>)}</ul>
+        </div>
+      </div>
 
-        <div className="rb-rationale-grid">
-          {R.rationale.map(r => (
-            <div key={r.num} className="rb-rationale-card">
-              <span className="rb-rn">— {r.num}</span>
-              <h4>{r.title}</h4>
-              <p>{r.body}</p>
+      <div style={{ marginTop: '1.4rem', marginBottom: '1rem' }}>
+        <span className="tag-pill" style={{ background: 'rgba(255,90,31,0.08)', borderColor: 'rgba(255,90,31,0.25)', color: 'var(--accent)' }}>FASES DE EVOLUCIÓN · 12 SEMANAS</span>
+      </div>
+      <div className="rb-transition">
+        {E.transition.map((t, i) => (
+          <div key={i} className="rb-phase">
+            <div className="rb-phase-num">{t.phase}</div>
+            <div>
+              <h5>{t.name}</h5>
+              <p>{t.detail}</p>
             </div>
-          ))}
-        </div>
-
-        <div style={{ marginTop: '2rem', marginBottom: '1rem' }}>
-          <span className="tag-pill" style={{ background: 'rgba(255,90,31,0.08)', borderColor: 'rgba(255,90,31,0.25)', color: 'var(--accent)' }}>TRANSICIÓN · 6 MESES SUAVES</span>
-        </div>
-        <div className="rb-transition">
-          {R.transition.map((t, i) => (
-            <div key={i} className="rb-phase">
-              <div className="rb-phase-num">{t.phase}</div>
-              <div>
-                <h5>{t.name}</h5>
-                <p>{t.detail}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -7263,12 +7261,14 @@ function MarketSection() {
     if (t === 'us') return 'TARGET';
     if (t === 'b2bcl') return 'B2B CL';
     if (t === 'referente') return 'REFERENTE';
+    if (t === 'directo') return 'DIRECTO';
+    if (t === 'indirecto') return 'INDIRECTO';
     return t.toUpperCase();
   };
   return (
     <section>
       <SectionHead num="01.0" title="Benchmark + <em>matriz</em>"
-        desc="15 jugadores · 4 directos chilenos de estampado + 6 directos chilenos de merch B2B (Nova Promo, Genteamericana, Promobrands, Branding Chile, Prom Promo, Bestseller) + 4 globales referentes. El espacio que La Estampa puede ocupar es el cruce que ninguno cubre: oficio operativo + curaduría editorial + propósito ESG real."/>
+        desc="15 jugadores en doble cancha competitiva. <b>6 directos textiles CL</b> (Bulo · Cotton Print · Textil Digital · Maule · Sublimasur · Coté Conde) que compiten por el cliente que llega buscando estampado de polera o uniforme. <b>6 indirectos de merch B2B</b> (Nova Promo · Zona Promo · Promobrands · Branding Chile · Prom Promo · Bestseller) que compiten por el budget de activación corporativa cuando el cliente pide poleras + tazas + lanyards en un solo proveedor. <b>2 referentes globales</b> (Custom Ink · Printful) que marcan estándares de UX y configurador. El espacio que LET puede ocupar es el cruce que ninguno cubre: oficio técnico real del estampado + curaduría editorial + propuesta B2B premium con autoría visible."/>
       <div className="market-wrap">
         <table className="market-table">
           <thead>
@@ -7291,8 +7291,8 @@ function MarketSection() {
         </table>
       </div>
       <div className="lead-callout tilt">
-        <b>Lectura:</b> El segmento chileno se reparte en 3 territorios: (1) base masiva de estampado (Maule, Estampados Chile, Sublimasur · pricing-first), (2) boutique creativo IG-first (Coté Conde, sin escala), y (3) <span className="hl">merch B2B corporativo</span> dominado por importadores como Nova Promo (Nova Group · representación premium), Genteamericana y Promobrands (brokerage Yiwu + producción mixta). <b>Ninguno tiene oficio textil propio + caso pop relevante + economía circular real al mismo tiempo.</b>
-        <span className="hl"> La Estampa puede liderar ese espacio "boutique premium con escala industrial + propósito ESG"</span> — el único que cruza los 3 ejes operativos (plotters Epson + DTF), editoriales (Priscila + caso TINI) y de propósito (mermas a perros donadas con métrica trimestral).
+        <b>Lectura:</b> El segmento textil chileno relevante se ordena así (validado por la clienta): competidores textiles directos = <span className="hl">Bulo, Cotton Print y Textil Digital</span>, más estampadores tradicionales (Maule, Sublimasur, Coté Conde). <b>Ninguno comunica claramente oficio técnico + criterio textil + organización por públicos (B2B/B2C/por metro) al mismo tiempo.</b>
+        <span className="hl"> LET puede ocupar ese espacio</span> con foco en oficio técnico real (plotters Epson + DTF + sublimación), portafolio de casos diversos y un sitio que segmente bien sus 3 públicos. Sin lenguaje aspiracional, sin pirotecnia ESG: estos saben lo que hacen.
       </div>
     </section>
   );
@@ -7340,60 +7340,60 @@ function CommSection() {
     },
     {
       name: 'Matías L.', role: 'Head of People · retail nacional', accent: '#4A7A50', avatar: 'M',
-      quote: '"Necesito kits onboarding mensuales que aguanten el lavado y vengan con narrativa para el reporte ESG."',
-      jtbd: 'Que el kit nuevo empleado refleje la marca + cumpla la meta de sustentabilidad asignada por dirección.',
-      worries: 'Repetir error de talla con 200 ingresos/mes. Que el ESG sea greenwashing. Que el costo escale.',
+      quote: '"Necesito kits onboarding mensuales que aguanten el lavado y que el equipo de compras pueda defender."',
+      jtbd: 'Que el kit nuevo empleado refleje la marca, tenga calidad consistente y se entregue a tiempo cada mes.',
+      worries: 'Repetir error de talla con 200 ingresos/mes. Inconsistencia de calidad entre tiradas. Costos escalando sin aviso.',
       channels: 'LinkedIn long-form · newsletter B2B · referido HR community · proveedor existente',
       cycle: '2 a 4 semanas evaluación · contrato anual · revisión trimestral'
     },
     {
-      name: 'Francisca H.', role: 'Brand Manager · marca con cultura masiva', accent: '#E94F4F', avatar: 'F',
-      quote: '"Si mi marca aparece en el feed del talent, necesito que la prenda esté a la altura del momento."',
-      jtbd: 'Que el merch + vestuario de la marca aguante el momento cultural sin reventar la cara o el sello.',
-      worries: 'Que la prenda destiña en cámara HD. Que el caso TINI no se pueda usar formal. Permission management.',
+      name: 'Francisca H.', role: 'Brand Manager · marca con cobertura nacional', accent: '#E94F4F', avatar: 'F',
+      quote: '"Si mi marca aparece en cámara, la prenda tiene que aguantar la HD."',
+      jtbd: 'Que el merch + vestuario de la marca aguante el momento sin reventar el color ni el sello.',
+      worries: 'Que la prenda destiña en cámara HD. Que el caso no se pueda usar formal. Permission management.',
       channels: 'IG referido · LinkedIn ejecutivo · directo Priscila · agencia creativa',
       cycle: '1 a 6 semanas · proyecto único alto valor + posibles repeticiones'
     },
     {
-      name: 'Sofía A.', role: 'Sustainability Officer · corporativo', accent: '#F2C12B', avatar: 'S',
-      quote: '"Mi CFO necesita los kilos de merma recuperada por nuestro pedido en un PDF que pueda firmar."',
-      jtbd: 'Cerrar la cotización con anexo ESG verificable que ahorre 4 semanas de research del equipo de sustainability.',
-      worries: 'Que el reporte sea inflado. Que no haya auditoría externa. Que el partner no responda Q2.',
-      channels: 'LinkedIn ESG community · newsletter eco · directo a Priscila · prensa industrial',
-      cycle: '2 a 6 meses · piloto + escalado · contrato anual o por proyecto'
+      name: 'Carla R.', role: 'Cliente final B2C transaccional', accent: '#F2C12B', avatar: 'C',
+      quote: '"Necesito una polera personalizada para el cumpleaños de mi pareja el sábado."',
+      jtbd: 'Pedido único, rápido, mockup claro, entrega cumplida. Pagar online y olvidarse del proceso.',
+      worries: 'Que no llegue a tiempo. Que el estampado se vea distinto al mockup. Cobros extra inesperados.',
+      channels: 'Google Ads "polera personalizada" · WhatsApp · IG cuenta @laestampatextil',
+      cycle: '1 a 7 días · pedido único · refiere a amigos si la experiencia es buena'
     }
   ];
   const journey = [
     { stage: '01', name: 'Trigger',     think: '"Necesito proveedor textil que sepa lo que hace."',                    channel: 'Google search · LinkedIn referido',     action: 'Busca "estampado activación Chile"' },
     { stage: '02', name: 'Discovery',   think: '"¿Estos tipos son serios o pyme garage?"',                            channel: 'Web laestampa.cl · IG @laestampa',        action: 'Mira casos + foto del taller + Priscila' },
-    { stage: '03', name: 'Evaluación',  think: '"¿Aguantan el deadline? ¿Cumplen lo que prometen?"',                  channel: 'Caso TINI editorial · testimonios',      action: 'Lee FAQ + descarga PDF capacidades' },
+    { stage: '03', name: 'Evaluación',  think: '"¿Aguantan el deadline? ¿Cumplen lo que prometen?"',                  channel: 'Portafolio editorial · testimonios',     action: 'Lee FAQ + descarga PDF capacidades' },
     { stage: '04', name: 'Cotización',  think: '"Probemos con un pedido chico antes de comprometer el grande."',      channel: 'Form web · WhatsApp · Hapee IA',         action: 'Pide cotización express · responde en 3 min' },
     { stage: '05', name: 'Loop',        think: '"Esto cumplió. La próxima activación va con ellos."',                channel: 'Email post-entrega · NPS · re-pedido',   action: 'Re-cotiza · refiere a su red · ticket sube' }
   ];
   const matrix = [
     {
-      audience: 'Camila · productora', stageBuilder: 'AUTORIDAD',
-      tofu: 'Cumplimos deadlines imposibles · 200 poleras en 5 días.',
-      mofu: 'Caso TINI / 31 Min · cómo se cumplió un brief de 48h.',
+      audience: 'Camila · productora', stageBuilder: 'OFICIO',
+      tofu: 'Cumplimos deadlines reales · 200 poleras en 5 días.',
+      mofu: 'Caso de activación · cómo se cumplió un brief de 48h.',
       bofu: 'Cupo express para activaciones de tu fecha + NDA disponible.'
     },
     {
-      audience: 'Matías · HR retail', stageBuilder: 'CONFIANZA',
+      audience: 'Matías · HR retail', stageBuilder: 'CONSISTENCIA',
       tofu: 'Kits onboarding que aguantan lavado 50+ veces.',
-      mofu: 'Línea Eco con métricas para tu reporte de sustentabilidad.',
+      mofu: 'Casos de retail con tirada mensual recurrente · ficha técnica.',
       bofu: 'Contrato mensual con SLA por etapa · 200 ingresos cubiertos.'
     },
     {
-      audience: 'Francisca · brand manager', stageBuilder: 'CULTURA POP',
-      tofu: 'Vestimos a 31 Minutos para el último Tini Desk.',
-      mofu: 'Permission management formalizado · casos descargables.',
-      bofu: 'Cotización con curaduría editorial · ticket premium.'
+      audience: 'Francisca · brand manager', stageBuilder: 'CALIDAD EN CÁMARA',
+      tofu: 'Materialidad que aguanta HD · gestión de color con criterio.',
+      mofu: 'Portafolio de producciones audiovisuales · permission management.',
+      bofu: 'Cotización con mockup + ficha técnica · review por cliente.'
     },
     {
-      audience: 'Sofía · sustainability', stageBuilder: 'ESG VERIFICABLE',
-      tofu: 'Reportes trimestrales públicos · kilos recuperados.',
-      mofu: 'Anexo ESG en formato GRI · auditoría externa Q3.',
-      bofu: 'Contrato anual con co-branding · línea eco curada.'
+      audience: 'Carla · cliente B2C final', stageBuilder: 'TRANSACCIONAL',
+      tofu: 'Polera personalizada en 5 días · 1 unidad o más.',
+      mofu: 'Mockup claro + pago online + tracking del pedido.',
+      bofu: 'Entrega cumplida + referido boca a boca para la próxima compra.'
     }
   ];
   return (
@@ -7591,16 +7591,26 @@ function GraphicSection() {
    02.3 TINI CASE
    ======================================================== */
 function TiniSection() {
-  const t = T.tiniCase;
+  /* NOTA: Esta sección antes se centraba en el caso TINI/31 Minutos.
+     Por feedback de la clienta, se reformuló a un portafolio de casos
+     equivalente (sin centrar la narrativa en un único proyecto).
+     Mantenemos el ID 'tini' por compatibilidad de routing. */
+  const portfolioSteps = [
+    { num: '01', name: 'Permission management', desc: 'Para cada caso documentado, pedimos consentimiento al cliente sobre alcance de uso (web, cotización, portafolio). Sin name-drop sin acuerdo previo.' },
+    { num: '02', name: 'BTS editorial',         desc: 'Foto profesional de la prenda terminada + plano de taller + storytelling honesto del deadline. Sin exageraciones.' },
+    { num: '03', name: 'Caso PDF descargable',  desc: 'Caso de 2-4 páginas con materialidad, tiempos y criterios técnicos. Asset para cierre de leads B2B.' },
+    { num: '04', name: 'Editorial web',          desc: 'Página de caso en la web madre con foto + texto editorial breve. Aprobación del cliente antes de publicar.' },
+    { num: '05', name: 'Post LinkedIn técnico',  desc: 'Post de Priscila o del equipo contando una decisión de oficio concreta del caso. Foco en el cómo, no en el quién (salvo permiso).' }
+  ];
   return (
     <section>
-      <SectionHead num="02.3" title="Caso <em>TINI · 31 Minutos</em>"
-        desc="Cómo se trabaja el activo editorial más fuerte del portafolio · permission management cuidado · materialización en assets · uso en el embudo."/>
+      <SectionHead num="02.3" title="Casos · <em>portafolio LET</em>"
+        desc="Cómo trabajamos el portafolio · varios casos en paralelo (productora, agencia, retail, inmobiliaria, audiovisual, B2C). Sin centrar la narrativa en un único proyecto. Permission management cuidado · cada caso aprobado por su cliente antes de publicarse."/>
       <div className="tini-block tilt">
-        <h3 dangerouslySetInnerHTML={{ __html: t.headline.replace(/Tini Desk/g, '<em>Tini Desk</em>') }}/>
-        <p className="why">{t.why} <b>Mostrar oficio + cultura pop + permiso cuidado convierte la marca en "la que viste a las marcas que importan".</b></p>
+        <h3>Varios proyectos sólidos. <em>El portafolio se construye con criterio, no con name-dropping.</em></h3>
+        <p className="why">LET acumuló 4 años de trabajos diversos: producciones audiovisuales, activaciones de agencia, inmobiliarias, retail, uniformes corporativos y cliente final B2C. <b>Cada caso vale por sí mismo · ordenarlos como activos editoriales con permiso del cliente es lo que falta · no inflar uno solo.</b></p>
         <div className="tini-steps">
-          {t.steps.map(s => (
+          {portfolioSteps.map(s => (
             <div key={s.num} className="tini-step tilt">
               <div className="num">STEP {s.num}</div>
               <h4>{s.name}</h4>
@@ -7876,7 +7886,7 @@ function MotherWebSection() {
         desc="Explicación previa de la arquitectura · 9 secciones · estructura B2B-first. Esta es la conceptualización; las 3 propuestas reales (W.1 Taller · W.2 Pop · W.3 Verde) materializan cada estilo con fotos editoriales y efectos."/>
       <div className="preview-note">
         <b>— Vista previa estratégica. </b>
-        Lo que ves abajo es el esqueleto conceptual de la web. <span className="arrow">→</span> Las 3 propuestas reales con fotografía editorial, efectos high-tech y direcciones visuales completas están en <b>W.1 · Taller Editorial · W.2 · Pop Industrial · W.3 · Verde Circular</b> (ver sidebar).
+        Lo que ves abajo es el esqueleto conceptual de la web. <span className="arrow">→</span> Las 3 propuestas reales con fotografía editorial, efectos high-tech y direcciones visuales completas están en <b>W.1 · Taller Editorial · W.2 · Pop Saturado · W.3 · Documental Técnico</b> (ver sidebar).
       </div>
       <div className="webmother-block">
         <div className="web-meta">
@@ -7905,11 +7915,11 @@ function MotherWebSection() {
             <div className="mock-hero">
               <div className="nav">
                 <div className="logo-mark">LA ESTAMPA<span style={{ color: 'var(--accent)' }}>·</span>TEXTIL</div>
-                <div className="menu"><span>OFICIO</span><span>MERCH B2B</span><span>ECO</span><span>CASOS</span><span>CONTACTO</span></div>
+                <div className="menu"><span>OFICIO</span><span>MERCH B2B</span><span>B2C</span><span>CASOS</span><span>CONTACTO</span></div>
               </div>
-              <div className="kicker">— OFICIO + INDUSTRIA + PROPÓSITO</div>
-              <h1>La tinta firme que viste a <em>las marcas que importan.</em></h1>
-              <div className="sub">Estampado textil, confección completa y merchandising B2B desde Santiago para todo Chile. Plotters Epson certificados, deadline real, mermas a perritos donados.</div>
+              <div className="kicker">— OFICIO TEXTIL · 4 AÑOS · 3 PÚBLICOS</div>
+              <h1>Estampado textil con <em>oficio.</em> Tinta firme en cada prenda.</h1>
+              <div className="sub">Sublimación, DTF, estampado por metro y confección. Para marcas, agencias, productoras y cliente final. Plotters Epson certificados, deadline real, anexo opcional de iniciativas eco si tu compra lo necesita.</div>
               <div className="cta-row">
                 <span className="mock-cta primary">Cotizar ahora →</span>
                 <span className="mock-cta secondary">Ver casos</span>
@@ -7923,32 +7933,32 @@ function MotherWebSection() {
             </div>
 
             <div className="mock-cap">
-              <div className="kick">— CAPACIDADES · LÍNEAS DE NEGOCIO</div>
+              <div className="kick">— CAPACIDADES · 3 PUERTAS POR PÚBLICO</div>
               <div className="mock-cap-grid">
                 <div className="mock-cap-card" style={{ '--card-accent': '#FF5A1F' }}>
-                  <div className="ix">— PRO</div>
-                  <h4>La Estampa · Pro</h4>
-                  <p>Estampado, serigrafía, sublimación, DTF, confección completa. Para activaciones, eventos, marcas con vida operativa.</p>
+                  <div className="ix">— B2B PRO</div>
+                  <h4>Merch B2B · Marcas y agencias</h4>
+                  <p>Uniformes corporativos, kits onboarding, merch activación, regalo cliente. Cotización con mockup en menos de 24h.</p>
                 </div>
                 <div className="mock-cap-card" style={{ '--card-accent': '#F2C12B' }}>
-                  <div className="ix">— MERCH</div>
-                  <h4>La Estampa · Merch</h4>
-                  <p>Merchandising B2B premium. Kits onboarding, regalo cliente, uniformes corporativos. Cotización en menos de 24h.</p>
+                  <div className="ix">— B2C</div>
+                  <h4>Cliente final transaccional</h4>
+                  <p>Polera única, regalo personalizado, cumpleaños, despedida, evento privado. Flujo que sostiene la operación día a día.</p>
                 </div>
                 <div className="mock-cap-card" style={{ '--card-accent': '#C9F25C' }}>
-                  <div className="ix">— ECO</div>
-                  <h4>La Estampa · Eco</h4>
-                  <p>Línea circular: mermas a camas y sacos para perros. Textiles ecológicos certificados. Anexo ESG en cada cotización B2B.</p>
+                  <div className="ix">— POR METRO</div>
+                  <h4>Estampado por metro</h4>
+                  <p>Para confeccionistas y diseñadores · sublimación + DTF · catálogo de bases técnicas. Color a brief.</p>
                 </div>
               </div>
             </div>
 
             <div className="mock-cases">
-              <div className="mock-cases-kick">— CASOS · 4 AÑOS DE TINTA</div>
-              <h3>Vestimos a <em>31 Minutos</em>, a inmobiliarias, a agencias.</h3>
+              <div className="mock-cases-kick">— CASOS · 4 AÑOS DE OFICIO</div>
+              <h3>Varios proyectos en paralelo · <em>distintos públicos, mismo oficio.</em></h3>
               <div className="mock-cases-row">
-                <div className="mock-case-card"><span className="tag">ENTRETENIMIENTO · TV</span><h5>31 Minutos · vestuario Tini Desk</h5><p>Estampados y piezas de vestuario para la aparición de 31 Minutos en el desk de TINI.</p></div>
                 <div className="mock-case-card"><span className="tag">AGENCIA · ACTIVACIÓN</span><h5>Poleras staff · 200 und · nacional</h5><p>Lunes el brief, viernes en bodega del cliente. Activación con repetición desde el segundo evento.</p></div>
+                <div className="mock-case-card"><span className="tag">PRODUCCIÓN AUDIOVISUAL</span><h5>Vestuario para producción</h5><p>Piezas de vestuario con timing apretado, materialidad de cámara y libreta de color respetada. Una credencial entre varias.</p></div>
                 <div className="mock-case-card"><span className="tag">INMOBILIARIA · OOH</span><h5>Cubrealarmas full-color · UV</h5><p>18 alarmas con gráfica de lanzamiento · sublimación reforzada · instalación en obra.</p></div>
                 <div className="mock-case-card"><span className="tag">RETAIL · KIT</span><h5>Kit onboarding · 3 piezas/mes</h5><p>200 ingresos mensuales con pañoleta + manta + tote a brand book. Entrega a domicilio.</p></div>
               </div>
@@ -8002,12 +8012,12 @@ function TallerBody({ s }) {
       <div className="sb-section">
         <span className="sb-kicker">— 01 · OFICIO</span>
         <h2 className="sb-title">4 técnicas · <em>cada una con su mejor uso.</em></h2>
-        <p className="sb-sub">Sublimación, DTF, serigrafía y bordado. Eligimos contigo cuál te conviene según prenda, cantidad, color y durabilidad esperada.</p>
+        <p className="sb-sub">Sublimación, DTF, estampado por metro y bordado. Eligimos contigo cuál te conviene según prenda, cantidad, color y durabilidad esperada.</p>
         <div className="taller-caps">
           {[
             { ix: 'SUB', name: 'Sublimación',     desc: 'Tinta integrada a la fibra. Color firme, suave al tacto. Ideal poliéster + mezclas.',         dur: '60+ lavados · uniforme deportivo' },
             { ix: 'DTF', name: 'DTF · film',      desc: 'Impresión sobre film + termoadhesivo. Cero límite de color. Funciona casi en cualquier tela.',  dur: '50+ lavados · activación corta' },
-            { ix: 'SER', name: 'Serigrafía',      desc: 'Pantalla + tinta plastisol. Tradición textil chilena. Tiradas grandes con identidad fuerte.',  dur: '80+ lavados · alta resistencia' },
+            { ix: 'MET', name: 'Por metro',       desc: 'Telas estampadas a pedido para confección propia o terceros. Catálogo de bases técnicas.',     dur: 'Desde 1 m · color a brief' },
             { ix: 'BOR', name: 'Bordado',         desc: 'Hilo industrial · acabado corporate premium. Ideal logo bolsillo + escudos institucionales.', dur: 'Vida útil prenda · institucional' }
           ].map(c => (
             <div key={c.ix} className="taller-cap-card">
@@ -8037,8 +8047,8 @@ function TallerBody({ s }) {
 
       {/* 03 · CASOS */}
       <div className="sb-section">
-        <span className="sb-kicker">— 03 · CASOS · 4 AÑOS DE TINTA</span>
-        <h2 className="sb-title">Vestimos a <em>31 Minutos</em>, agencias y marcas con peso.</h2>
+        <span className="sb-kicker">— 03 · CASOS · 4 AÑOS DE OFICIO</span>
+        <h2 className="sb-title">Varios proyectos en paralelo · <em>productoras, agencias, retail, B2C.</em></h2>
         <div className="taller-cases">
           {T.brand.cases.map((c, i) => (
             <div key={i} className="taller-case">
@@ -8122,11 +8132,11 @@ function TallerBody({ s }) {
         <h2 className="sb-title">Lo que <em>todo cliente</em> pregunta · respondido sin rodeos.</h2>
         <div className="web-faq">
           {[
-            { q: '¿Mínimo de unidades para estampar?',                       a: 'Sublimación y DTF desde 50 unidades por modelo. Serigrafía rinde mejor desde 100. Para producciones menores podemos ir hasta 20 con prima de costo.' },
+            { q: '¿Mínimo de unidades para estampar?',                       a: 'Sublimación y DTF desde 50 unidades por modelo. Para producciones menores podemos bajar a 20 con prima de costo. Cliente final (B2C): desde 1 unidad para pedidos personalizados específicos.' },
             { q: '¿Cuál es el tiempo real entre brief y bodega?',            a: 'Cotización en <24h. Producción estándar 4-7 días hábiles para 200 unidades. Plazo express 48h disponible bajo solicitud con prima ~15%.' },
             { q: '¿DTF o sublimación, cuál elijo para mi pedido?',           a: 'Si tu prenda es 100% poliéster y quieres acabado suave invisible al tacto → sublimación. Si es algodón, lycra, polar o quieres colores muy saturados con relieve mínimo → DTF.' },
-            { q: '¿Aguantan los lavados a 60°C?',                           a: 'Sublimación aguanta 60+ lavados sin pérdida visible. DTF aguanta 50+. Serigrafía 80+. Te damos ficha técnica de durabilidad con cada cotización.' },
-            { q: '¿Puedo agregar la línea eco a mi pedido?',                a: 'Sí, sin costo extra. Cada cotización trae checkbox de "línea eco" que activa la trazabilidad de mermas + textiles certificados disponibles a brief. Te llega anexo ESG con el pedido.' },
+            { q: '¿Aguantan los lavados a 60°C?',                           a: 'Sublimación aguanta 60+ lavados sin pérdida visible. DTF aguanta 50+. Te damos ficha técnica de durabilidad con cada cotización.' },
+            { q: '¿Tienen iniciativas eco?',                                  a: 'Sí, en desarrollo. Reutilizamos mermas (camas y sacos donados a fundaciones) y ofrecemos bases textiles más limpias cuando el brief lo permite. Es opción complementaria · pídelo en tu cotización si te suma.' },
             { q: '¿Hacen confección completa o solo estampan?',              a: 'Las dos cosas. Puedes traer tu prenda terminada para estampar o pedir confección desde el patrón. Tenemos catálogo de bases y también producimos a medida.' }
           ].map((f, i) => (
             <div key={i} className="web-faq-item">
@@ -8148,7 +8158,7 @@ function TallerBody({ s }) {
               <li>Respuesta automatizada en 3 minutos</li>
               <li>Cotización formal en menos de 24h</li>
               <li>Mockup incluido sin costo</li>
-              <li>Anexo ESG opcional (línea eco)</li>
+              <li>Anexo opcional de iniciativas eco si tu compra lo necesita</li>
             </ul>
           </div>
           <div className="fields">
@@ -8164,7 +8174,7 @@ function TallerBody({ s }) {
               <div className="field">BRIEF · CUÉNTANOS QUÉ NECESITÁS · 2 LÍNEAS BASTAN</div>
             </div>
             <div className="field-row full">
-              <div className="field">☐ AGREGAR LÍNEA ECO + ANEXO ESG SIN COSTO</div>
+              <div className="field">☐ AGREGAR ANEXO DE INICIATIVAS ECO · OPCIONAL · SIN COSTO</div>
             </div>
             <div className="submit-cta">SOLICITAR COTIZACIÓN →</div>
           </div>
@@ -8183,20 +8193,20 @@ function PopBody({ s }) {
     <>
       {/* 01 · MARQUEE marcas */}
       <div className="sb-section">
-        <span className="sb-kicker">— 01 · MARCAS QUE VESTIMOS</span>
-        <h2 className="sb-title">Estuvimos en <em>todas las activaciones</em> que viste el último año.</h2>
+        <span className="sb-kicker">— 01 · TIPOS DE TRABAJOS QUE HACEMOS</span>
+        <h2 className="sb-title">Operamos <em>varios proyectos en paralelo</em> · distintos públicos, mismo oficio.</h2>
       </div>
       <div className="pop-marquee-wrap">
         <div className="pop-marquee">
           {[1,2].map(rep => (
             <React.Fragment key={rep}>
-              <div className="item">31 MINUTOS <span className="star">★</span></div>
-              <div className="item">TINI DESK <span className="star">★</span></div>
-              <div className="item">FESTIVAL X <span className="star">★</span></div>
-              <div className="item">ACTIVACIÓN <em>RETAIL</em> <span className="star">★</span></div>
-              <div className="item">LANZAMIENTO <span className="star">★</span></div>
-              <div className="item">TV NACIONAL <span className="star">★</span></div>
-              <div className="item">FIESTAS PATRIAS <span className="star">★</span></div>
+              <div className="item">PRODUCCIÓN <em>AUDIOVISUAL</em> <span className="star">★</span></div>
+              <div className="item">AGENCIA · <em>ACTIVACIÓN</em> <span className="star">★</span></div>
+              <div className="item">RETAIL <em>KIT ONBOARDING</em> <span className="star">★</span></div>
+              <div className="item">INMOBILIARIA <em>OOH</em> <span className="star">★</span></div>
+              <div className="item">UNIFORME <em>CORPORATIVO</em> <span className="star">★</span></div>
+              <div className="item">CLIENTE FINAL <em>B2C</em> <span className="star">★</span></div>
+              <div className="item">CONFECCIONISTA <em>POR METRO</em> <span className="star">★</span></div>
               <div className="item">PRODUCTORA <em>EVENTO</em> <span className="star">★</span></div>
             </React.Fragment>
           ))}
@@ -8205,22 +8215,22 @@ function PopBody({ s }) {
 
       {/* 02 · CASOS POP */}
       <div className="sb-section">
-        <span className="sb-kicker">— 02 · CASOS · CULTURA POP</span>
-        <h2 className="sb-title">Los <em>3 momentos</em> que la marca pasó a la cultura.</h2>
+        <span className="sb-kicker">— 02 · CASOS · MIX DE PROYECTOS</span>
+        <h2 className="sb-title">Varios proyectos en paralelo, <em>distintos públicos, mismo oficio.</em></h2>
         <div className="pop-cards-grid">
           <div className="pop-card c1">
             <div>
-              <span className="kk">— CASO 01 · TV NACIONAL</span>
-              <h5>31 Minutos × Tini Desk</h5>
-              <p>Estampados y vestuario para la aparición de 31 Minutos en el último desk de TINI. Deadline imposible · cumplido.</p>
+              <span className="kk">— CASO 01 · AGENCIA / ACTIVACIÓN</span>
+              <h5>Poleras staff · 200 und</h5>
+              <p>Brief el lunes. Viernes en bodega del cliente. Activación nacional · DTF para soportar lavados y sol. Repetición desde el segundo evento.</p>
             </div>
             <span className="arrow">→</span>
           </div>
           <div className="pop-card c2">
             <div>
-              <span className="kk">— CASO 02 · FESTIVAL</span>
-              <h5>Activación + 200 poleras</h5>
-              <p>Brief lunes. Viernes en bodega. Domingo en TV. Lunes nos están pidiendo otra tirada para el siguiente fin de semana.</p>
+              <span className="kk">— CASO 02 · PRODUCCIÓN AUDIOVISUAL</span>
+              <h5>Vestuario para producción</h5>
+              <p>Piezas de vestuario con timing apretado, materialidad de cámara y libreta de color del show respetada. Una credencial más en el portafolio de producciones culturales.</p>
             </div>
             <span className="arrow">→</span>
           </div>
@@ -8244,7 +8254,7 @@ function PopBody({ s }) {
             <div>
               <span className="kk" style={{ color: 'var(--style-accent)' }}>— POLERAS · ACTIVACIÓN</span>
               <h5>50 - 1.000 und</h5>
-              <p>DTF o serigrafía. Plazo estándar 5 días. Lead time express 48h disponible bajo solicitud.</p>
+              <p>DTF o sublimación según base textil. Plazo estándar 5 días. Lead time express 48h disponible bajo solicitud.</p>
             </div>
           </div>
           <div className="pop-card c3" style={{ background: 'var(--style-bg2)', color: 'var(--style-ink)', border: '2px solid var(--style-accent2)' }}>
@@ -8290,13 +8300,13 @@ function PopBody({ s }) {
         <h2 className="sb-title">Cada año, <em>cinco marcas nuevas</em> pasan por el taller.</h2>
         <div className="pop-talents-grid">
           {[
-            { c: 't1', y: '2026', name: '31 Minutos', item: 'Vestuario Tini Desk · 60 piezas' },
-            { c: 't2', y: '2026', name: 'Festival X', item: '180 poleras staff · activación' },
+            { c: 't1', y: '2026', name: 'Producción audiovisual', item: 'Vestuario producción · 60 piezas' },
+            { c: 't2', y: '2026', name: 'Festival regional', item: '180 poleras staff · activación' },
             { c: 't3', y: '2025', name: 'Inmobiliaria', item: '18 cubrealarmas · OOH' },
             { c: 't4', y: '2025', name: 'Productora', item: '240 poleras · tour nacional' },
             { c: 't1', y: '2025', name: 'Retail', item: '200 kits onboarding · mensual' },
             { c: 't2', y: '2024', name: 'Agencia BTL', item: '120 pañoletas · evento masivo' },
-            { c: 't3', y: '2024', name: 'TV Show', item: '40 prendas · personaje' },
+            { c: 't3', y: '2024', name: 'B2C cliente final', item: 'Pedidos personalizados · flujo recurrente' },
             { c: 't4', y: '2024', name: 'Sello musical', item: 'Merch lanzamiento álbum' }
           ].map((t, i) => (
             <div key={i} className={'pop-talent ' + t.c}>
@@ -8313,14 +8323,14 @@ function PopBody({ s }) {
       {/* 07 · STICKER PACK descargable */}
       <div className="sb-section">
         <span className="sb-kicker">— 06 · STICKER PACK DOWNLOADABLE</span>
-        <h2 className="sb-title">Pack gratis · <em>llevate La Estampa</em> a tu WhatsApp.</h2>
-        <p className="sb-sub">Stickers, GIFs y wallpapers de la marca para que circulen. Descargá el pack completo zip · 24 piezas + GIFs animados + fondos de pantalla.</p>
+        <h2 className="sb-title">Pack gratis · <em>llévate LET</em> a tu WhatsApp.</h2>
+        <p className="sb-sub">Stickers, GIFs y wallpapers de la marca para que circulen. Descarga el pack completo zip · 24 piezas + GIFs animados + fondos de pantalla.</p>
         <div className="pop-stickers">
           <div className="pop-sticker s1">¡VEN<br/>VEN!</div>
           <div className="pop-sticker s2">★ POP ★</div>
           <div className="pop-sticker s3">TINTA<br/>FIRME</div>
-          <div className="pop-sticker s4">31 MIN<br/>★ TINI</div>
-          <div className="pop-sticker s5">VESTÍ<br/>TU MARCA</div>
+          <div className="pop-sticker s4">DTF<br/>★ PRO</div>
+          <div className="pop-sticker s5">VISTE<br/>TU MARCA</div>
           <div className="pop-sticker s6">LA<br/>ESTAMPA</div>
           <div className="pop-sticker s3">VIVA<br/>LA TINTA</div>
           <div className="pop-sticker s1">FESTIVAL<br/>READY</div>
@@ -8431,12 +8441,12 @@ function VerdeBody({ s }) {
         </div>
       </div>
 
-      {/* 03 · CICLO 4 ETAPAS */}
+      {/* 03 · INICIATIVAS COMPLEMENTARIAS */}
       <div className="sb-section">
-        <span className="sb-kicker">— 03 · EL CICLO · 4 ETAPAS</span>
-        <h2 className="sb-title">De la merma <em>al uso útil</em> · paso a paso.</h2>
+        <span className="sb-kicker">— 03 · INICIATIVAS COMPLEMENTARIAS · EN DESARROLLO</span>
+        <h2 className="sb-title">Iniciativas eco <em>como anexo opcional</em> · sin pirotecnia.</h2>
         <div className="verde-cycle">
-          {T.eco.stages.map(st => (
+          {(T.initiatives && T.initiatives.items ? T.initiatives.items : []).map(st => (
             <div key={st.num} className="verde-stage">
               <div className="num">{st.num}</div>
               <h6>{st.name}</h6>
@@ -8838,7 +8848,7 @@ function WebGraphicSystem({ s }) {
           <div className="gs-app" style={{ background: s.palette.bg2, color: s.palette.ink, border: '2px solid ' + s.palette.accent }}>
             <span className="app-type" style={{ color: s.palette.accent }}>— PACKAGING</span>
             <div className="app-name">la <em style={{ fontFamily: 'Instrument Serif, serif', fontStyle: 'italic' }}>estampa</em></div>
-            <span className="app-meta">Caja kraft · 30×40 cm · {s.id === 'verde' ? 'cartón reciclado' : 'serigrafía 1 tinta'}</span>
+            <span className="app-meta">Caja kraft · 30×40 cm · {s.id === 'verde' ? 'cartón reciclado' : 'impresión 1 tinta'}</span>
           </div>
           <div className="gs-app" style={{ background: '#0B0A08', color: '#F4ECDC' }}>
             <span className="app-type" style={{ color: s.palette.accent }}>— IG CARD 1:1</span>
@@ -9106,7 +9116,7 @@ function WebStyleSection({ styleId }) {
               <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1fr', gap: '2rem', marginBottom: '2rem', position: 'relative', zIndex: 2 }}>
                 <div>
                   <img src="assets/logo/laestampa-logo-real.jpg" alt="la estampa textil" style={{ height: 52, width: 'auto', objectFit: 'contain', borderRadius: 10, background: 'rgba(255,255,255,0.95)', padding: 6, marginBottom: '.9rem' }}/>
-                  <p style={{ fontSize: '.82rem', color: fmute, lineHeight: 1.6, marginBottom: '1rem' }}>4 años imprimiendo prendas que se ven en cámara. Plotters Epson certificados. Vestimos 31 Minutos para Tini Desk. Confección + estampado + merch B2B.</p>
+                  <p style={{ fontSize: '.82rem', color: fmute, lineHeight: 1.6, marginBottom: '1rem' }}>4 años imprimiendo prendas que se ven en cámara. Plotters Epson certificados. Sublimación + DTF + estampado por metro + confección y merch B2B.</p>
                   <div style={{ display: 'flex', gap: '.55rem', flexWrap: 'wrap' }}>
                     {['IG', 'FB', 'IN', 'YT', 'PIN'].map(net => (
                       <div key={net} style={{ width: 36, height: 36, borderRadius: '50%', background: `${fink}10`, border: `1px solid ${fink}20`, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Geist Mono, monospace', fontSize: '.58rem', color: fink, fontWeight: 700, letterSpacing: '0.04em', transition: 'background .2s', cursor: 'pointer' }}>{net}</div>
@@ -9118,17 +9128,17 @@ function WebStyleSection({ styleId }) {
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '.78rem', color: fmute, lineHeight: 2 }}>
                     <li>Sublimación textil</li>
                     <li>DTF film transfer</li>
-                    <li>Serigrafía clásica</li>
+                    <li>Estampado por metro</li>
                     <li>Confección completa</li>
-                    <li>Merch B2B premium</li>
-                    <li>Activación eventos</li>
-                    <li>Línea Eco circular</li>
+                    <li>Bordado + terminaciones</li>
+                    <li>Merch B2B corporativo</li>
+                    <li>B2C cliente final</li>
                   </ul>
                 </div>
                 <div>
                   <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.58rem', letterSpacing: '.22em', color: facc, textTransform: 'uppercase', fontWeight: 700, marginBottom: '.8rem' }}>CASOS</div>
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '.78rem', color: fmute, lineHeight: 2 }}>
-                    <li>31 Minutos · Tini Desk</li>
+                    <li>Producción audiovisual</li>
                     <li>Activaciones festival</li>
                     <li>Inmobiliarias B2B</li>
                     <li>Agencias publicidad</li>
@@ -9335,13 +9345,13 @@ function RrssSection({ propId }) {
 }
 
 /* ========================================================
-   W.1 LANDING ESTAMPADO + SERIGRAFÍA
+   W.1 LANDING ESTAMPADO TEXTIL
    ======================================================== */
 function LandEstampadoSection() {
   const l = T.landEstampado;
   return (
     <section>
-      <SectionHead num="W.1" title="Landing · <em>Estampado + Serigrafía</em>"
+      <SectionHead num="W.1" title="Landing · <em>Estampado Textil</em>"
         desc="Aterrizaje dedicado para Google Ads línea L1. Acento DTF naranja, prueba social operativa, cotización express con formulario corto que dispara IA filtro."/>
       <div className="landing-block" style={{ '--land-accent': '#FF5A1F', '--land-kicker-bg': 'rgba(255,90,31,0.10)' }}>
         <div className="land-meta tilt">
@@ -9372,18 +9382,18 @@ function LandEstampadoSection() {
         <div className="land-mock tilt">
           <div className="browser-bar">
             <div className="dot r"/><div className="dot y"/><div className="dot g"/>
-            <div className="url">— laestampatextil.cl/estampado-serigrafia</div>
+            <div className="url">— laestampatextil.cl/estampado-textil</div>
           </div>
           <div className="land-mock-hero">
             <div className="nav-row">
               <div className="brand">LA ESTAMPA<span style={{ color: 'var(--accent)' }}>·</span>TEXTIL</div>
               <div>WhatsApp · +56 9 · · · · ·</div>
             </div>
-            <div className="kicker">— ESTAMPADO · SERIGRAFÍA · DTF · SUBLIMACIÓN</div>
+            <div className="kicker">— ESTAMPADO TEXTIL · DTF · SUBLIMACIÓN · POR METRO</div>
             <h2>Tinta firme que aguanta <em>50 lavados</em> sin desteñir.</h2>
-            <div className="sub">Estampado profesional para activaciones, uniformes y campañas. 70+ cierres mensuales lo confirman. Lunes el brief, viernes en bodega de tu cliente.</div>
+            <div className="sub">Estampado profesional para activaciones, uniformes, campañas y pedidos B2C. 70+ cierres mensuales lo confirman. Lunes el brief, viernes en bodega de tu cliente.</div>
             <div className="cta-row">
-              <span className="land-cta-primary">Cotizar mis poleras →</span>
+              <span className="land-cta-primary">Cotizar mi pedido →</span>
               <span className="land-cta-secondary">Ver el oficio</span>
             </div>
           </div>
@@ -9392,15 +9402,15 @@ function LandEstampadoSection() {
             <div className="row-grid">
               <div className="row-cell"><h5>Sublimación</h5><p>Tinta integrada a la fibra · poliéster y mezclas · color firme.</p></div>
               <div className="row-cell"><h5>DTF · film transfer</h5><p>Cero límite de color · funciona en algodón, lycra, polar.</p></div>
-              <div className="row-cell"><h5>Serigrafía</h5><p>Resistencia máxima al lavado · ideal para tiradas grandes.</p></div>
+              <div className="row-cell"><h5>Por metro</h5><p>Telas estampadas para confección · catálogo de bases técnicas.</p></div>
             </div>
           </div>
           <div className="land-mock-row">
-            <div className="row-kick">— POR QUÉ LA ESTAMPA</div>
+            <div className="row-kick">— POR QUÉ LET</div>
             <div className="row-grid">
               <div className="row-cell"><h5>Plotters Epson</h5><p>Certificados industriales. Gestión de color profesional.</p></div>
               <div className="row-cell"><h5>Deadline real</h5><p>Lunes brief → viernes en bodega. No prometemos, lo hacemos.</p></div>
-              <div className="row-cell"><h5>Línea Eco</h5><p>Cada cotización trae opción de merma circular · ESG.</p></div>
+              <div className="row-cell"><h5>Anexo eco opcional</h5><p>Si lo pides, cotización incluye opción de bases más limpias.</p></div>
             </div>
           </div>
           <div className="land-mock-form">
@@ -9510,11 +9520,11 @@ function DigitalsCutSection() {
     <section>
       <SectionHead num="W.4"
         title="Digitals Cut · <em>recomendada</em> ★"
-        desc="La 4ta versión es la que recomendamos al cierre. Toma la dirección Taller Editorial (W.1) como base + integra el widget Merch B2B en vivo + suma un bloque interactivo de casos editoriales (TINI · economía circular · prensa) optimizado para SEO clásico + AEO (citas en LLMs) + GEO (Generative Engine Optimization). Es La Estampa preparada para 2027 sin abandonar lo que hizo bien estos 4 años."/>
+        desc="La 4ta versión es la que recomendamos al cierre. Toma la dirección Taller Editorial (W.1) como base + integra el widget Merch B2B en vivo + suma un bloque interactivo de casos del portafolio (productoras, agencias, retail, B2C) optimizado para SEO clásico + AEO (citas en LLMs) + GEO (Generative Engine Optimization). Es LET preparada para 2027 sobre el mismo logo y nombre actual · sin rebranding."/>
 
       <div className="preview-note" style={{ borderColor: '#F2C12B', background: 'rgba(242,193,43,0.06)', color: '#F2C12B' }}>
         <b>— RECOMENDADA. </b>
-        Esta versión combina los mejores activos de las propuestas anteriores: oficio editorial (W.1) + widget interactivo (L.3) + economía circular (W.3) + caso TINI/31 Min como prensa pop. <span className="arrow" style={{ color: '#F2C12B' }}>→</span> Optimizada para que aparezca en búsquedas Google + sea citada por LLMs (ChatGPT, Claude, Gemini) + capture lead B2B premium.
+        Esta versión combina los mejores activos de las propuestas anteriores: oficio editorial (W.1) + widget interactivo (L.3) + portafolio de casos diversos + anexo opcional de iniciativas eco. <span className="arrow" style={{ color: '#F2C12B' }}>→</span> Optimizada para que aparezca en búsquedas Google + sea citada por LLMs (ChatGPT, Claude, Gemini) + capture lead B2B + B2C transaccional.
       </div>
 
       <div className="dc-shell">
@@ -9538,18 +9548,18 @@ function DigitalsCutSection() {
             <div className="dc-menu">
               <span>OFICIO</span>
               <span>MERCH B2B</span>
-              <span>CASOS</span>
-              <span>ECO</span>
+              <span>B2C</span>
+              <span>POR METRO</span>
               <span className="pill">COTIZAR ★</span>
             </div>
           </div>
           <div className="dc-content">
-            <span className="dc-badge"><span className="star">★</span> RECOMENDADA · OFICIO + WIDGET + CASOS</span>
-            <h1>La tinta firme que <em>viste a las marcas</em> que importan.</h1>
-            <p className="dc-sub">4 años de oficio textil. Plotters Epson certificados. 70+ cierres mensuales. Vestimos a 31 Minutos para el último Tini Desk. Y ahora ofrecemos preview en vivo de cómo tu logo se ve en producto · antes de cotizar.</p>
+            <span className="dc-badge"><span className="star">★</span> RECOMENDADA · OFICIO + WIDGET + PORTAFOLIO</span>
+            <h1>Estampado textil <em>con oficio</em> · tinta firme en cada prenda.</h1>
+            <p className="dc-sub">4 años de oficio textil. Plotters Epson certificados. 70+ cierres mensuales entre B2B operativo y B2C transaccional. Ahora con preview en vivo: subes tu logo y ves cómo se ve en producto antes de cotizar.</p>
             <div className="dc-cta-row">
               <button className="dc-cta-primary">Probar widget en vivo →</button>
-              <button className="dc-cta-secondary">Ver casos editoriales</button>
+              <button className="dc-cta-secondary">Ver casos del portafolio</button>
             </div>
           </div>
         </div>
@@ -9588,7 +9598,7 @@ function DigitalsCutSection() {
             {[
               { ix: '01', name: 'Sublimación', desc: 'Tinta integrada a la fibra. Color firme, suave al tacto. Ideal poliéster y mezclas. 60+ lavados.' },
               { ix: '02', name: 'DTF · film',  desc: 'Impresión sobre film + termoadhesivo. Cero límite de color. Funciona en casi cualquier tela.' },
-              { ix: '03', name: 'Serigrafía',  desc: 'Pantalla + tinta plastisol. Tradición textil chilena. Tiradas grandes con identidad fuerte.' },
+              { ix: '03', name: 'Por metro',   desc: 'Telas estampadas a pedido para confeccionistas y diseñadores · catálogo de bases técnicas.' },
               { ix: '04', name: 'Bordado',     desc: 'Hilo industrial · acabado corporativo premium. Ideal logo bolsillo y escudos institucionales.' }
             ].map(c => (
               <div key={c.ix} className="dc-cap-card">
@@ -9604,7 +9614,7 @@ function DigitalsCutSection() {
         <div className="dc-section bg-dark">
           <span className="dc-kicker">— BLOG · CASOS EDITORIALES</span>
           <h2>Lo que <em>contamos</em> también es lo que Google y los LLMs citan.</h2>
-          <p className="dc-sub">Cada caso publicado es contenido SEO + activo de AEO (Answer Engine Optimization). Cuando un comprador pregunta a ChatGPT por proveedores de estampado serio en Chile, La Estampa aparece porque tenemos las URLs, los casos, las métricas y la prensa.</p>
+          <p className="dc-sub">Cada caso publicado es contenido SEO + activo de AEO (Answer Engine Optimization). Cuando un comprador pregunta a ChatGPT por proveedores de estampado textil serio en Chile, LET aparece porque tenemos las URLs, los casos, las métricas y los datos técnicos.</p>
 
           <div className="dc-seo-ribbon">
             <span className="seo-badge">★ SEO + AEO + GEO</span>
@@ -9612,33 +9622,19 @@ function DigitalsCutSection() {
           </div>
 
           <div className="dc-casos-grid">
-            <div className="dc-caso big" style={{ backgroundImage: 'url(assets/rrss/tinydesk-31min.png)' }}>
+            <div className="dc-caso big" style={{ backgroundImage: 'url(assets/img/pop-hero.png)' }}>
               <div className="caso-meta">
-                <span className="caso-tag">CASO ESTRELLA · TV NACIONAL</span>
-                <h4>Vestimos a 31 Minutos para el último Tini Desk.</h4>
-                <p className="caso-excerpt">Producción exprés de prendas custom · materialidad de cámara HD · libreta de color del show respetada · permission management cuidado. La pieza editorial más fuerte de los últimos 12 meses.</p>
+                <span className="caso-tag">AGENCIA · ACTIVACIÓN</span>
+                <h4>200 poleras staff · lunes brief, viernes en bodega.</h4>
+                <p className="caso-excerpt">Activación nacional con timing apretado. DTF para soportar lavados y sol. Repetición desde el segundo evento. Uno de los casos B2B operativos recurrentes del portafolio.</p>
                 <a className="caso-link">LEER CASO COMPLETO →</a>
               </div>
             </div>
-            <div className="dc-caso" style={{ backgroundImage: 'url(assets/img/verde-hero.png)' }}>
+            <div className="dc-caso" style={{ backgroundImage: 'url(assets/rrss/tinydesk-31min.png)' }}>
               <div className="caso-meta">
-                <span className="caso-tag">ECONOMÍA CIRCULAR</span>
-                <h4>Cómo nuestras mermas terminan en una fundación.</h4>
-                <a className="caso-link">VER REPORTE Q1 →</a>
-              </div>
-            </div>
-            <div className="dc-caso" style={{ backgroundImage: 'url(assets/img/pop-hero.png)' }}>
-              <div className="caso-meta">
-                <span className="caso-tag">FESTIVAL · ACTIVACIÓN</span>
-                <h4>200 poleras staff · lunes brief, viernes en bodega.</h4>
-                <a className="caso-link">VER PROCESO →</a>
-              </div>
-            </div>
-            <div className="dc-caso" style={{ backgroundImage: 'url(assets/img/verde-perros-row.png)' }}>
-              <div className="caso-meta">
-                <span className="caso-tag">PRENSA · ENTREVISTA</span>
-                <h4>Priscila Sarmiento · de Remind a La Estampa en 4 años.</h4>
-                <a className="caso-link">LEER ENTREVISTA →</a>
+                <span className="caso-tag">PRODUCCIÓN AUDIOVISUAL</span>
+                <h4>Vestuario para producción televisiva.</h4>
+                <a className="caso-link">VER CASO →</a>
               </div>
             </div>
             <div className="dc-caso" style={{ backgroundImage: 'url(assets/img/taller-polera.png)' }}>
@@ -9646,6 +9642,20 @@ function DigitalsCutSection() {
                 <span className="caso-tag">B2B · ONBOARDING</span>
                 <h4>Kit nuevo empleado · 200 ingresos/mes con marca retail.</h4>
                 <a className="caso-link">VER CASO →</a>
+              </div>
+            </div>
+            <div className="dc-caso" style={{ backgroundImage: 'url(assets/img/verde-hero.png)' }}>
+              <div className="caso-meta">
+                <span className="caso-tag">B2C · CLIENTE FINAL</span>
+                <h4>Cliente final · flujo y liquidez diaria.</h4>
+                <a className="caso-link">VER CASO →</a>
+              </div>
+            </div>
+            <div className="dc-caso" style={{ backgroundImage: 'url(assets/img/verde-perros-row.png)' }}>
+              <div className="caso-meta">
+                <span className="caso-tag">INICIATIVA COMPLEMENTARIA</span>
+                <h4>Reutilización de mermas a fundaciones · línea complementaria.</h4>
+                <a className="caso-link">VER INICIATIVA →</a>
               </div>
             </div>
           </div>
@@ -9691,7 +9701,7 @@ function DigitalsCutSection() {
           <div className="content">
             <span style={{ fontFamily: 'Geist Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.22em', color: '#F2C12B', display: 'inline-block', marginBottom: '1rem', textTransform: 'uppercase' }}>— DECIDE HOY · TU PEDIDO EMPIEZA MAÑANA</span>
             <h2>El brief que cuesta menos · es <em>el que ya partió.</em></h2>
-            <p>Cotización en menos de 24 horas hábiles. Mockup incluido. Anexo ESG opcional. Plotters Epson certificados. 4 años de oficio detrás de cada hilo.</p>
+            <p>Cotización en menos de 24 horas hábiles. Mockup incluido. Anexo opcional de iniciativas eco. Plotters Epson certificados. 4 años de oficio detrás de cada hilo.</p>
             <div className="ctas">
               <button className="dc-cta-primary">Probar widget en vivo →</button>
               <button className="dc-cta-secondary">Cotizar directamente</button>
@@ -9731,7 +9741,7 @@ function DigitalsCutSection() {
           <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr 1fr 1fr 1fr', gap: '1.8rem', marginBottom: '2.2rem', position: 'relative', zIndex: 2 }}>
             <div>
               <img src="assets/logo/laestampa-logo-real.jpg" alt="La Estampa Textil" style={{ height: 60, width: 'auto', objectFit: 'contain', borderRadius: 10, background: 'rgba(255,255,255,0.95)', padding: 6, marginBottom: '1rem' }}/>
-              <p style={{ fontSize: '.82rem', color: 'rgba(244,236,220,0.62)', lineHeight: 1.65, marginBottom: '1rem' }}>4 años de oficio textil. Plotters Epson certificados. Vestimos a 31 Minutos para Tini Desk. Confección + estampado + merch B2B premium. <b style={{ color: '#FF5A1F' }}>Recomendados por agencias que pesan.</b></p>
+              <p style={{ fontSize: '.82rem', color: 'rgba(244,236,220,0.62)', lineHeight: 1.65, marginBottom: '1rem' }}>4 años de oficio textil. Plotters Epson certificados. Sublimación, DTF, estampado por metro y confección. Trabajamos con agencias, productoras, marcas, retail y cliente final B2C. <b style={{ color: '#FF5A1F' }}>Estos saben lo que hacen.</b></p>
               <div style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap' }}>
                 {['IG', 'FB', 'IN', 'YT', 'PIN'].map(net => (
                   <div key={net} style={{ width: 38, height: 38, borderRadius: '50%', background: 'rgba(244,236,220,0.08)', border: '1px solid rgba(244,236,220,0.18)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', color: '#F4ECDC', fontWeight: 700, letterSpacing: '0.04em', cursor: 'pointer' }}>{net}</div>
@@ -9743,17 +9753,17 @@ function DigitalsCutSection() {
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '.78rem', color: 'rgba(244,236,220,0.62)', lineHeight: 2 }}>
                 <li>Sublimación</li>
                 <li>DTF transfer</li>
-                <li>Serigrafía</li>
-                <li>Confección</li>
+                <li>Estampado por metro</li>
+                <li>Confección + bordado</li>
                 <li>Merch B2B</li>
-                <li>Activación</li>
-                <li>Línea Eco</li>
+                <li>B2C cliente final</li>
+                <li>Activaciones</li>
               </ul>
             </div>
             <div>
               <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.58rem', letterSpacing: '.22em', color: '#FF5A1F', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.9rem' }}>CASOS</div>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '.78rem', color: 'rgba(244,236,220,0.62)', lineHeight: 2 }}>
-                <li>31 Minutos · Tini Desk</li>
+                <li>Producción audiovisual</li>
                 <li>Activación festival</li>
                 <li>Inmobiliarias</li>
                 <li>Agencias retail</li>
@@ -9953,7 +9963,7 @@ function LandMerchWidgetSection() {
           <div className="lw-content">
             <span className="lw-kicker">— MERCH B2B · CON TU MARCA · 5 DÍAS</span>
             <h1>Tu marca <em>sobre 50 productos.</em> Sin minimo absurdo.</h1>
-            <p className="lw-sub">Poleras, tazas, mochilas, libretas, llaveros, totes. Subes tu logo, eliges producto, generas el mockup y cotizas. Producción en taller propio · plotters Epson · DTF + serigrafía + bordado. Desde 50 unidades.</p>
+            <p className="lw-sub">Poleras, tazas, mochilas, libretas, llaveros, totes. Subes tu logo, eliges producto, generas el mockup y cotizas. Producción en taller propio · plotters Epson · DTF + sublimación + bordado + estampado por metro. Desde 50 unidades.</p>
             <div className="lw-cta-row">
               <button className="lw-cta-primary" onClick={() => { const el = document.getElementById('merch-studio'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Probar widget en vivo →</button>
               <button className="lw-cta-secondary" onClick={() => { const el = document.getElementById('merch-form'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Cotizar directamente</button>
@@ -10097,10 +10107,10 @@ function LandMerchWidgetSection() {
           <h2>Lo que <em>producimos</em> con tu marca.</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '.8rem', marginTop: '1.2rem' }}>
             {[
-              { ic: '👕', name: 'Poleras + poleras', desc: 'Algodón · poliéster · mezcla. DTF · sublimación · serigrafía.', min: '50 und' },
+              { ic: '👕', name: 'Poleras + poleras', desc: 'Algodón · poliéster · mezcla. DTF · sublimación · bordado.', min: '50 und' },
               { ic: '☕', name: 'Tazas', desc: 'Cerámica blanca o color · sublimación full-color permanente.', min: '50 und' },
               { ic: '🧢', name: 'Gorros + jockeys', desc: 'Bordado industrial · 6 paneles · adultos y niños.', min: '50 und' },
-              { ic: '🎒', name: 'Mochilas + totes', desc: 'Algodón crudo · poliéster · serigrafía o bordado.', min: '50 und' },
+              { ic: '🎒', name: 'Mochilas + totes', desc: 'Algodón crudo · poliéster · DTF o bordado.', min: '50 und' },
               { ic: '📒', name: 'Libretas + cuadernos', desc: 'Tapas duras · estampado UV · papel reciclado opcional.', min: '100 und' },
               { ic: '✏️', name: 'Lápices + pens', desc: 'Plástico color · grabado láser permanente.', min: '200 und' },
               { ic: '🔑', name: 'Llaveros + accesorios', desc: 'Acrílico color · metal · grabado láser o sublimación.', min: '100 und' },
@@ -10124,7 +10134,7 @@ function LandMerchWidgetSection() {
           <h2>Marcas que <em>ya confiaron.</em></h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '1.2rem' }}>
             {[
-              { tag: 'TV · 31 MINUTOS', title: 'Vestuario Tini Desk', desc: 'Producción exprés de prendas custom para la aparición de 31 Minutos en el desk de TINI. Permission management cuidado.', metric: '5 días brief→bodega' },
+              { tag: 'PRODUCCIÓN AUDIOVISUAL', title: 'Vestuario para producción TV', desc: 'Producción exprés de prendas custom para producción audiovisual con timing apretado y libreta de color respetada. Permission management cuidado.', metric: '5 días brief→bodega' },
               { tag: 'AGENCIA · ACTIVACIÓN', title: '200 poleras staff festival', desc: 'Brief lunes, viernes en bodega del cliente. DTF para soportar lavados + sol. Repetición desde el 2do evento.', metric: '200 und · 5 días' },
               { tag: 'RETAIL · ONBOARDING', title: 'Kit nuevo empleado mensual', desc: 'Marca con 200 ingresos al mes · pañoleta + manta + tote a brand book · entrega a domicilio.', metric: '+600 kits / trimestre' }
             ].map((c, i) => (
@@ -10151,8 +10161,8 @@ function LandMerchWidgetSection() {
               <ul className="promises">
                 <li style={{ color: '#F4ECDC' }}>Cotización PDF con tu logo + precio unitario + plazo</li>
                 <li style={{ color: '#F4ECDC' }}>Mockup visual del producto elegido</li>
-                <li style={{ color: '#F4ECDC' }}>Opciones de tela y técnica (DTF · sublimación · serigrafía · bordado)</li>
-                <li style={{ color: '#F4ECDC' }}>Anexo ESG opcional · línea eco sin costo extra</li>
+                <li style={{ color: '#F4ECDC' }}>Opciones de tela y técnica (DTF · sublimación · estampado por metro · bordado)</li>
+                <li style={{ color: '#F4ECDC' }}>Anexo opcional de iniciativas eco · sin costo extra</li>
                 <li style={{ color: '#F4ECDC' }}>Despacho a tu bodega o a domicilio del cliente final</li>
               </ul>
             </div>
@@ -10336,19 +10346,20 @@ function LandMerchSection() {
 }
 
 /* ========================================================
-   04.0 ECO
+   04.0 INICIATIVAS ECO · COMPLEMENTARIAS (no enrutada por defecto · línea complementaria)
    ======================================================== */
-function EcoSection() {
-  const e = T.eco;
+function InitiativesSection() {
+  const e = T.initiatives;
+  if (!e) return null;
   return (
     <section>
-      <SectionHead num="04.0" title="Línea Eco · <em>circular</em>"
+      <SectionHead num="04.0" title="Iniciativas eco · <em>complementarias</em>"
         desc={e.thesis}/>
       <div style={{ marginBottom: '1rem' }}>
-        <span className="tag-pill" style={{ background: 'rgba(201,242,92,0.08)', borderColor: 'rgba(201,242,92,0.25)', color: 'var(--accent2)' }}>4 ETAPAS · CICLO COMPLETO</span>
+        <span className="tag-pill" style={{ background: 'rgba(201,242,92,0.08)', borderColor: 'rgba(201,242,92,0.25)', color: 'var(--accent2)' }}>EN DESARROLLO · NO PILAR CENTRAL</span>
       </div>
       <div className="eco-stages">
-        {e.stages.map(s => (
+        {e.items.map(s => (
           <div key={s.num} className="eco-stage tilt">
             <div className="num">{s.num}</div>
             <h4>{s.name}</h4>
@@ -10358,22 +10369,305 @@ function EcoSection() {
       </div>
 
       <div style={{ marginTop: '2rem', marginBottom: '.8rem' }}>
-        <span className="tag-pill" style={{ background: 'rgba(242,193,43,0.08)', borderColor: 'rgba(242,193,43,0.25)', color: 'var(--accent3)' }}>MÉTRICAS · REPORTE PÚBLICO TRIMESTRAL</span>
+        <span className="tag-pill" style={{ background: 'rgba(201,242,92,0.08)', borderColor: 'rgba(201,242,92,0.25)', color: 'var(--accent2)' }}>USO COMERCIAL · ANEXO OPCIONAL</span>
       </div>
-      <div className="eco-kpis-row">
-        {e.kpis.map((k, i) => (
-          <div key={i} className="eco-kpi tilt">
-            <div className="v">{k.k}</div>
-            <span className="k">{k.v}</span>
+      <div className="eco-uses">
+        {e.use.map((u, i) => <div key={i} className="eco-use">{u}</div>)}
+      </div>
+    </section>
+  );
+}
+
+/* ========================================================
+   00.4 OWNERSHIP · propiedad + plataforma + dominio + costos
+   ======================================================== */
+function OwnershipSection() {
+  const o = T.ownership;
+  if (!o) return null;
+  return (
+    <section>
+      <SectionHead num="00.4" title="Propiedad + plataforma + <em>dominio</em>"
+        desc={o.intro}/>
+
+      <div className="info-card tilt" style={{ marginBottom: '1.4rem', borderColor: 'rgba(242,193,43,0.45)', background: 'linear-gradient(135deg, rgba(242,193,43,0.06), transparent 70%)' }}>
+        <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.22em', color: '#F2C12B', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.5rem' }}>★ LECTURA RÁPIDA</div>
+        <h4 style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 700, fontSize: '1.3rem', color: 'var(--ink)', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '.4rem' }}>{o.headline}</h4>
+      </div>
+
+      {/* PLATAFORMA */}
+      <div className="info-card tilt" style={{ marginBottom: '1.2rem' }}>
+        <div className="kicker">— PLATAFORMA</div>
+        <h4 style={{ marginTop: '.3rem', marginBottom: '.6rem' }}>{o.platform.label}</h4>
+        <p style={{ marginBottom: '.6rem' }} dangerouslySetInnerHTML={{ __html: o.platform.body }} />
+        <p style={{ marginBottom: '.6rem', fontStyle: 'italic', color: 'var(--ink-soft)' }}>{o.platform.alternatives}</p>
+        <ul style={{ paddingLeft: '1.2rem' }}>{o.platform.stack.map((s, i) => <li key={i} dangerouslySetInnerHTML={{ __html: s }} />)}</ul>
+      </div>
+
+      {/* AI-EDITABLE · diferencial real del stack moderno */}
+      {o.aiEditable && (
+        <div className="info-card tilt" style={{ marginBottom: '1.2rem', borderColor: 'rgba(201,242,92,0.45)', background: 'linear-gradient(135deg, rgba(201,242,92,0.05), transparent 70%)' }}>
+          <div className="kicker" style={{ color: '#C9F25C' }}>★ MANTENCIÓN AI-NATIVA</div>
+          <h4 style={{ marginTop: '.3rem', marginBottom: '.6rem' }}>{o.aiEditable.label}</h4>
+          <p style={{ marginBottom: '1rem' }} dangerouslySetInnerHTML={{ __html: o.aiEditable.body }} />
+          <div style={{ display: 'grid', gap: '.7rem', marginBottom: '1rem' }}>
+            {o.aiEditable.examples.map((ex, i) => (
+              <div key={i} style={{ padding: '.8rem 1rem', background: 'rgba(0,0,0,0.25)', borderLeft: '3px solid #C9F25C', borderRadius: 8 }}>
+                <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.58rem', letterSpacing: '.16em', color: '#C9F25C', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.3rem' }}>{ex.who}</div>
+                <div style={{ fontStyle: 'italic', color: 'var(--ink)', fontSize: '.86rem', marginBottom: '.4rem' }}>{ex.prompt}</div>
+                <div style={{ fontSize: '.78rem', color: 'var(--ink-soft)' }}>→ {ex.result}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ padding: '.7rem .9rem', background: 'rgba(242,193,43,0.08)', borderLeft: '3px solid #F2C12B', fontSize: '.82rem', color: 'var(--ink-soft)' }} dangerouslySetInnerHTML={{ __html: o.aiEditable.callout }} />
+        </div>
+      )}
+
+      {/* FUNNEL SCOPE · qué incluye y qué no */}
+      {o.funnelScope && (
+        <div className="info-card tilt" style={{ marginBottom: '1.2rem', borderColor: 'rgba(255,90,31,0.40)' }}>
+          <div className="kicker" style={{ color: '#FF5A1F' }}>— ALCANCE FUNNEL</div>
+          <h4 style={{ marginTop: '.3rem', marginBottom: '.6rem' }}>{o.funnelScope.label}</h4>
+          <p style={{ marginBottom: '1rem' }} dangerouslySetInnerHTML={{ __html: o.funnelScope.body }} />
+          <div className="info-grid cols-2" style={{ gap: '.9rem' }}>
+            <div className="step-card" style={{ borderColor: 'rgba(201,242,92,0.35)' }}>
+              <div className="step-num" style={{ color: '#C9F25C' }}>INCLUYE</div>
+              <ul style={{ paddingLeft: '1.2rem', marginTop: '.5rem' }}>{o.funnelScope.included.map((it, i) => <li key={i}>{it}</li>)}</ul>
+            </div>
+            <div className="step-card" style={{ borderColor: 'rgba(255,90,31,0.35)' }}>
+              <div className="step-num" style={{ color: '#FF5A1F' }}>NO INCLUYE</div>
+              <ul style={{ paddingLeft: '1.2rem', marginTop: '.5rem' }}>{o.funnelScope.excluded.map((it, i) => <li key={i}>{it}</li>)}</ul>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* MATRIZ DE PROPIEDAD */}
+      <div className="info-card tilt" style={{ marginBottom: '1.2rem' }}>
+        <div className="kicker">— DE QUIÉN ES QUÉ</div>
+        <h4 style={{ marginTop: '.3rem', marginBottom: '.6rem' }}>Matriz de propiedad de activos</h4>
+        <div style={{ overflowX: 'auto' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.85rem' }}>
+            <thead>
+              <tr style={{ borderBottom: '1px solid var(--line)', textAlign: 'left' }}>
+                <th style={{ padding: '.6rem .3rem', color: 'var(--accent)', fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.16em', textTransform: 'uppercase' }}>Activo</th>
+                <th style={{ padding: '.6rem .3rem', color: 'var(--accent)', fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.16em', textTransform: 'uppercase' }}>Dueño</th>
+                <th style={{ padding: '.6rem .3rem', color: 'var(--accent)', fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.16em', textTransform: 'uppercase' }}>Detalle</th>
+              </tr>
+            </thead>
+            <tbody>
+              {o.propertyMatrix.map((row, i) => (
+                <tr key={i} style={{ borderBottom: '1px solid var(--line)' }}>
+                  <td style={{ padding: '.7rem .3rem', fontWeight: 600 }}>{row.item}</td>
+                  <td style={{ padding: '.7rem .3rem' }}>
+                    <span style={{ padding: '.2rem .5rem', borderRadius: '999px', background: row.owner === 'LET' ? 'rgba(255,90,31,0.10)' : row.owner === 'Compartido' ? 'rgba(242,193,43,0.10)' : 'rgba(201,242,92,0.10)', color: row.owner === 'LET' ? '#FF5A1F' : row.owner === 'Compartido' ? '#F2C12B' : '#C9F25C', fontFamily: 'Geist Mono, monospace', fontSize: '.62rem', letterSpacing: '.12em', textTransform: 'uppercase', fontWeight: 700 }}>{row.owner}</span>
+                  </td>
+                  <td style={{ padding: '.7rem .3rem', color: 'var(--ink-soft)', fontSize: '.78rem' }}>{row.detail}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* COSTOS */}
+      <div className="info-grid cols-2" style={{ marginBottom: '1.4rem' }}>
+        <div className="step-card" style={{ borderColor: 'rgba(201,242,92,0.30)' }}>
+          <div className="step-num" style={{ color: '#C9F25C' }}>INCLUIDO</div>
+          <h5>{o.costsIncluded.label}</h5>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '.5rem' }}>{o.costsIncluded.items.map((it, i) => <li key={i}>{it}</li>)}</ul>
+        </div>
+        <div className="step-card" style={{ borderColor: 'rgba(255,90,31,0.30)' }}>
+          <div className="step-num" style={{ color: '#FF5A1F' }}>NO INCLUIDO</div>
+          <h5>{o.costsExtra.label}</h5>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '.5rem' }}>{o.costsExtra.items.map((it, i) => <li key={i}>{it}</li>)}</ul>
+        </div>
+      </div>
+
+      {/* DOMINIO .cl vs .com */}
+      <div className="info-card tilt" style={{ marginBottom: '1.2rem', borderColor: 'rgba(242,193,43,0.45)' }}>
+        <div className="kicker" style={{ color: '#F2C12B' }}>— DECISIÓN PENDIENTE</div>
+        <h4 style={{ marginTop: '.3rem', marginBottom: '.4rem' }}>{o.domain.label}</h4>
+        <p style={{ marginBottom: '.8rem', fontStyle: 'italic', color: 'var(--ink)' }}>{o.domain.headline}</p>
+        <p style={{ marginBottom: '.8rem', color: 'var(--ink-soft)' }}>{o.domain.currentStatus}</p>
+
+        <div className="info-grid cols-2" style={{ marginTop: '1rem', marginBottom: '1.2rem' }}>
+          {o.domain.options.map(op => (
+            <div key={op.id} className="step-card">
+              <div className="step-num">OPCIÓN {op.id}</div>
+              <h5>{op.name}</h5>
+              <div style={{ marginTop: '.4rem', marginBottom: '.5rem', fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.16em', color: '#C9F25C', textTransform: 'uppercase' }}>→ {op.recommendation}</div>
+              <p style={{ fontSize: '.82rem', color: 'var(--ink-soft)' }}>{op.detail}</p>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ padding: '1rem 1.1rem', background: 'rgba(255,90,31,0.06)', border: '1px solid rgba(255,90,31,0.25)', borderRadius: 10, marginBottom: '1rem' }}>
+          <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.18em', color: '#FF5A1F', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.4rem' }}>{o.domain.migrationPlan.label}</div>
+          <ol style={{ paddingLeft: '1.4rem', marginBottom: '.7rem' }}>{o.domain.migrationPlan.steps.map((s, i) => <li key={i} style={{ marginBottom: '.3rem' }}>{s}</li>)}</ol>
+          <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.18em', color: 'var(--accent3)', textTransform: 'uppercase', marginBottom: '.3rem' }}>RIESGOS</div>
+          <ul style={{ paddingLeft: '1.4rem', marginBottom: '.7rem' }}>{o.domain.migrationPlan.risks.map((r, i) => <li key={i}>{r}</li>)}</ul>
+          <div style={{ padding: '.6rem .8rem', background: 'rgba(242,193,43,0.10)', borderLeft: '3px solid #F2C12B', fontSize: '.82rem', color: 'var(--ink)' }}>
+            <b style={{ color: '#F2C12B' }}>Recomendación Digitals:</b> {o.domain.migrationPlan.recommendation}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ========================================================
+   00.5 OPERATING · quién hace qué
+   ======================================================== */
+function OperatingSection() {
+  const o = T.operating;
+  if (!o) return null;
+  return (
+    <section>
+      <SectionHead num="00.5" title="Operación realista · <em>quién hace qué</em>"
+        desc={o.intro}/>
+
+      <div className="info-card tilt" style={{ marginBottom: '1.4rem', borderColor: 'rgba(201,242,92,0.45)', background: 'linear-gradient(135deg, rgba(201,242,92,0.06), transparent 70%)' }}>
+        <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.6rem', letterSpacing: '.22em', color: '#C9F25C', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.5rem' }}>★ POSICIÓN</div>
+        <h4 style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 700, fontSize: '1.3rem', color: 'var(--ink)', textTransform: 'uppercase', letterSpacing: '-0.01em' }}>{o.headline}</h4>
+      </div>
+
+      <div className="info-grid cols-3" style={{ marginBottom: '1.2rem' }}>
+        <div className="step-card" style={{ borderColor: 'rgba(255,90,31,0.45)' }}>
+          <div className="step-num" style={{ color: '#FF5A1F' }}>DIGITALS</div>
+          <h5>{o.digitalsDoes.label}</h5>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '.6rem' }}>{o.digitalsDoes.items.map((it, i) => <li key={i} style={{ marginBottom: '.3rem' }}>{it}</li>)}</ul>
+        </div>
+        <div className="step-card" style={{ borderColor: 'rgba(242,193,43,0.45)' }}>
+          <div className="step-num" style={{ color: '#F2C12B' }}>LET APORTA</div>
+          <h5>{o.letDoes.label}</h5>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '.6rem' }}>{o.letDoes.items.map((it, i) => <li key={i} style={{ marginBottom: '.3rem' }}>{it}</li>)}</ul>
+        </div>
+        <div className="step-card" style={{ borderColor: 'rgba(201,242,92,0.45)' }}>
+          <div className="step-num" style={{ color: '#C9F25C' }}>LET NO HACE</div>
+          <h5>{o.letDoesNot.label}</h5>
+          <ul style={{ paddingLeft: '1.2rem', marginTop: '.6rem' }}>{o.letDoesNot.items.map((it, i) => <li key={i} style={{ marginBottom: '.3rem' }}>{it}</li>)}</ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ========================================================
+   04.1 GANTT · vista visual del roadmap con prioridades
+   ======================================================== */
+function GanttSection() {
+  /* Gantt resumen visual del roadmap. Etapas + prioridades + tiempos.
+     Útil para que la clienta lea de un vistazo qué pasa en cada semana. */
+  const lanes = [
+    {
+      lane: 'Identidad + Plataforma', color: '#FF5A1F',
+      bars: [
+        { from: 1, to: 2, label: 'Manual marca + accesos', prio: 'P0' },
+        { from: 3, to: 5, label: 'Sprint 1 · 2 landings campaña (HTML + Tailwind)', prio: 'P0' },
+        { from: 4, to: 10, label: 'Sprint 2 · web madre (vanilla o Astro)', prio: 'P0' },
+        { from: 9, to: 12, label: 'Entrega código + handoff técnico a LET', prio: 'P1' }
+      ]
+    },
+    {
+      lane: 'Hapee + Tracking', color: '#F2C12B',
+      bars: [
+        { from: 1, to: 3, label: 'Setup Hapee + pixel + GA4', prio: 'P0' },
+        { from: 3, to: 6, label: 'Agente IA fase 1 → 3', prio: 'P0' },
+        { from: 6, to: 12, label: 'Agente fase 4 + scoring', prio: 'P1' }
+      ]
+    },
+    {
+      lane: 'Google Ads', color: '#4A7A50',
+      bars: [
+        { from: 4, to: 5, label: 'Google MVP · 2 líneas', prio: 'P0' },
+        { from: 6, to: 8, label: 'Optimización quirúrgica', prio: 'P1' },
+        { from: 9, to: 12, label: 'Always-on 4 líneas', prio: 'P0' }
+      ]
+    },
+    {
+      lane: 'Meta Ads · testeo', color: '#0A66C2',
+      bars: [
+        { from: 4, to: 6, label: 'F1 · 8 creativos test', prio: 'P0' },
+        { from: 7, to: 9, label: 'F2 · escalar ganadores', prio: 'P1' },
+        { from: 10, to: 12, label: 'F3 · retención + Advantage+', prio: 'P1' }
+      ]
+    },
+    {
+      lane: 'Contenido RRSS', color: '#E94F4F',
+      bars: [
+        { from: 3, to: 3, label: 'Toma audiovisual #1', prio: 'P0' },
+        { from: 4, to: 8, label: 'Grilla mes 1-2', prio: 'P1' },
+        { from: 9, to: 12, label: 'Grilla mes 3 + Voz Priscila', prio: 'P1' }
+      ]
+    },
+    {
+      lane: 'Dominio + SEO', color: '#C9F25C',
+      bars: [
+        { from: 1, to: 12, label: 'Mantener laestampatextil.cl', prio: 'P0' },
+        { from: 9, to: 12, label: 'Decisión .com (post QBR M3)', prio: 'P2' }
+      ]
+    }
+  ];
+  const weeks = 12;
+  const COL = `repeat(${weeks}, 1fr)`;
+  const milestonesAtWeek = { 5: 'MVP en aire', 8: 'Informe Día 60 ★', 12: 'Informe Día 90 + plan Q2 ★' };
+
+  return (
+    <section>
+      <SectionHead num="04.1" title="Gantt · <em>etapas + prioridades + tiempos</em>"
+        desc="Vista visual del roadmap por semana · 6 líneas operativas trabajando en paralelo · prioridades P0 (crítico arrancar ya) · P1 (importante) · P2 (decisión más adelante). Hitos marcados con estrella ★."/>
+
+      <div className="info-card tilt" style={{ marginBottom: '1.4rem' }}>
+        <div className="kicker">— LECTURA</div>
+        <h4 style={{ marginTop: '.3rem', marginBottom: '.5rem' }}>P0 = arranca semana 1-3 · P1 = arranca semana 4-9 · P2 = decisión post-QBR</h4>
+        <p>Las 6 líneas se ejecutan en paralelo · no hay dependencia bloqueante entre ellas. La línea de dominio se mantiene en .cl los 12 meses · decisión .com se evalúa en QBR del Día 90 con data real.</p>
+      </div>
+
+      <div style={{ background: 'var(--bg2)', border: '1px solid var(--line)', borderRadius: 14, padding: '1rem', overflowX: 'auto' }}>
+        {/* HEADER · SEMANAS */}
+        <div style={{ display: 'grid', gridTemplateColumns: `220px ${COL}`, gap: '4px', marginBottom: '.8rem', minWidth: 900 }}>
+          <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: '.58rem', letterSpacing: '.18em', color: 'var(--ink-soft)', textTransform: 'uppercase', alignSelf: 'end' }}>LÍNEA OPERATIVA</div>
+          {Array.from({ length: weeks }, (_, i) => i + 1).map(w => (
+            <div key={w} style={{ textAlign: 'center', fontFamily: 'Geist Mono, monospace', fontSize: '.58rem', letterSpacing: '.1em', color: milestonesAtWeek[w] ? '#FF3D7F' : 'var(--ink-soft)', textTransform: 'uppercase', fontWeight: milestonesAtWeek[w] ? 800 : 500, borderBottom: milestonesAtWeek[w] ? '2px solid #FF3D7F' : 'none', paddingBottom: '.3rem' }}>
+              S{w}
+              {milestonesAtWeek[w] && <div style={{ fontSize: '.5rem', marginTop: '.2rem' }}>★</div>}
+            </div>
+          ))}
+        </div>
+
+        {/* LANES */}
+        {lanes.map(lane => (
+          <div key={lane.lane} style={{ display: 'grid', gridTemplateColumns: `220px ${COL}`, gap: '4px', alignItems: 'center', padding: '.4rem 0', borderBottom: '1px dashed var(--line)', minWidth: 900 }}>
+            <div style={{ fontFamily: 'Bricolage Grotesque', fontWeight: 700, fontSize: '.78rem', color: 'var(--ink)', textTransform: 'uppercase', letterSpacing: '-0.005em', display: 'flex', alignItems: 'center', gap: '.4rem' }}>
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: lane.color }}/>
+              {lane.lane}
+            </div>
+            {Array.from({ length: weeks }, (_, i) => i + 1).map(w => {
+              const bar = lane.bars.find(b => w >= b.from && w <= b.to);
+              const isStart = bar && w === bar.from;
+              return (
+                <div key={w} style={{ position: 'relative', height: 28, background: bar ? lane.color + '22' : 'transparent', borderLeft: w === bar?.from ? `3px solid ${lane.color}` : 'none', display: 'flex', alignItems: 'center', justifyContent: 'flex-start', overflow: 'hidden' }}>
+                  {isStart && (
+                    <span style={{ position: 'absolute', left: 4, top: 4, padding: '.05rem .35rem', background: lane.color, color: '#0B0A08', fontFamily: 'Geist Mono, monospace', fontSize: '.5rem', letterSpacing: '.1em', fontWeight: 800, borderRadius: 3, textTransform: 'uppercase', whiteSpace: 'nowrap', zIndex: 2 }}>{bar.prio}</span>
+                  )}
+                  {isStart && (
+                    <span style={{ position: 'absolute', left: 4, bottom: 3, fontSize: '.55rem', color: 'var(--ink)', fontFamily: 'Geist, sans-serif', whiteSpace: 'nowrap', maxWidth: 200, overflow: 'hidden', textOverflow: 'ellipsis', paddingRight: '4px', fontWeight: 600 }}>{bar.label}</span>
+                  )}
+                </div>
+              );
+            })}
           </div>
         ))}
       </div>
 
-      <div style={{ marginTop: '2rem', marginBottom: '.8rem' }}>
-        <span className="tag-pill" style={{ background: 'rgba(201,242,92,0.08)', borderColor: 'rgba(201,242,92,0.25)', color: 'var(--accent2)' }}>USOS COMERCIALES · CÓMO SUMA AL EMBUDO</span>
-      </div>
-      <div className="eco-uses">
-        {e.use.map((u, i) => <div key={i} className="eco-use">{u}</div>)}
+      <div className="info-card" style={{ marginTop: '1.4rem' }}>
+        <div className="kicker">— HITOS ★</div>
+        <h4 style={{ marginTop: '.3rem', marginBottom: '.5rem' }}>Tres checkpoints decisorios</h4>
+        <div className="info-grid cols-3">
+          <div className="step-card"><div className="step-num">S5</div><h5>MVP en aire</h5><p>Google + Meta + grilla RRSS arrancando.</p></div>
+          <div className="step-card" style={{ borderColor: 'rgba(255,61,127,0.45)' }}><div className="step-num" style={{ color: '#FF3D7F' }}>Día 60 ★</div><h5>Primer informe + QBR</h5><p>Decisión de escalamiento basada en data real.</p></div>
+          <div className="step-card" style={{ borderColor: 'rgba(255,61,127,0.45)' }}><div className="step-num" style={{ color: '#FF3D7F' }}>Día 90 ★</div><h5>Segundo informe + plan Q2</h5><p>Decisión sobre dominio .cl/.com + roadmap Q2.</p></div>
+        </div>
       </div>
     </section>
   );
@@ -10508,7 +10802,7 @@ function InvestSection() {
 
       <div className="lead-callout tilt" style={{ marginTop: '2rem' }}>
         <b>Próximo paso · cierre del kick-off:</b>
-        <span className="hl"> Validar fases 1 y 2 · firmar SOW de fundación + web · agendar shoot editorial del taller para el M1 · alinear permisos del caso TINI.</span> El timing ideal es arrancar Fase 1 en la primera semana de junio para tener landings y always-on Google rediseñado operando antes de la temporada alta de activaciones (sept-noviembre).
+        <span className="hl"> Validar fases 1 y 2 · firmar SOW de fundación + web · agendar sesión audiovisual del taller para el M1 · revisar sección de propiedad + plataforma + dominio.</span> El timing ideal es arrancar Fase 1 en la primera semana de junio para tener landings y always-on Google rediseñado operando antes de la temporada alta de activaciones (sept-noviembre).
       </div>
     </section>
   );
@@ -10643,8 +10937,8 @@ function ShowcaseSection() {
       <div className="lead-callout" style={{ marginTop: '2rem' }}>
         <b>Importante · pareo web ↔ RRSS:</b>
         <span className="hl"> W.1 Taller Editorial → R.1 Editorial Taller (LinkedIn-first · slow craft).</span>
-        <span className="hl"> W.2 Pop Industrial → R.2 Pop Cultural (TikTok + IG masivo · trends).</span>
-        <span className="hl"> W.3 Verde Circular → R.3 Documental Eco (LinkedIn + IG documental · ESG real).</span> Si más adelante se decide combinar (ej. web W.1 + RRSS R.3) se puede armar híbrido — pero recomendamos pareo natural para máxima coherencia de marca.
+        <span className="hl"> W.2 Pop Saturado → R.2 Pop Cultural (TikTok + IG masivo · trends).</span>
+        <span className="hl"> W.3 Documental Técnico → R.3 Documental Técnico (LinkedIn + IG documental · oficio + iniciativas eco como anexo).</span> Si más adelante se decide combinar (ej. web W.1 + RRSS R.3) se puede armar híbrido — pero recomendamos pareo natural para máxima coherencia de marca.
       </div>
     </section>
   );
@@ -10963,6 +11257,9 @@ function App() {
       case 'digitals-team':  return <DigitalsTeamSection/>;
       case 'digitals-stack': return <DigitalsStackSection/>;
       case 'roadmap':    return <RoadmapSection/>;
+      case 'gantt':      return <GanttSection/>;
+      case 'ownership':  return <OwnershipSection/>;
+      case 'operating':  return <OperatingSection/>;
       default:           return <SummarySection/>;
     }
   }
